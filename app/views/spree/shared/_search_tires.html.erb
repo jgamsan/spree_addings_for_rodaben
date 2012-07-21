@@ -1,0 +1,25 @@
+<div id="tiresSettings">
+  <% if search_tires.blank? -%>
+    <%= select_tag :tire_width_id, options_for_select([[t(:width), '']] +
+                    Spree::TireWidth.all.map {|t| [t.name, t.id]},
+                    @width ? @width.id : params[:tire_width_id]) %>
+    <%= select_tag :tire_serial_id, options_for_select([[t(:serial), '']] +
+                    Spree::TireSerial.all.map {|t| [t.name, t.id]},
+                    @serial ? @serial.id : params[:tire_serial_id]) %>
+    <%= select_tag :tire_innertube_id, options_for_select([[t(:innertube), '']] +
+                    Spree::TireInnertube.all.map {|t| [t.name, t.id]},
+                    @innertube ? @innertube.id : params[:tire_innertube_id]) %>
+    <%= select_tag :tire_speed_code_id, options_for_select([[t(:speed_code), '']] +
+                    Spree::TireSpeedCode.all.map {|t| [t.name, t.id]},
+                    @speed ? @speed.id : params[:tire_speed_code_id]) %>
+  <% else -%>
+    <%= select_tag :tire_width_id, options_for_select([[t(:width), '']] +
+                    Spree::TireWidth.find(search_tires[0]).map {|t| [t.name, t.id]}, @width) %>
+    <%= select_tag :tire_serial_id, options_for_select([[t(:serial), '']] +
+                    Spree::TireSerial.find(search_tires[1]).map {|t| [t.name, t.id]}, @serial)%>
+    <%= select_tag :tire_innertube_id, options_for_select([[t(:innertube), '']] +
+                    Spree::TireInnertube.find(search_tires[2]).map {|t| [t.name, t.id]}, @innertube) %>
+    <%= select_tag :tire_speed_code_id, options_for_select([[t(:speed_code), '']] +
+                    Spree::TireSpeedCode.find(search_tires[4]).map {|t| [t.name, t.id]}, @vel) %>
+  <% end -%> 
+</div>
