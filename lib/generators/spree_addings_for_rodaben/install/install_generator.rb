@@ -14,12 +14,12 @@ module SpreeAddingsForRodaben
       
       def add_datas
         run 'mkdir db/datas' unless Dir.exist?('db/datas')
-        copy_file "anchos.csv", "db/datas/rodaben-anchos.csv"
-        copy_file "llantas.csv", "db/datas/rodaben-llantas.csv"
-        copy_file "perfiles.csv", "db/datas/rodaben-series.csv"
-        copy_file "vel.csv", "db/datas/rodaben-ivel.csv"
-        copy_file "marcas.csv", "db/datas/rodaben-marcas.csv"
-        copy_file "taxons.csv", "db/datas/rodaben-taxons.csv"
+        copy_file "rodaben-anchos.csv", "db/datas/rodaben-anchos.csv"
+        copy_file "rodaben-llantas.csv", "db/datas/rodaben-llantas.csv"
+        copy_file "rodaben-series.csv", "db/datas/rodaben-series.csv"
+        copy_file "rodaben-ivel.csv", "db/datas/rodaben-ivel.csv"
+        copy_file "rodaben-marcas.csv", "db/datas/rodaben-marcas.csv"
+        copy_file "rodaben-taxons.csv", "db/datas/rodaben-taxons.csv"
       end
       
       def add_migrations
