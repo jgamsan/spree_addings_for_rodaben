@@ -4,5 +4,5 @@ es:
   serial: "Serie"
   innertube: "Llanta"
   tire_season: "Invierno"
-  rf: "RunFlat"
-  gr: "Agricola"
+  tire_rf: "RunFlat"
+  tire_gr: "Agricola"
