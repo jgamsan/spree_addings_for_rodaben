@@ -14,8 +14,8 @@
                     @speed ? @speed.id : params[:tire_speed_code_id]) %>
     <%= select_tag :tire_season, options_for_select([[t(:tire_season), '']] +
                     Spree::Variant::SEASON_OPTIONS) %>  
-    <%= check_box_tag :tire_gr, t(:tire_gr) %>
-    <%= check_box_tag :tire_rf, t(:tire_rf) %>
+    <%= check_box_tag :tire_gr, nil, t(:tire_gr) %>
+    <%= check_box_tag :tire_rf, nil, t(:tire_rf) %>
   <% else -%>
     <%= select_tag :tire_width_id, options_for_select([[t(:width), '']] +
                     Spree::TireWidth.find(search_tires[0]).map {|t| [t.name, t.id]}, @width) %>
