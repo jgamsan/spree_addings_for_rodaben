@@ -8,8 +8,8 @@ module Spree::Search
       base_scope = base_scope.by_serial(tire_serial_id.to_i) if tire_serial_id
       base_scope = base_scope.by_innertube(tire_innertube_id.to_i) if tire_innertube_id
       base_scope = base_scope.by_speed(tire_speed_code_id.to_i) if tire_speed_code_id
-      base_scope = base_scope.by_rf(tire_rf.to_i) if tire_rf
-      base_scope = base_scope.by_gr(tire_gr.to_i) if tire_gr
+      base_scope = base_scope.by_rf(tire_rf) if tire_rf
+      base_scope = base_scope.by_gr(tire_gr) if tire_gr
       base_scope = base_scope.by_season(tire_season.to_i) if tire_season
       base_scope = base_scope.on_hand unless Spree::Config[:show_zero_stock_products]
       base_scope = add_search_scopes(base_scope)
