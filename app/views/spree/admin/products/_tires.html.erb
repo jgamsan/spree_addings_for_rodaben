@@ -28,6 +28,6 @@
   <li>
     <%= f.label :tire_season, t(:season) %>
     <%= f.collection_select :tire_season, options_for_select([[t(:tire_season), '']] +
-                    Spree::Variant::SEASON_OPTIONS), { 'style' => 'width:40px' } %>
+                    Spree::Variant::SEASON_OPTIONS) %>
   </li>
  </ul>
