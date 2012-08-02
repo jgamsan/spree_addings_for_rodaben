@@ -9,7 +9,7 @@
   </li>
   <li>
     <%= f.label :tire_serial_id, t(:serial) %>
-    <%= f.collection_select(:tire_profile_id, Spree::TireProfile.all, :id, :name, { :include_blank => true }, { 'style' => 'width:40px' }) %>
+    <%= f.collection_select(:tire_serial_id, Spree::TireSerial.all, :id, :name, { :include_blank => true }, { 'style' => 'width:40px' }) %>
   </li>
   <li>
     <%= f.label :tire_innertube_id, t(:innertube) %>
