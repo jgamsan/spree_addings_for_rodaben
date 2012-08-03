@@ -27,7 +27,7 @@
   </li>
   <li>
     <%= f.label :tire_season, t(:season) %>
-    <%= f.select(:tire_season, [[t(:tire_season), '']] +
+    <%= f.select(:tire_season, ([[t(:tire_season), '']] +
                     Spree::Variant::SEASON_OPTIONS)) %>
   </li>
  </ul>
