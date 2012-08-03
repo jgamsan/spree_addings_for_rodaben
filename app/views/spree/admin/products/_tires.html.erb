@@ -18,15 +18,15 @@
  </ul>
  <ul>
   <li>
-    <%= f.label :tire_rf, t(:rf) %>
+    <%= f.label :tire_rf, t(:tire_rf) %>
     <%= f.check_box :tire_rf, { 'style' => 'width:40px' } %>
   </li>
   <li>
-    <%= f.label :tire_gr, t(:gr) %>
+    <%= f.label :tire_gr, t(:tire_gr) %>
     <%= f.check_box :tire_gr, { 'style' => 'width:40px' } %>
   </li>
   <li>
-    <%= f.label :tire_season, t(:season) %>
+    <%= f.label :tire_season, t(:tire_season) %>
     <%= f.select(:tire_season, ([[t(:tire_season), '']] +
                     Spree::Variant::SEASON_OPTIONS)) %>
   </li>
