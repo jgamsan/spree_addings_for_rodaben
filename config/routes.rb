@@ -1,5 +1,5 @@
 Spree::Core::Engine.routes.draw do
   namespace :admin do
-    resource :tires_admin
+    resource :tire_settings
   end
 end
