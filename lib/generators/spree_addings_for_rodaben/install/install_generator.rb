@@ -20,6 +20,7 @@ module SpreeAddingsForRodaben
         copy_file "rodaben-ivel.csv", "db/datas/rodaben-ivel.csv"
         copy_file "rodaben-marcas.csv", "db/datas/rodaben-marcas.csv"
         copy_file "rodaben-taxons.csv", "db/datas/rodaben-taxons.csv"
+        copy_file "rodaben-taxonomies.csv", "db/datas/rodaben-taxonomies.csv"
       end
       
       def add_migrations
