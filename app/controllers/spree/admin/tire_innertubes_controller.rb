@@ -49,6 +49,7 @@ module Spree
           format.html { redirect_to(admin_tire_settings_path) }
           format.xml  { head :ok }
         end
+      end
     end
   end
 end 
