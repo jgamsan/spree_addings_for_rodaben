@@ -1,0 +1,23 @@
+<h3>Resumen de Estadisticas de la Actualizacion llevada a cabo a las <%=	Time.now.strftime("%H:%M del %A %d de %B del %Y") %></h3>
+
+<h4>Se han leido un total de <%= @readed %> articulos de la Base de Datos</h4>
+<table>
+  <tr>
+    <th></th>
+    <th>Articulos</th>
+  </tr>
+  <tr>
+    <td>Nuevos</td>
+    <td><%= @created %></td>
+  </tr>
+  <tr>
+    <td>Actualizados</td>
+    <td><%= @updated %></td>
+  </tr>
+  <tr>
+    <td>Borrados</td>
+    <td><%= @deleted %></td>
+  </tr>
+</table>
+
+Se adjunta fichero CSV con los productos sin incorporar a la aplicacion por si se realizara manualmente.
