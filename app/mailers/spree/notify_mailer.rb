@@ -1,5 +1,5 @@
 module Spree
-  class TestMailer < ActionMailer::Base
+  class NotifyMailer < ActionMailer::Base
     default :from => "no-reply@galiclick.com", :to => "miguel.gamazo@galiclick.com"
 
     def file_notification(file)
