@@ -2,7 +2,7 @@ module Spree
   module Admin
     class TireSerialsController < Spree::Admin::BaseController
       def index
-        @serials = Spree::TireSerial.all.order('name').page(params[:page]).per(10)
+        @serials = Spree::TireSerial.order('name').page(params[:page]).per(10)
       end
       
       def new

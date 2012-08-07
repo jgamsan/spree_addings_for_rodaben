@@ -2,7 +2,7 @@ module Spree
   module Admin
     class TireSpeedCodesController < Spree::Admin::BaseController
       def index
-        @speed_codes = Spree::TireSpeedCode.all.order('name').page(params[:page]).per(10)
+        @speed_codes = Spree::TireSpeedCode.order('name').page(params[:page]).per(10)
       end
       
       def new

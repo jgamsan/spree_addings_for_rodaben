@@ -2,7 +2,7 @@ module Spree
   module Admin
     class TireInnertubesController < Spree::Admin::BaseController
       def index
-        @innertubes = Spree::TireInnertube.all.order('name').page(params[:page]).per(10)
+        @innertubes = Spree::TireInnertube.order('name').page(params[:page]).per(10)
       end
       
       def new
