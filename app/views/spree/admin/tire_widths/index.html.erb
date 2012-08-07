@@ -22,8 +22,8 @@
       <tr id="<%= spree_dom_id width %>" data-hook="admin_tire_widths_index_rows">
         <td width="60px"><%= width.name %></td>
         <td width="140px" data-hook="admin_tire_widths_index_row_actions">
-          <%= link_to_edit width %> &nbsp;
-          <%= link_to_delete width %>
+          <%= link_to_with_icon 'edit', t(:edit), edit_admin_tire_width_url(width) %> &nbsp;
+          <%= link_to_delete width , {:url => admin_tire_width_url(width) }%>
         </td>
       </tr>
     <% end %>
