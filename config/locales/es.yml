@@ -6,3 +6,5 @@ es:
   tire_season: "Invierno"
   tire_rf: "RunFlat"
   tire_gr: "Agricola"
+  new_tire_width: "Nuevo Ancho"
+  tire_widths: "Gestion de Anchos de Neumatico"
