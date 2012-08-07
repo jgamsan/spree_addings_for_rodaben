@@ -1,6 +1,6 @@
 module Spree
   class NotifyMailer < ActionMailer::Base
-    default :from => "no-reply@galiclick.com", :to => "miguel.gamazo@galiclick.com"
+    default :to => "miguel.gamazo@galiclick.com"
 
     def file_notification(file)
       attachments[file] = File.read("#{Rails.root}/public/images/uploads/" + file)
