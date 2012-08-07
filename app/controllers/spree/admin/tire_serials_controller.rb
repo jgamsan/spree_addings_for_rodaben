@@ -10,7 +10,7 @@ module Spree
       end
       
       def edit
-        @serial = Spree.TireSerial(params[:id])      
+        @serial = Spree::TireSerial.find(params[:id])      
       end
       
       def create

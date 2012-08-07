@@ -10,7 +10,7 @@ module Spree
       end
       
       def edit
-        @innertube = Spree.TireInnertube(params[:id])      
+        @innertube = Spree::TireInnertube.find(params[:id])      
       end
       
       def create

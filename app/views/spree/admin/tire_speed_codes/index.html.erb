@@ -1,0 +1,32 @@
+<%#= render :partial => 'tires_setting_menu' %>
+
+<div class="toolbar" data-hook="toolbar">
+  <ul class="actions">
+    <li>
+      <%= button_link_to t(:new_tire_speed_code), new_admin_tire_speed_code_url, :icon => 'add', :id => 'admin_new_tire_speed_code_link' %>
+    </li>
+  </ul>
+  <br class="clear" />
+</div>
+
+<h1><%= t(:tire_speed_codes) %></h1>
+
+<table class="index" id="tire_speed_codes_listing">
+  <thead data-hook="admin_tire_speed_codes_index_headers">
+    <th><%= t(:name) %></th>
+    <th data-hook="admin_tire_speed_codes_index_header_actions">
+    </th>
+  </thead>
+  <tbody>
+    <% @speed_codes.each do |speed_code|%>
+      <tr id="<%= spree_dom_id speed_code %>" data-hook="admin_tire_speed_codes_index_rows">
+        <td width="60px"><%= speed_code.name %></td>
+        <td width="140px" data-hook="admin_tire_speed_codes_index_row_actions">
+          <%= link_to_with_icon 'edit', t(:edit), edit_admin_tire_speed_code_url(speed_code) %> &nbsp;
+          <%= link_to_delete speed_code , {:url => admin_tire_speed_code_url(speed_code) }%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @speed_codes %>

@@ -1,0 +1,6 @@
+<h1><%= t(:editing_tire_serial) %></h1>
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @serial } %>
+<%= form_for [:admin, @serial] do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
+<% end %>

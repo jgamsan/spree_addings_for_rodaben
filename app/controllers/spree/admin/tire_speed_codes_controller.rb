@@ -10,7 +10,7 @@ module Spree
       end
       
       def edit
-        @speed_code = Spree.TireSpeedCode(params[:id])      
+        @speed_code = Spree::TireSpeedCode.find(params[:id])      
       end
       
       def create

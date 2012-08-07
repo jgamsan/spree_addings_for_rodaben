@@ -1,0 +1,9 @@
+<%#= render :partial => 'spree/admin/shared/tires_setting_menu' %>
+
+<h1><%= t(:new_tire_innertube) %></h1>
+<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @innertube } %>
+
+<%= form_for [:admin, @innertube] do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <p class="form-buttons" data-hook="buttons"><%= button t(:create) %></p>
+<% end %>

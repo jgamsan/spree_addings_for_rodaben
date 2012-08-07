@@ -10,7 +10,7 @@ module Spree
       end
       
       def edit
-        @width = Spree.TireWidth(params[:id])      
+        @width = Spree::TireWidth.find(params[:id])      
       end
       
       def create
