@@ -2,7 +2,7 @@ module Spree
   module Admin
     class TireWidthsController < Spree::Admin::BaseController
       def index
-        @widths = Spree::TireWidth.all.order('name').page(params[:page]).per(10)
+        @widths = Spree::TireWidth.all.order('by name').page(params[:page]).per(10)
       end
       
       def new

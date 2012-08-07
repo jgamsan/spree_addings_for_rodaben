@@ -1,0 +1,12 @@
+<% content_for :sidebar do %>
+
+  <h3><%= t(:configurations) %></h3>
+  <br class="clear" />
+
+  <ul class="sidebar" data-hook="tire_settings_sidebar_menu">
+    <%= configurations_sidebar_menu_item t(:width), "admin_tire_widths_path" %>
+    <%= configurations_sidebar_menu_item t(:serial), "admin_tire_serials_path" %>
+    <%= configurations_sidebar_menu_item t(:innertube), "admin_tire_innertubes_path" %>
+    <%= configurations_sidebar_menu_item t(:speed_code), "admin_tire_speed_codes_path" %>
+  </ul>
+<% end %>
