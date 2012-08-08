@@ -3,7 +3,7 @@
 <h1><%= t(:new_tire_serial) %></h1>
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @serial } %>
 
-<%= form_for [:admin, @serial] do |f| %>
+<%= form_for [:admin, @tire_serial] do |f| %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p class="form-buttons" data-hook="buttons"><%= button t(:create) %></p>
 <% end %>

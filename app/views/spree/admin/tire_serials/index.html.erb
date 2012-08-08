@@ -18,15 +18,15 @@
     </th>
   </thead>
   <tbody>
-    <% @serials.each do |serial|%>
+    <% @tire_serials.each do |serial|%>
       <tr id="<%= spree_dom_id serial %>" data-hook="admin_tire_serials_index_rows">
         <td serial="60px"><%= serial.name %></td>
         <td serial="140px" data-hook="admin_tire_serials_index_row_actions">
-          <%= link_to_with_icon 'edit', t(:edit), edit_admin_tire_serial_url(serial) %> &nbsp;
-          <%= link_to_delete serial , {:url => admin_tire_serial_url(serial) }%>
+          <%= link_to_edit width %> &nbsp;
+          <%= link_to_delete width %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= paginate @serials %>
+<%= paginate @tire_serials %>

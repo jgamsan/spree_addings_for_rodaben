@@ -18,15 +18,15 @@
     </th>
   </thead>
   <tbody>
-    <% @speed_codes.each do |speed_code|%>
+    <% @tire_speed_codes.each do |speed_code|%>
       <tr id="<%= spree_dom_id speed_code %>" data-hook="admin_tire_speed_codes_index_rows">
         <td width="60px"><%= speed_code.name %></td>
         <td width="140px" data-hook="admin_tire_speed_codes_index_row_actions">
-          <%= link_to_with_icon 'edit', t(:edit), edit_admin_tire_speed_code_url(speed_code) %> &nbsp;
-          <%= link_to_delete speed_code , {:url => admin_tire_speed_code_url(speed_code) }%>
+          <%= link_to_edit width %> &nbsp;
+          <%= link_to_delete width %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= paginate @speed_codes %>
+<%= paginate @tire_speed_codes %>

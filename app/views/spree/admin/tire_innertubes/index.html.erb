@@ -19,16 +19,16 @@
     </th>
   </thead>
   <tbody>
-    <% @innertubes.each do |innertube|%>
+    <% @tire_innertubes.each do |innertube|%>
       <tr id="<%= spree_dom_id innertube %>" data-hook="admin_tire_innertubes_index_rows">
         <td widht="60px"><%= innertube.name %></td>
         <td widht="60px"><%= innertube.sale_price %></td>
         <td innertube="140px" data-hook="admin_tire_innertubes_index_row_actions">
-          <%= link_to_with_icon 'edit', t(:edit), edit_admin_tire_innertube_url(innertube) %> &nbsp;
-          <%= link_to_delete innertube , {:url => admin_tire_innertube_url(innertube) }%>
+          <%= link_to_edit width %> &nbsp;
+          <%= link_to_delete width %>
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-<%= paginate @innertubes %>
+<%= paginate @tire_innertubes %>
