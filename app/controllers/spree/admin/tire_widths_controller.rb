@@ -1,6 +1,7 @@
 module Spree
   module Admin
-    class TireWidthsController < Spree::Admin::BaseController
+    class TireWidthsController < ResourceController
+=begin
       def index
         @widths = Spree::TireWidth.order("name").page(params[:page]).per(10)
       end
@@ -50,6 +51,7 @@ module Spree
           format.xml  { head :ok }
         end
       end
+=end
     end
   end
 end 

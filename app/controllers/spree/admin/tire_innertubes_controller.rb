@@ -18,7 +18,7 @@ module Spree
 
         respond_to do |format|
           if @innertube.save
-            format.html { redirect_to(admin_tire_settings_path, :notice => 'Nueva Llanta creada correctamente.') }
+            format.html { redirect_to(admin_tire_innertubes_path, :notice => 'Nueva Llanta creada correctamente.') }
             format.xml  { render :xml => @innertube, :status => :created, :location => @innertube }
           else
             format.html { render :action => "new" }
