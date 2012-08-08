@@ -7,8 +7,9 @@ module Spree
       mail(:subject => "Enviando archivo con Items eliminados por Focal")
     end
 
-    def report_notification(readed, updated, deleted, created, file)
-      attachments[file] = File.read(file)
+    def report_notification(readed, updated, deleted, created)
+      file = "listado-neumaticos-no-incorporados.csv"
+      attachments[file] = File.read("#{Rails.root}/vendor/products/" + file)
       @readed = readed
       @updated = updated
       @deleted = deleted
