@@ -1,23 +1,23 @@
-<h3>Resumen de Estadisticas de la Actualizacion llevada a cabo a las <%=	Time.now.strftime("%H:%M del %A %d de %B del %Y") %></h3>
+<h3>Resumen de Estadisticas de la Actualizacion llevada a cabo a las <%=	l Time.now, :format => '%H:%M del %A %d de %B del %Y' %></h3>
 
 <h4>Se han leido un total de <%= @readed %> articulos de la Base de Datos</h4>
-<table>
+<table style="border: 1px solid black;">
   <tr>
     <th></th>
     <th>Articulos</th>
   </tr>
   <tr>
     <td>Nuevos</td>
-    <td><%= @created %></td>
+    <td style="text-align:center;"><%= @created %></td>
   </tr>
   <tr>
     <td>Actualizados</td>
-    <td><%= @updated %></td>
+    <td style="text-align:center;"><%= @updated %></td>
   </tr>
   <tr>
     <td>Borrados</td>
-    <td><%= @deleted %></td>
+    <td style="text-align:center;"><%= @deleted %></td>
   </tr>
 </table>
-
+ </br>
 Se adjunta fichero CSV con los productos sin incorporar a la aplicacion por si se realizara manualmente.
