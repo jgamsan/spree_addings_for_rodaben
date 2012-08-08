@@ -3,7 +3,7 @@
 <h1><%= t(:new_tire_width) %></h1>
 <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @width } %>
 
-<%= form_for [:admin, @width] do |f| %>
+<%= form_for [:admin, @tire_width] do |f| %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p class="form-buttons" data-hook="buttons"><%= button t(:create) %></p>
 <% end %>
