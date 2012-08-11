@@ -11,4 +11,10 @@ Spree::Variant.class_eval do
   ["No", 2],
   ["Todo Tiempo", 3]
   ]
+  
+  TUBE_OPTIONS = [
+  ["TL", 1],
+  ["TT", 2],
+  ["RU", 3]
+  ]
 end
