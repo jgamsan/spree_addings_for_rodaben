@@ -1,3 +1,4 @@
+# encoding: UTF-8
 Spree::Order.class_eval do
 
   def send_email_to_provider(order, resend = false)
