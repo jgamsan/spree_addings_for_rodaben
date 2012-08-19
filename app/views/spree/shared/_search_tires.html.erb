@@ -2,7 +2,7 @@
                 Spree::TireWidth.order('name').map {|t| [t.name, t.id]},
                 @width ? @width.id : params[:tire_width_id]) %>
 <%= select_tag :tire_serial_id, options_for_select([[t(:serial), '']] +
-                Spree::TireSerial..order('name').map {|t| [t.name, t.id]},
+                Spree::TireSerial.order('name').map {|t| [t.name, t.id]},
                 @serial ? @serial.id : params[:tire_serial_id]) %>
 <%= select_tag :tire_innertube_id, options_for_select([[t(:innertube), '']] +
                 Spree::TireInnertube.order('name').map {|t| [t.name, t.id]},
