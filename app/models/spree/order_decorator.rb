@@ -1,6 +1,7 @@
 Spree::Order.class_eval do
 
   def finalize!
+    super
     deliver_order_company_provider_email
   end
 
