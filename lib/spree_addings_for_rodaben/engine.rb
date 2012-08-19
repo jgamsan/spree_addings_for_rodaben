@@ -16,7 +16,7 @@ module SpreeAddingsForRodaben
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
       Spree::Order.class_eval do
-        Order.state_machines[:state] = StateMachine::Machine.new(Order, :initial => 'cart') do
+        Spree::Order.state_machines[:state] = StateMachine::Machine.new(Order, :initial => 'cart') do
           event :next do
             transition :from => 'cart',     :to => 'address'
             transition :from => 'address',  :to => 'delivery'
