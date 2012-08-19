@@ -15,7 +15,7 @@ module SpreeAddingsForRodaben
       Dir.glob(File.join(File.dirname(__FILE__), '../../app/**/*_decorator*.rb')) do |c|
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
-      Order.class_eval do
+      Spree::Order.class_eval do
         Order.state_machines[:state] = StateMachine::Machine.new(Order, :initial => 'cart') do
           event :next do
             transition :from => 'cart',     :to => 'address'
