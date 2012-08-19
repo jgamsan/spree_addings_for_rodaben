@@ -16,6 +16,7 @@ Spree::Order.class_eval do
       transition :from => 'delivery', :to => 'payment', :if => :payment_required?
       transition :from => 'delivery', :to => 'complete'
       transition :from => 'confirm',  :to => 'complete'
+      transition :from => 'complete', :to => 'approval'
 
       # note: some payment methods will not support a confirm step
       transition :from => 'payment',  :to => 'confirm',
@@ -48,12 +49,16 @@ Spree::Order.class_eval do
     before_transition :to => ['delivery'] do |order|
       order.shipments.each { |s| s.destroy unless s.shipping_method.available_to_order?(order) }
     end
-    around_transition :to => 'complete', :do => :deliver_order_company_provider_email
+    after_transition :to => 'approval', :do => :request!
     after_transition :to => 'complete', :do => :finalize!
     after_transition :to => 'delivery', :do => :create_tax_charge!
     after_transition :to => 'payment',  :do => :create_shipment!
     after_transition :to => 'resumed',  :do => :after_resume
     after_transition :to => 'canceled', :do => :after_cancel
+  end
+
+  def request!
+    deliver_order_company_provider_email
   end
 
 end
