@@ -21,7 +21,7 @@ Datos del Cliente
 
 Nombre: <%= @order.ship_address.firstname %>
 Apellidos: <%= @order.ship_address.lastname %>
-Direccion: <%= @order.ship_address.address1 + @order.ship_address.address2 %>
+Direccion: <%= @order.ship_address.address1 %>
 Poblacion: <%= @order.ship_address.city %>
 Codigo Postal: <%= @order.ship_address.zipcode %>
 Provincia: <%= @order.ship_address.state.name %>
