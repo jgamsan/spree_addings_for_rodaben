@@ -19,9 +19,10 @@ Pedido Total: <%= number_to_currency(@order.total) %>
 Datos del Cliente
 ============================================================
 
-Nombre:
-Apellidos:
-Direccion:
-Poblacion:
-Codigo Postal:
-Provincia:
+Nombre: <%= @order.ship_address.firstname.capitalize %>
+Apellidos: <%= @order.ship_address.lastname.capitalize %>
+Direccion: <%= @order.ship_address.address1.capitalize + @order.ship_address.address2.capitalize %>
+Poblacion: <%= @order.ship_address.city.capitalize %>
+Codigo Postal: <%= @order.ship_address.zipcode %>
+Provincia: <%= @order.ship_address..state.name.capitalize %>
+Teléfono: <%= @order.ship_address.phone %>  
