@@ -19,10 +19,10 @@ Pedido Total: <%= number_to_currency(@order.total) %>
 Datos del Cliente
 ============================================================
 
-Nombre: <%= @order.ship_address.firstname %>
-Apellidos: <%= @order.ship_address.lastname %>
-Direccion: <%= @order.ship_address.address1 %>
-Poblacion: <%= @order.ship_address.city %>
-Codigo Postal: <%= @order.ship_address.zipcode %>
-Provincia: <%= @order.ship_address.state.name %>
-Teléfono: <%= @order.ship_address.phone %>  
+Nombre: <%= @order.bill_address.firstname %>
+Apellidos: <%= @order.bill_address.lastname %>
+Direccion: <%= @order.bill_address.address1 %>
+Poblacion: <%= @order.bill_address.city %>
+Codigo Postal: <%= @order.bill_address.zipcode %>
+Provincia: <%= @order.bill_address.state.name %>
+Teléfono: <%= @order.bill_address.phone %>  
