@@ -1,11 +1,11 @@
 Spree::Product.class_eval do
   attr_accessible :tire_speed_code_id, :tire_rf, :tire_innertube_id, :tire_width_id,
                   :tire_serial_id, :tire_gr, :tire_season
-  attr_accessible :count_on_hand
+  attr_accessible :count_on_hand, :price_in_offert
 
   delegate_belongs_to :master, :tire_width_id, :tire_rf, :tire_innertube_id,
-                    :tire_speed_code_id, :tire_serial_id, :tire_gr, :tire_season
-                    
+                    :tire_speed_code_id, :tire_serial_id, :tire_gr, :tire_season, :price_in_offert
+
   scope :by_width, lambda { |width| joins(:master).where("spree_variants.tire_width_id = ?", width)}
   scope :by_serial, lambda { |serial| joins(:master).where("spree_variants.tire_serial_id = ?", serial)}
   scope :by_innertube, lambda { |innertube| joins(:master).where("spree_variants.tire_innertube_id = ?", innertube)}
