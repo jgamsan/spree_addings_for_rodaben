@@ -4,6 +4,6 @@ Deface::Override.new(:virtual_path => "spree/admin/products/_form",
                       :text => %q{
           <%= f.field_container :price_in_offert do %>
             <%= f.label :price_in_offert, t(:price_in_offert) %><br />
-            <%= f.text_field :price_in_offert, :value => number_to_currency(@product.cost_price, :unit => '') %>
+            <%= f.text_field :price_in_offert, :value => number_to_currency(@product.price_in_offert, :unit => '') %>
             <%= f.error_message_on :cost_price %>
           <% end %>})
