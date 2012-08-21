@@ -16,4 +16,5 @@ Deface::Override.new(:virtual_path => %q{spree/products/_cart_form},
           <span class="price selling" itemprop="price">
             <%= number_to_currency @product.price %>
           </span>
-        </div>})
+        </div>
+      <% end %>})
