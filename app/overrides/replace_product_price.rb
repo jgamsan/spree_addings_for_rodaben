@@ -6,7 +6,7 @@ Deface::Override.new(:virtual_path => %q{spree/products/_cart_form},
       <% if (@product.price - @product.price_in_offert) < 0 %>
         <div>
           <span class="price selling" style="color:red">
-            <%= number_to_currency @product.price %>
+            <%= number_to_currency @product.price %></span>
           <span class="price selling" itemprop="price" style="text-decoration: line-through;>
             <%= number_to_currency @product.price_in_offert %>
           </span>
