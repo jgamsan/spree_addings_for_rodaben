@@ -7,9 +7,8 @@ Spree::Variant.class_eval do
   attr_accessible :count_on_hand, :cost_price, :price, :price_in_offert
 
   SEASON_OPTIONS = [
-  ["Si", 1],
-  ["No", 2],
-  ["Todo Tiempo", 3]
+  ["Invierno", 1],
+  ["Todo Tiempo", 2]
   ]
 
   TUBE_OPTIONS = [
