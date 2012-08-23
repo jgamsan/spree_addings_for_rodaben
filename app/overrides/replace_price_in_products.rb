@@ -6,6 +6,8 @@ Deface::Override.new(:virtual_path => %q{spree/shared/_products},
         <div>
           <span class="price selling" style="color:red">
             <%= number_to_currency product.price %></span>
+            <span class="price selling" itemprop="price" style="text-decoration: line-through;">
+            <%= number_to_currency @product.price_in_offert %>
         </div>
       <% else %>
         <div>
