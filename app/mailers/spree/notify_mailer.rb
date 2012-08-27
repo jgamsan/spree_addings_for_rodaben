@@ -24,12 +24,15 @@ module Spree
       mail(:subject => "Enviando Informe de Items Borrados en Articulos")
     end
 
-    def send_email_to_provider(order, resend = false)
+    def send_email_to_provider(order, line_items, resend = false)
     @order = order
+    @line_items = line_items
     subject = (resend ? "[#{t(:resend).upcase}] " : '')
-    subject += "Prueba de envio de Orden a la Compañia GANE ##{order.number}"
-    mail(:to => ["miguel.gamazo@galiclick.com", "juan.tato@galiclick.com", "rodaben71@gmail.com"],
+    subject += "Prueba de envio de Orden a la Compañia ##{order.line_item.variant.product.supplier.title.first} ##{order.number}"
+    mail(:to => "miguel.gamazo@galiclick.com",
          :subject => subject)
+    #mail(:to => ["miguel.gamazo@galiclick.com", "juan.tato@galiclick.com", "rodaben71@gmail.com"],
+    #     :subject => subject)
   end
   end
 end
