@@ -1,6 +1,6 @@
 Deface::Override.new(:virtual_path => "spree/admin/products/_form",
                       :name => "add_supplier_to_products_in_admin",
-                      :insert_bottom => "data-hook='admin_product_form_left'",
+                      :insert_bottom => %q{[data-hook='admin_product_form_left']},
                       :text => %q{
           <%= f.field_container :supplier do %>
         <%= f.label :supplier_id, t(:supplier_id) %><br />
