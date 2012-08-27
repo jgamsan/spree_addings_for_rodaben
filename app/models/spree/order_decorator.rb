@@ -24,7 +24,7 @@ Spree::Order.class_eval do
       @suppliers = Spree::Supplier.all
       @suppliers.each do |supplier|
         @line_items = Spree::LineItem.joins(:variant, :product).where("spree_products.supplier_id = ? and spree_line_items.order_id = ?", supplier.id, self.id)
-        Spree::NotifyMailer.send_email_to_provider(self, @line_items).deliver unless @line_items.empty
+        Spree::NotifyMailer.send_email_to_provider(self, @line_items).deliver unless @line_items.empty?
       end
     rescue Exception => e
       logger.error("#{e.class.name}: #{e.message}")
