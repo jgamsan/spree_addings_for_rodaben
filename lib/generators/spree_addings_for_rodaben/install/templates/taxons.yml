@@ -1,0 +1,2024 @@
+---
+
+Categories:
+  id: 1
+  parent_id:
+  position: 0
+  name: Categorias
+  permalink: categorias
+  taxonomy_id: 1
+  created_at: 2012-08-28 17:07:00.082729000 Z
+  updated_at: 2012-08-28 17:07:00.082729000 Z
+  lft: 1
+  rgt: 16
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+Marcas:
+  id: 2
+  parent_id:
+  position: 0
+  name: Marcas
+  permalink: marcas
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:07:15.820867000 Z
+  updated_at: 2012-08-28 17:07:15.820867000 Z
+  lft: 17
+  rgt: 238
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+Neumaticos:
+  id: 3
+  parent_id: 1
+  position: 0
+  name: Neumaticos
+  permalink: categorias/neumaticos
+  taxonomy_id: 1
+  created_at: 2012-08-28 17:07:32.320487000 Z
+  updated_at: 2012-08-28 17:07:32.320487000 Z
+  lft: 2
+  rgt: 15
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+Automovil:
+  id: 4
+  parent_id: 3
+  position: 0
+  name: Automovil
+  permalink: categorias/neumaticos/automovil
+  taxonomy_id: 1
+  created_at: 2012-08-28 17:07:45.702821000 Z
+  updated_at: 2012-08-28 17:07:45.702821000 Z
+  lft: 3
+  rgt: 4
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+Furgoneta:
+  id: 5
+  parent_id: 3
+  position: 1
+  name: Furgoneta
+  permalink: categorias/neumaticos/furgoneta
+  taxonomy_id: 1
+  created_at: 2012-08-28 17:07:57.700981000 Z
+  updated_at: 2012-08-28 17:07:57.700981000 Z
+  lft: 5
+  rgt: 6
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+Caravana:
+  id: 6
+  parent_id: 3
+  position: 2
+  name: Caravana
+  permalink: categorias/neumaticos/caravana
+  taxonomy_id: 1
+  created_at: 2012-08-28 17:08:07.216456000 Z
+  updated_at: 2012-08-28 17:08:07.216456000 Z
+  lft: 7
+  rgt: 8
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+camion:
+  id: 7
+  parent_id: 3
+  position: 3
+  name: Camion
+  permalink: categorias/neumaticos/camion
+  taxonomy_id: 1
+  created_at: 2012-08-28 17:08:12.375182000 Z
+  updated_at: 2012-08-28 17:08:12.375182000 Z
+  lft: 9
+  rgt: 10
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+agricola:
+  id: 8
+  parent_id: 3
+  position: 4
+  name: Agricola
+  permalink: categorias/neumaticos/agricola
+  taxonomy_id: 1
+  created_at: 2012-08-28 17:08:28.547264000 Z
+  updated_at: 2012-08-28 17:08:28.547264000 Z
+  lft: 11
+  rgt: 12
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+moto:
+  id: 9
+  parent_id: 3
+  position: 5
+  name: Moto
+  permalink: categorias/neumaticos/moto
+  taxonomy_id: 1
+  created_at: 2012-08-28 17:08:32.715767000 Z
+  updated_at: 2012-08-28 17:08:32.715767000 Z
+  lft: 13
+  rgt: 14
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+avon:
+  id: 10
+  parent_id: 2
+  position: 0
+  name: AVON
+  permalink: marcas/avon
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:08:56.340511000 Z
+  updated_at: 2012-08-28 17:08:56.340511000 Z
+  lft: 18
+  rgt: 19
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+bridgestone:
+  id: 11
+  parent_id: 2
+  position: 1
+  name: BRIDGESTONE
+  permalink: marcas/bridgestone
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:09:14.762238000 Z
+  updated_at: 2012-08-28 17:09:14.762238000 Z
+  lft: 20
+  rgt: 21
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+continental:
+  id: 12
+  parent_id: 2
+  position: 2
+  name: CONTINENTAL
+  permalink: marcas/continental
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:09:31.164028000 Z
+  updated_at: 2012-08-28 17:09:31.164028000 Z
+  lft: 22
+  rgt: 23
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+cooper:
+  id: 13
+  parent_id: 2
+  position: 3
+  name: COOPER
+  permalink: marcas/cooper
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:09:36.043040000 Z
+  updated_at: 2012-08-28 17:09:36.043040000 Z
+  lft: 24
+  rgt: 25
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+dunlop:
+  id: 14
+  parent_id: 2
+  position: 4
+  name: DUNLOP
+  permalink: marcas/dunlop
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:13:21.740860000 Z
+  updated_at: 2012-08-28 17:13:21.740860000 Z
+  lft: 26
+  rgt: 27
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+falken:
+  id: 15
+  parent_id: 2
+  position: 5
+  name: FALKEN
+  permalink: marcas/falken
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:13:31.648828000 Z
+  updated_at: 2012-08-28 17:13:31.648828000 Z
+  lft: 28
+  rgt: 29
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+goodyear:
+  id: 16
+  parent_id: 2
+  position: 6
+  name: GOOD YEAR
+  permalink: marcas/good-year
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:13:51.254286000 Z
+  updated_at: 2012-08-28 17:13:51.254286000 Z
+  lft: 30
+  rgt: 31
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+hercules:
+  id: 17
+  parent_id: 2
+  position: 7
+  name: HERCULES
+  permalink: marcas/hercules
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:14:00.828532000 Z
+  updated_at: 2012-08-28 17:14:00.828532000 Z
+  lft: 32
+  rgt: 33
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+lassa:
+  id: 18
+  parent_id: 2
+  position: 8
+  name: LASSA
+  permalink: marcas/lassa
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:14:11.013011000 Z
+  updated_at: 2012-08-28 17:14:11.013011000 Z
+  lft: 34
+  rgt: 35
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+mabor:
+  id: 19
+  parent_id: 2
+  position: 9
+  name: MABOR
+  permalink: marcas/mabor
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:14:22.434309000 Z
+  updated_at: 2012-08-28 17:14:22.434309000 Z
+  lft: 36
+  rgt: 37
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+michelin:
+  id: 20
+  parent_id: 2
+  position: 10
+  name: MICHELIN
+  permalink: marcas/michelin
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:14:31.368652000 Z
+  updated_at: 2012-08-28 17:14:31.368652000 Z
+  lft: 38
+  rgt: 39
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+mitas:
+  id: 21
+  parent_id: 2
+  position: 11
+  name: MITAS
+  permalink: marcas/mitas
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:14:40.667066000 Z
+  updated_at: 2012-08-28 17:14:40.667066000 Z
+  lft: 40
+  rgt: 41
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+pirelli:
+  id: 22
+  parent_id: 2
+  position: 12
+  name: PIRELLI
+  permalink: marcas/pirelli
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:14:50.305119000 Z
+  updated_at: 2012-08-28 17:14:50.305119000 Z
+  lft: 42
+  rgt: 43
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+starmaxx:
+  id: 23
+  parent_id: 2
+  position: 13
+  name: STARMAXX
+  permalink: marcas/starmaxx
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:15:00.176511000 Z
+  updated_at: 2012-08-28 17:15:00.176511000 Z
+  lft: 44
+  rgt: 45
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+uniroyal:
+  id: 24
+  parent_id: 2
+  position: 14
+  name: UNIROYAL
+  permalink: marcas/uniroyal
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:15:11.627972000 Z
+  updated_at: 2012-08-28 17:15:11.627972000 Z
+  lft: 46
+  rgt: 47
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+cultor:
+  id: 25
+  parent_id: 2
+  position: 15
+  name: CULTOR
+  permalink: marcas/cultor
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:15:22.513067000 Z
+  updated_at: 2012-08-28 17:15:22.513067000 Z
+  lft: 48
+  rgt: 49
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+barum:
+  id: 26
+  parent_id: 2
+  position: 16
+  name: BARUM
+  permalink: marcas/barum
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:15:33.255455000 Z
+  updated_at: 2012-08-28 17:15:33.255455000 Z
+  lft: 50
+  rgt: 51
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+sunew:
+  id: 27
+  parent_id: 2
+  position: 17
+  name: SUNEW
+  permalink: marcas/sunew
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:15:48.918367000 Z
+  updated_at: 2012-08-28 17:15:48.918367000 Z
+  lft: 52
+  rgt: 53
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+fedima:
+  id: 28
+  parent_id: 2
+  position: 18
+  name: FEDIMA
+  permalink: marcas/fedima
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:15:57.360334000 Z
+  updated_at: 2012-08-28 17:15:57.360334000 Z
+  lft: 54
+  rgt: 55
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+semperit:
+  id: 29
+  parent_id: 2
+  position: 19
+  name: SEMPERIT
+  permalink: marcas/semperit
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:16:07.623320000 Z
+  updated_at: 2012-08-28 17:16:07.623320000 Z
+  lft: 56
+  rgt: 57
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+kumho:
+  id: 30
+  parent_id: 2
+  position: 20
+  name: KUMHO
+  permalink: marcas/kumho
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:16:17.939513000 Z
+  updated_at: 2012-08-28 17:16:17.939513000 Z
+  lft: 58
+  rgt: 59
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+general:
+  id: 31
+  parent_id: 2
+  position: 21
+  name: GENERAL
+  permalink: marcas/general
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:16:27.553913000 Z
+  updated_at: 2012-08-28 17:16:27.553913000 Z
+  lft: 60
+  rgt: 61
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+fulda:
+  id: 32
+  parent_id: 2
+  position: 22
+  name: FULDA
+  permalink: marcas/fulda
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:16:38.713228000 Z
+  updated_at: 2012-08-28 17:16:38.713228000 Z
+  lft: 62
+  rgt: 63
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+vredestein:
+  id: 33
+  parent_id: 2
+  position: 23
+  name: VREDESTEIN
+  permalink: marcas/vredestein
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:16:48.506231000 Z
+  updated_at: 2012-08-28 17:16:48.506231000 Z
+  lft: 64
+  rgt: 65
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+nortenha:
+  id: 34
+  parent_id: 2
+  position: 24
+  name: NORTENHA
+  permalink: marcas/nortenha
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:16:57.827094000 Z
+  updated_at: 2012-08-28 17:16:57.827094000 Z
+  lft: 66
+  rgt: 67
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+yokohama:
+  id: 35
+  parent_id: 2
+  position: 25
+  name: YOKOHAMA
+  permalink: marcas/yokohama
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:17:11.542647000 Z
+  updated_at: 2012-08-28 17:17:11.542647000 Z
+  lft: 68
+  rgt: 69
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+firestone:
+  id: 36
+  parent_id: 2
+  position: 26
+  name: FIRESTONE
+  permalink: marcas/firestone
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:17:20.733214000 Z
+  updated_at: 2012-08-28 17:17:20.733214000 Z
+  lft: 70
+  rgt: 71
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+hankook:
+  id: 37
+  parent_id: 2
+  position: 27
+  name: HANKOOK
+  permalink: marcas/hankook
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:17:30.383988000 Z
+  updated_at: 2012-08-28 17:17:30.383988000 Z
+  lft: 72
+  rgt: 73
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+fronteira:
+  id: 38
+  parent_id: 2
+  position: 28
+  name: FRONTEIRA
+  permalink: marcas/fronteira
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:17:40.833757000 Z
+  updated_at: 2012-08-28 17:17:40.833757000 Z
+  lft: 74
+  rgt: 75
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+qualifier:
+  id: 39
+  parent_id: 2
+  position: 29
+  name: QUALIFIER
+  permalink: marcas/qualifier
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:18:02.129363000 Z
+  updated_at: 2012-08-28 17:18:02.129363000 Z
+  lft: 76
+  rgt: 77
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+ohtsu_falken:
+  id: 40
+  parent_id: 2
+  position: 30
+  name: OHTSU-FALKEN
+  permalink: marcas/ohtsu-falken
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:18:12.167296000 Z
+  updated_at: 2012-08-28 17:18:12.167296000 Z
+  lft: 78
+  rgt: 79
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+winterfalken:
+  id: 41
+  parent_id: 2
+  position: 31
+  name: WINTERFALKEN
+  permalink: marcas/winterfalken
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:18:20.866723000 Z
+  updated_at: 2012-08-28 17:18:20.866723000 Z
+  lft: 80
+  rgt: 81
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+trayal:
+  id: 42
+  parent_id: 2
+  position: 32
+  name: TRAYAL
+  permalink: marcas/trayal
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:18:31.503098000 Z
+  updated_at: 2012-08-28 17:18:31.503098000 Z
+  lft: 82
+  rgt: 83
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+armpower:
+  id: 43
+  parent_id: 2
+  position: 33
+  name: ARMPOWER
+  permalink: marcas/armpower
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:18:39.688673000 Z
+  updated_at: 2012-08-28 17:18:39.688673000 Z
+  lft: 84
+  rgt: 85
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+zeta:
+  id: 44
+  parent_id: 2
+  position: 34
+  name: ZETA
+  permalink: marcas/zeta
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:18:48.298179000 Z
+  updated_at: 2012-08-28 17:18:48.298179000 Z
+  lft: 86
+  rgt: 87
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+achilles:
+  id: 45
+  parent_id: 2
+  position: 35
+  name: ACHILLES
+  permalink: marcas/achilles
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:18:57.249769000 Z
+  updated_at: 2012-08-28 17:18:57.249769000 Z
+  lft: 88
+  rgt: 89
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+atturo:
+  id: 46
+  parent_id: 2
+  position: 36
+  name: ATTURO
+  permalink: marcas/atturo
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:19:05.964587000 Z
+  updated_at: 2012-08-28 17:19:05.964587000 Z
+  lft: 90
+  rgt: 91
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+autogrip:
+  id: 47
+  parent_id: 2
+  position: 37
+  name: AUTOGRIP
+  permalink: marcas/autogrip
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:19:14.553530000 Z
+  updated_at: 2012-08-28 17:19:14.553530000 Z
+  lft: 92
+  rgt: 93
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+autoguard:
+  id: 48
+  parent_id: 2
+  position: 38
+  name: AUTOGUARD
+  permalink: marcas/autoguard
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:19:22.584569000 Z
+  updated_at: 2012-08-28 17:19:22.584569000 Z
+  lft: 94
+  rgt: 95
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+bandagem:
+  id: 49
+  parent_id: 2
+  position: 39
+  name: BANDAGEM
+  permalink: marcas/bandagem
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:19:37.688159000 Z
+  updated_at: 2012-08-28 17:19:37.688159000 Z
+  lft: 96
+  rgt: 97
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+bct:
+  id: 50
+  parent_id: 2
+  position: 40
+  name: BCT
+  permalink: marcas/bct
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:19:45.976601000 Z
+  updated_at: 2012-08-28 17:19:45.976601000 Z
+  lft: 98
+  rgt: 99
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+bergougnan:
+  id: 51
+  parent_id: 2
+  position: 41
+  name: BERGOUGNAN
+  permalink: marcas/bergougnan
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:19:55.185173000 Z
+  updated_at: 2012-08-28 17:19:55.185173000 Z
+  lft: 100
+  rgt: 101
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+bkt:
+  id: 52
+  parent_id: 2
+  position: 42
+  name: BKT
+  permalink: marcas/bkt
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:20:04.837766000 Z
+  updated_at: 2012-08-28 17:20:04.837766000 Z
+  lft: 102
+  rgt: 103
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+bmw:
+  id: 53
+  parent_id: 2
+  position: 43
+  name: BMW
+  permalink: marcas/bmw
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:20:14.201224000 Z
+  updated_at: 2012-08-28 17:20:14.201224000 Z
+  lft: 104
+  rgt: 105
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+ceat:
+  id: 54
+  parent_id: 2
+  position: 44
+  name: CEAT
+  permalink: marcas/ceat
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:20:23.950093000 Z
+  updated_at: 2012-08-28 17:20:23.950093000 Z
+  lft: 106
+  rgt: 107
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+compass:
+  id: 55
+  parent_id: 2
+  position: 45
+  name: COMPASS
+  permalink: marcas/compass
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:20:38.913973000 Z
+  updated_at: 2012-08-28 17:20:38.913973000 Z
+  lft: 108
+  rgt: 109
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+debica:
+  id: 56
+  parent_id: 2
+  position: 46
+  name: DEBICA
+  permalink: marcas/debica
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:20:49.332167000 Z
+  updated_at: 2012-08-28 17:20:49.332167000 Z
+  lft: 110
+  rgt: 111
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+delinte:
+  id: 57
+  parent_id: 2
+  position: 47
+  name: DELINTE
+  permalink: marcas/delinte
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:20:58.771485000 Z
+  updated_at: 2012-08-28 17:20:58.771485000 Z
+  lft: 112
+  rgt: 113
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+diplomat:
+  id: 58
+  parent_id: 2
+  position: 48
+  name: DIPLOMAT
+  permalink: marcas/diplomat
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:21:06.960097000 Z
+  updated_at: 2012-08-28 17:21:06.960097000 Z
+  lft: 114
+  rgt: 115
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+doublestar:
+  id: 59
+  parent_id: 2
+  position: 49
+  name: DOUBLESTAR
+  permalink: marcas/doublestar
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:21:16.797026000 Z
+  updated_at: 2012-08-28 17:21:16.797026000 Z
+  lft: 116
+  rgt: 117
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+duro:
+  id: 60
+  parent_id: 2
+  position: 50
+  name: DURO
+  permalink: marcas/duro
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:21:24.638089000 Z
+  updated_at: 2012-08-28 17:21:24.638089000 Z
+  lft: 118
+  rgt: 119
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+durun:
+  id: 61
+  parent_id: 2
+  position: 51
+  name: DURUN
+  permalink: marcas/durun
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:21:34.596827000 Z
+  updated_at: 2012-08-28 17:21:34.596827000 Z
+  lft: 120
+  rgt: 121
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+ep:
+  id: 62
+  parent_id: 2
+  position: 52
+  name: EP
+  permalink: marcas/ep
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:21:46.203428000 Z
+  updated_at: 2012-08-28 17:21:46.203428000 Z
+  lft: 122
+  rgt: 123
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+evergreen:
+  id: 63
+  parent_id: 2
+  position: 53
+  name: EVERGREEN
+  permalink: marcas/evergreen
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:21:55.176678000 Z
+  updated_at: 2012-08-28 17:21:55.176678000 Z
+  lft: 124
+  rgt: 125
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+fate:
+  id: 64
+  parent_id: 2
+  position: 54
+  name: FATE
+  permalink: marcas/fate
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:22:05.169721000 Z
+  updated_at: 2012-08-28 17:22:05.169721000 Z
+  lft: 126
+  rgt: 127
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+firenza:
+  id: 65
+  parent_id: 2
+  position: 55
+  name: FIRENZA
+  permalink: marcas/firenza
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:22:16.741649000 Z
+  updated_at: 2012-08-28 17:22:16.741649000 Z
+  lft: 128
+  rgt: 129
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+forceum:
+  id: 66
+  parent_id: 2
+  position: 56
+  name: FORCEUM
+  permalink: marcas/forceum
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:22:26.274948000 Z
+  updated_at: 2012-08-28 17:22:26.274948000 Z
+  lft: 130
+  rgt: 131
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+full_run:
+  id: 67
+  parent_id: 2
+  position: 57
+  name: FULL RUN
+  permalink: marcas/full-run
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:22:35.479360000 Z
+  updated_at: 2012-08-28 17:22:35.479360000 Z
+  lft: 132
+  rgt: 133
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+gerutti:
+  id: 68
+  parent_id: 2
+  position: 58
+  name: GERUTTI
+  permalink: marcas/gerutti
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:22:45.647261000 Z
+  updated_at: 2012-08-28 17:22:45.647261000 Z
+  lft: 134
+  rgt: 135
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+good_ride:
+  id: 69
+  parent_id: 2
+  position: 59
+  name: GOOD RIDE
+  permalink: marcas/good-ride
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:22:55.684516000 Z
+  updated_at: 2012-08-28 17:22:55.684516000 Z
+  lft: 136
+  rgt: 137
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+goodrich:
+  id: 70
+  parent_id: 2
+  position: 60
+  name: GOODRICH
+  permalink: marcas/goodrich
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:23:05.957392000 Z
+  updated_at: 2012-08-28 17:23:05.957392000 Z
+  lft: 138
+  rgt: 139
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+gremax:
+  id: 71
+  parent_id: 2
+  position: 61
+  name: GREMAX
+  permalink: marcas/gremax
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:23:14.554945000 Z
+  updated_at: 2012-08-28 17:23:14.554945000 Z
+  lft: 140
+  rgt: 141
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+gt_radial:
+  id: 72
+  parent_id: 2
+  position: 62
+  name: GT RADIAL
+  permalink: marcas/gt-radial
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:23:24.179026000 Z
+  updated_at: 2012-08-28 17:23:24.179026000 Z
+  lft: 142
+  rgt: 143
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+haida:
+  id: 73
+  parent_id: 2
+  position: 63
+  name: HAIDA
+  permalink: marcas/haida
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:23:34.056494000 Z
+  updated_at: 2012-08-28 17:23:34.056494000 Z
+  lft: 144
+  rgt: 145
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+hifly:
+  id: 74
+  parent_id: 2
+  position: 64
+  name: HIFLY
+  permalink: marcas/hifly
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:23:44.028919000 Z
+  updated_at: 2012-08-28 17:23:44.028919000 Z
+  lft: 146
+  rgt: 147
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+huismerk:
+  id: 75
+  parent_id: 2
+  position: 65
+  name: HUISMERK
+  permalink: marcas/huismerk
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:23:53.618446000 Z
+  updated_at: 2012-08-28 17:23:53.618446000 Z
+  lft: 148
+  rgt: 149
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+irc:
+  id: 76
+  parent_id: 2
+  position: 66
+  name: IRC
+  permalink: marcas/irc
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:24:02.675048000 Z
+  updated_at: 2012-08-28 17:24:02.675048000 Z
+  lft: 150
+  rgt: 151
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+jinyu:
+  id: 77
+  parent_id: 2
+  position: 67
+  name: JINYU
+  permalink: marcas/jinyu
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:24:12.674006000 Z
+  updated_at: 2012-08-28 17:24:12.674006000 Z
+  lft: 152
+  rgt: 153
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+kinforest:
+  id: 78
+  parent_id: 2
+  position: 68
+  name: KINFOREST
+  permalink: marcas/kinforest
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:24:22.868296000 Z
+  updated_at: 2012-08-28 17:24:22.868296000 Z
+  lft: 154
+  rgt: 155
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+kings_tyre:
+  id: 79
+  parent_id: 2
+  position: 69
+  name: KINGS TYRE
+  permalink: marcas/kings-tyre
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:24:33.178730000 Z
+  updated_at: 2012-08-28 17:24:33.178730000 Z
+  lft: 156
+  rgt: 157
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+kleber:
+  id: 80
+  parent_id: 2
+  position: 70
+  name: KLEBER
+  permalink: marcas/kleber
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:24:42.510843000 Z
+  updated_at: 2012-08-28 17:24:42.510843000 Z
+  lft: 158
+  rgt: 159
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+kormoran:
+  id: 81
+  parent_id: 2
+  position: 71
+  name: KORMORAN
+  permalink: marcas/kormoran
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:24:52.030745000 Z
+  updated_at: 2012-08-28 17:24:52.030745000 Z
+  lft: 160
+  rgt: 161
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+landsail:
+  id: 82
+  parent_id: 2
+  position: 72
+  name: LANDSAIL
+  permalink: marcas/landsail
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:25:02.296985000 Z
+  updated_at: 2012-08-28 17:25:02.296985000 Z
+  lft: 162
+  rgt: 163
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+marshal:
+  id: 83
+  parent_id: 2
+  position: 73
+  name: MARSHAL
+  permalink: marcas/marshal
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:25:13.456829000 Z
+  updated_at: 2012-08-28 17:25:13.456829000 Z
+  lft: 164
+  rgt: 165
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+marshall:
+  id: 84
+  parent_id: 2
+  position: 74
+  name: MARSHALL
+  permalink: marcas/marshall
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:25:24.370377000 Z
+  updated_at: 2012-08-28 17:25:24.370377000 Z
+  lft: 166
+  rgt: 167
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+master_craft:
+  id: 85
+  parent_id: 2
+  position: 75
+  name: MASTER CRAFT
+  permalink: marcas/master-craft
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:25:34.943579000 Z
+  updated_at: 2012-08-28 17:25:34.943579000 Z
+  lft: 168
+  rgt: 169
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+mastersolid:
+  id: 86
+  parent_id: 2
+  position: 76
+  name: MASTERSOLID
+  permalink: marcas/mastersolid
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:25:45.118165000 Z
+  updated_at: 2012-08-28 17:25:45.118165000 Z
+  lft: 170
+  rgt: 171
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+matador:
+  id: 87
+  parent_id: 2
+  position: 77
+  name: MATADOR
+  permalink: marcas/matador
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:25:55.881713000 Z
+  updated_at: 2012-08-28 17:25:55.881713000 Z
+  lft: 172
+  rgt: 173
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+maxxis:
+  id: 88
+  parent_id: 2
+  position: 78
+  name: MAXXIS
+  permalink: marcas/maxxis
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:26:06.395252000 Z
+  updated_at: 2012-08-28 17:26:06.395252000 Z
+  lft: 174
+  rgt: 175
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+mercedes:
+  id: 89
+  parent_id: 2
+  position: 79
+  name: MERCEDES
+  permalink: marcas/mercedes
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:26:16.183898000 Z
+  updated_at: 2012-08-28 17:26:16.183898000 Z
+  lft: 176
+  rgt: 177
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+meteor:
+  id: 90
+  parent_id: 2
+  position: 80
+  name: METEOR
+  permalink: marcas/meteor
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:26:25.845981000 Z
+  updated_at: 2012-08-28 17:26:25.845981000 Z
+  lft: 178
+  rgt: 179
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+minerva:
+  id: 91
+  parent_id: 2
+  position: 81
+  name: MINERVA
+  permalink: marcas/minerva
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:26:35.592559000 Z
+  updated_at: 2012-08-28 17:26:35.592559000 Z
+  lft: 180
+  rgt: 181
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+nankang:
+  id: 92
+  parent_id: 2
+  position: 82
+  name: NANKANG
+  permalink: marcas/nankang
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:26:45.407417000 Z
+  updated_at: 2012-08-28 17:26:45.407417000 Z
+  lft: 182
+  rgt: 183
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+nexen:
+  id: 93
+  parent_id: 2
+  position: 83
+  name: NEXEN
+  permalink: marcas/nexen
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:27:00.397622000 Z
+  updated_at: 2012-08-28 17:27:00.397622000 Z
+  lft: 184
+  rgt: 185
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+nokian:
+  id: 94
+  parent_id: 2
+  position: 84
+  name: NOKIAN
+  permalink: marcas/nokian
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:27:10.029390000 Z
+  updated_at: 2012-08-28 17:27:10.029390000 Z
+  lft: 186
+  rgt: 187
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+orca:
+  id: 95
+  parent_id: 2
+  position: 85
+  name: ORCA
+  permalink: marcas/orca
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:27:19.557348000 Z
+  updated_at: 2012-08-28 17:27:19.557348000 Z
+  lft: 188
+  rgt: 189
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+pinso:
+  id: 96
+  parent_id: 2
+  position: 86
+  name: PINSO
+  permalink: marcas/pinso
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:27:29.952214000 Z
+  updated_at: 2012-08-28 17:27:29.952214000 Z
+  lft: 190
+  rgt: 191
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+portyre:
+  id: 97
+  parent_id: 2
+  position: 87
+  name: PORTYRE
+  permalink: marcas/portyre
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:27:40.881929000 Z
+  updated_at: 2012-08-28 17:27:40.881929000 Z
+  lft: 192
+  rgt: 193
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+riken:
+  id: 98
+  parent_id: 2
+  position: 88
+  name: RIKEN
+  permalink: marcas/riken
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:27:51.080465000 Z
+  updated_at: 2012-08-28 17:27:51.080465000 Z
+  lft: 194
+  rgt: 195
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+roadstone:
+  id: 99
+  parent_id: 2
+  position: 89
+  name: ROADSTONE
+  permalink: marcas/roadstone
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:28:01.353574000 Z
+  updated_at: 2012-08-28 17:28:01.353574000 Z
+  lft: 196
+  rgt: 197
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+rockstone:
+  id: 100
+  parent_id: 2
+  position: 90
+  name: ROCKSTONE
+  permalink: marcas/rockstone
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:28:12.500085000 Z
+  updated_at: 2012-08-28 17:28:12.500085000 Z
+  lft: 198
+  rgt: 199
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+rota:
+  id: 101
+  parent_id: 2
+  position: 91
+  name: ROTA
+  permalink: marcas/rota
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:28:21.475326000 Z
+  updated_at: 2012-08-28 17:28:21.475326000 Z
+  lft: 200
+  rgt: 201
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+sagitar:
+  id: 102
+  parent_id: 2
+  position: 92
+  name: SAGITAR
+  permalink: marcas/sagitar
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:28:32.756864000 Z
+  updated_at: 2012-08-28 17:28:32.756864000 Z
+  lft: 202
+  rgt: 203
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+sailun:
+  id: 103
+  parent_id: 2
+  position: 93
+  name: SAILUN
+  permalink: marcas/sailun
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:28:43.641303000 Z
+  updated_at: 2012-08-28 17:28:43.641303000 Z
+  lft: 204
+  rgt: 205
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+sava:
+  id: 104
+  parent_id: 2
+  position: 94
+  name: SAVA
+  permalink: marcas/sava
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:28:54.240332000 Z
+  updated_at: 2012-08-28 17:28:54.240332000 Z
+  lft: 206
+  rgt: 207
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+solideal:
+  id: 105
+  parent_id: 2
+  position: 95
+  name: SOLIDEAL
+  permalink: marcas/solideal
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:29:05.708835000 Z
+  updated_at: 2012-08-28 17:29:05.708835000 Z
+  lft: 208
+  rgt: 209
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+stunner:
+  id: 106
+  parent_id: 2
+  position: 96
+  name: STUNNER
+  permalink: marcas/stunner
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:29:19.761544000 Z
+  updated_at: 2012-08-28 17:29:19.761544000 Z
+  lft: 210
+  rgt: 211
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+sunny:
+  id: 107
+  parent_id: 2
+  position: 97
+  name: SUNNY
+  permalink: marcas/sunny
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:29:29.105653000 Z
+  updated_at: 2012-08-28 17:29:29.105653000 Z
+  lft: 212
+  rgt: 213
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+tokay:
+  id: 108
+  parent_id: 2
+  position: 98
+  name: TOKAY
+  permalink: marcas/tokay
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:29:39.891989000 Z
+  updated_at: 2012-08-28 17:29:39.891989000 Z
+  lft: 214
+  rgt: 215
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+toyo:
+  id: 109
+  parent_id: 2
+  position: 99
+  name: TOYO
+  permalink: marcas/toyo
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:29:48.530295000 Z
+  updated_at: 2012-08-28 17:29:48.530295000 Z
+  lft: 216
+  rgt: 217
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+tracmax:
+  id: 110
+  parent_id: 2
+  position: 100
+  name: TRACMAX
+  permalink: marcas/tracmax
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:29:58.618259000 Z
+  updated_at: 2012-08-28 17:29:58.618259000 Z
+  lft: 218
+  rgt: 219
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+traxter:
+  id: 111
+  parent_id: 2
+  position: 101
+  name: TRAXTER
+  permalink: marcas/traxter
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:30:09.011525000 Z
+  updated_at: 2012-08-28 17:30:09.011525000 Z
+  lft: 220
+  rgt: 221
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+trazano:
+  id: 112
+  parent_id: 2
+  position: 102
+  name: TRAZANO
+  permalink: marcas/trazano
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:30:19.114615000 Z
+  updated_at: 2012-08-28 17:30:19.114615000 Z
+  lft: 222
+  rgt: 223
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+trelleborg:
+  id: 113
+  parent_id: 2
+  position: 103
+  name: TRELLEBORG
+  permalink: marcas/trelleborg
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:30:29.531276000 Z
+  updated_at: 2012-08-28 17:30:29.531276000 Z
+  lft: 224
+  rgt: 225
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+triangle:
+  id: 114
+  parent_id: 2
+  position: 104
+  name: TRIANGLE
+  permalink: marcas/triangle
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:30:40.028381000 Z
+  updated_at: 2012-08-28 17:30:40.028381000 Z
+  lft: 226
+  rgt: 227
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+tyfoon:
+  id: 115
+  parent_id: 2
+  position: 105
+  name: TYFOON
+  permalink: marcas/tyfoon
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:30:50.604847000 Z
+  updated_at: 2012-08-28 17:30:50.604847000 Z
+  lft: 228
+  rgt: 229
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+vee_rubber:
+  id: 116
+  parent_id: 2
+  position: 106
+  name: VEE-RUBBER
+  permalink: marcas/vee-rubber
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:31:01.594364000 Z
+  updated_at: 2012-08-28 17:31:01.594364000 Z
+  lft: 230
+  rgt: 231
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+west_lake:
+  id: 117
+  parent_id: 2
+  position: 107
+  name: WEST LAKE
+  permalink: marcas/west-lake
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:31:11.109015000 Z
+  updated_at: 2012-08-28 17:31:11.109015000 Z
+  lft: 232
+  rgt: 233
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+westlake:
+  id: 118
+  parent_id: 2
+  position: 108
+  name: WESTLAKE
+  permalink: marcas/westlake
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:31:21.669167000 Z
+  updated_at: 2012-08-28 17:31:21.669167000 Z
+  lft: 234
+  rgt: 235
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description:
+
+jante:
+  id: 119
+  parent_id: 2
+  position: 109
+  name: JANTE
+  permalink: marcas/jante
+  taxonomy_id: 2
+  created_at: 2012-08-28 17:31:32.376792000 Z
+  updated_at: 2012-08-28 17:31:32.376792000 Z
+  lft: 236
+  rgt: 237
+  icon_file_name:
+  icon_content_type:
+  icon_file_size:
+  icon_updated_at:
+  description: 

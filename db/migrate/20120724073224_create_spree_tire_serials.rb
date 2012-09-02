@@ -5,9 +5,5 @@ class CreateSpreeTireSerials < ActiveRecord::Migration
 
       t.timestamps
     end
-    file = "#{Rails.root}/db/datas/rodaben-series.csv"
-    CSV.foreach(file, :col_sep =>';') do |row|
-      Spree::TireSerial.create(:name => row[0])
-    end
   end
 end

@@ -5,9 +5,5 @@ class CreateSpreeTireWidths < ActiveRecord::Migration
 
       t.timestamps
     end
-    file = "#{Rails.root}/db/datas/rodaben-anchos.csv"
-    CSV.foreach(file, :col_sep =>';') do |row|
-      Spree::TireWidth.create(:name => row[0])
-    end
   end
 end

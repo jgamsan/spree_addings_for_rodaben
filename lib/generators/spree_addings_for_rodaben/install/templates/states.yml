@@ -1,0 +1,311 @@
+id_1060500055:
+ id: 1060500055
+ name: Alava
+ abbr: VI
+ country_id: 188
+
+id_1060500056:
+ id: 1060500056
+ name: Albacete
+ abbr: AB
+ country_id: 188
+
+id_1060500057:
+ id: 1060500057
+ name: Alicante
+ abbr: AB
+ country_id: 188
+
+id_1060500058:
+ id: 1060500058
+ name: Almería
+ abbr: AL
+ country_id: 188
+
+id_1060500059:
+ id: 1060500059
+ name: Ávila
+ abbr: AV
+ country_id: 188
+
+id_1060500060:
+ id: 1060500060
+ name: Badajoz
+ abbr: BA
+ country_id: 188
+
+id_1060500061:
+ id: 1060500061
+ name: Baleares (Illes)
+ abbr: IB
+ country_id: 188
+
+id_1060500062:
+ id: 1060500062
+ name: Barcelona
+ abbr: B
+ country_id: 188
+
+id_1060500063:
+ id: 1060500063
+ name: Burgos
+ abbr: BU
+ country_id: 188
+
+id_1060500064:
+ id: 1060500064
+ name: Cáceres
+ abbr: CC
+ country_id: 188
+
+id_1060500065:
+ id: 1060500065
+ name: Cádiz
+ abbr: CA
+ country_id: 188
+
+id_1060500066:
+ id: 1060500066
+ name: Castellón
+ abbr: CS
+ country_id: 188
+
+id_1060500067:
+ id: 1060500067
+ name: Ciudad Real
+ abbr: CR
+ country_id: 188
+
+id_1060500068:
+ id: 1060500068
+ name: Córdoba
+ abbr: CO
+ country_id: 188
+
+id_1060500069:
+ id: 1060500069
+ name: A Coruña
+ abbr: C
+ country_id: 188
+
+id_1060500070:
+ id: 1060500070
+ name: Cuenca
+ abbr: CU
+ country_id: 188
+
+id_1060500071:
+ id: 1060500071
+ name: Girona
+ abbr: GI
+ country_id: 188
+
+id_1060500072:
+ id: 1060500072
+ name: Granada
+ abbr: GR
+ country_id: 188
+
+id_1060500073:
+ id: 1060500073
+ name: Guadalajara
+ abbr: GU
+ country_id: 188
+
+id_1060500074:
+ id: 1060500074
+ name: Guipúzcoa
+ abbr: SS
+ country_id: 188
+
+id_1060500075:
+ id: 1060500075
+ name: Huelva
+ abbr: H
+ country_id: 188
+
+id_1060500076:
+ id: 1060500076
+ name: Huesca
+ abbr: HU
+ country_id: 188
+
+id_1060500077:
+ id: 1060500077
+ name: Jaén
+ abbr: J
+ country_id: 188
+
+id_1060500078:
+ id: 1060500078
+ name: León
+ abbr: LE
+ country_id: 188
+
+id_1060500079:
+ id: 1060500079
+ name: Lleida
+ abbr: L
+ country_id: 188
+
+id_1060500080:
+ id: 1060500080
+ name: La Rioja
+ abbr: LO
+ country_id: 188
+
+id_1060500081:
+ id: 1060500081
+ name: Lugo
+ abbr: LU
+ country_id: 188
+
+id_1060500082:
+ id: 1060500082
+ name: Madrid
+ abbr: M
+ country_id: 188
+
+id_1060500083:
+ id: 1060500083
+ name: Málaga
+ abbr: MA
+ country_id: 188
+
+id_1060500084:
+ id: 1060500084
+ name: Murcia
+ abbr: MU
+ country_id: 188
+
+id_1060500085:
+ id: 1060500085
+ name: Navarra
+ abbr: NA
+ country_id: 188
+
+id_1060500086:
+ id: 1060500086
+ name: Ourense
+ abbr: OU
+ country_id: 188
+
+id_1060500087:
+ id: 1060500087
+ name: Asturias
+ abbr: O
+ country_id: 188
+
+id_1060500088:
+ id: 1060500088
+ name: Palencia
+ abbr: P
+ country_id: 188
+
+id_1060500089:
+ id: 1060500089
+ name: Las Palmas
+ abbr: GC
+ country_id: 188
+
+id_1060500090:
+ id: 1060500090
+ name: Pontevedra
+ abbr: PO
+ country_id: 188
+
+id_1060500091:
+ id: 1060500091
+ name: Salamanca
+ abbr: SA
+ country_id: 188
+
+id_1060500092:
+ id: 1060500092
+ name: Santa Cruz de Tenerife
+ abbr: TF
+ country_id: 188
+
+id_1060500093:
+ id: 1060500093
+ name: Cantabria
+ abbr: S
+ country_id: 188
+
+id_1060500094:
+ id: 1060500094
+ name: Segovia
+ abbr: SG
+ country_id: 188
+
+id_1060500095:
+ id: 1060500095
+ name: Sevilla
+ abbr: SE
+ country_id: 188
+
+id_1060500096:
+ id: 1060500096
+ name: Soria
+ abbr: SO
+ country_id: 188
+
+id_1060500097:
+ id: 1060500097
+ name: Tarragona
+ abbr: T
+ country_id: 188
+
+id_1060500098:
+ id: 1060500098
+ name: Teruel
+ abbr: TE
+ country_id: 188
+
+id_1060500099:
+ id: 1060500099
+ name: Toledo
+ abbr: TO
+ country_id: 188
+
+id_1060500100:
+ id: 1060500100
+ name: Valencia
+ abbr: V
+ country_id: 188
+
+id_1060500101:
+ id: 1060500101
+ name: Valladolid
+ abbr: VA
+ country_id: 188
+
+id_1060500102:
+ id: 1060500102
+ name: Vizcaya
+ abbr: BI
+ country_id: 188
+
+id_1060500103:
+ id: 1060500103
+ name: Zamora
+ abbr: ZA
+ country_id: 188
+
+id_1060500104:
+ id: 1060500104
+ name: Zaragoza
+ abbr: Z
+ country_id: 188
+
+id_1060500105:
+ id: 1060500105
+ name: Ceuta
+ abbr: CE
+ country_id: 188
+
+id_1060500106:
+ id: 1060500106
+ name: Melilla
+ abbr: ML
+ country_id: 188

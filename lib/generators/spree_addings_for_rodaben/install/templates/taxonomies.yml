@@ -1,0 +1,12 @@
+---
+Categorias:
+  id: 1
+  name: Categorias
+  created_at: 2012-08-28 17:07:00.033307000 Z
+  updated_at: 2012-08-28 17:07:00.033307000 Z
+
+Marcas:
+  id: 2
+  name: Marcas
+  created_at: 2012-08-28 17:07:15.814924000 Z
+  updated_at: 2012-08-28 17:07:15.814924000 Z

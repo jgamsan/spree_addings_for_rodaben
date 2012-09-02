@@ -5,9 +5,5 @@ class CreateSpreeTireInnertubes < ActiveRecord::Migration
 
       t.timestamps
     end
-    file = "#{Rails.root}/db/datas/rodaben-llantas.csv"
-    CSV.foreach(file, :col_sep =>',') do |row|
-      Spree::TireInnertube.create(:name => row[0])
-    end 
   end
 end

@@ -5,9 +5,5 @@ class CreateSpreeTireSpeedCodes < ActiveRecord::Migration
 
       t.timestamps
     end
-    file = "#{Rails.root}/db/datas/rodaben-ivel.csv"
-    CSV.foreach(file, :col_sep =>';') do |row|
-      Spree::TireSpeedCode.create(:name => row[0])
-    end 
   end
 end

@@ -11,18 +11,19 @@ module SpreeAddingsForRodaben
         inject_into_file 'app/assets/stylesheets/store/all.css', " *= require store/spree_addings_for_rodaben\n", :before => /\*\//, :verbose => true
         inject_into_file 'app/assets/stylesheets/admin/all.css', " *= require admin/spree_addings_for_rodaben\n", :before => /\*\//, :verbose => true
       end
-      
+
       def add_datas
-        run 'mkdir db/datas' unless Dir.exist?('db/datas')
-        copy_file "rodaben-anchos.csv", "db/datas/rodaben-anchos.csv"
-        copy_file "rodaben-llantas.csv", "db/datas/rodaben-llantas.csv"
-        copy_file "rodaben-series.csv", "db/datas/rodaben-series.csv"
-        copy_file "rodaben-ivel.csv", "db/datas/rodaben-ivel.csv"
-        copy_file "rodaben-marcas.csv", "db/datas/rodaben-marcas.csv"
-        copy_file "rodaben-taxons.csv", "db/datas/rodaben-taxons.csv"
-        copy_file "rodaben-taxonomies.csv", "db/datas/rodaben-taxonomies.csv"
+        run 'mkdir db/default' unless Dir.exist?('db/default')
+        copy_file "tire_widths.yml", "db/default/tire_widths.yml"
+        copy_file "tire_innertubes.yml", "db/default/tire_innertubes.yml"
+        copy_file "tire_serials.yml", "db/default/tire_serials.yml"
+        copy_file "tire_speed_codes.yml", "db/default/tire_speed_codes.yml"
+        copy_file "states.yml", "db/default/states.yml"
+        copy_file "taxons.yml", "db/default/taxons.yml"
+        copy_file "suppliers.yml", "db/default/suppliers.yml"
+        copy_file "taxonomies.yml", "db/default/taxonomies.yml"
       end
-      
+
       def add_migrations
         run 'bundle exec rake railties:install:migrations FROM=spree_addings_for_rodaben'
       end
