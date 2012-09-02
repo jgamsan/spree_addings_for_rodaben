@@ -8,14 +8,14 @@ module Spree
       mail(:subject => "Enviando archivo con Items eliminados por Focal")
     end
 
-    def report_notification(readed, updated, deleted, created)
-      file = "listado-neumaticos-no-incorporados.csv"
-      attachments[file] = File.read("#{Rails.root}/vendor/products/" + file)
+    def report_notification(readed, updated, deleted, created, directory, file, company)
+      attachments[file] = File.read(File.join(directory, file))
       @readed = readed
       @updated = updated
       @deleted = deleted
       @created = created
-      mail(:subject => "Enviando Informe con las estadisticas de la actualizacion")
+      @company = company
+      mail(:subject => "Enviando Informe con las estadisticas de la actualizacion de la Empresa #{company}")
     end
 
     def report_deleted_items(deleted, category)
@@ -28,7 +28,7 @@ module Spree
     @order = order
     @line_items = line_items
     subject = (resend ? "[#{t(:resend).upcase}] " : '')
-    subject += "Prueba de envio de Orden a la Compañia ##{order.line_item.variant.product.supplier.title.first} ##{order.number}"
+    subject += "Prueba de envio de Orden a la Compañia #{order.line_item.variant.product.supplier.title.first} #{order.number}"
     mail(:to => "miguel.gamazo@galiclick.com",
          :subject => subject)
     #mail(:to => ["miguel.gamazo@galiclick.com", "juan.tato@galiclick.com", "rodaben71@gmail.com"],
