@@ -4,13 +4,13 @@ Deface::Override.new(:virtual_path => %q{spree/shared/_products},
                      :text => %q{
       <% if (product.price - product.price_in_offert) < 0 %>
         <span class="price selling" style="color:red">
-          <%= number_to_currency product.price %></span>
+          <%= product.display_price %></span>
           <span class="price selling" itemprop="price" style="text-decoration: line-through;">
-          <%= number_to_currency product.price_in_offert %>
+          <%= product.display_price_in_offert %>
       <% else %>
 
           <span class="price selling" itemprop="price">
-            <%= number_to_currency product.price %>
+            <%= product.display_price %>
           </span>
 
       <% end %>})
