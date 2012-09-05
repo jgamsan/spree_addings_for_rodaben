@@ -1,8 +1,8 @@
 Spree::Variant.class_eval do
-  has_one :tire_width, :class_name => "Spree::TireWidth"
-  has_one :tire_serial, :class_name => "Spree::TireSerial"
-  has_one :tire_innertube, :class_name => "Spree::TireInnertube"
-  has_one :tire_speed_code, :class_name => "Spree::TireSpeedCode"
+  belongs_to :tire_width, :class_name => "Spree::TireWidth"
+  belongs_to :tire_serial, :class_name => "Spree::TireSerial"
+  belongs_to :tire_innertube, :class_name => "Spree::TireInnertube"
+  belongs_to :tire_speed_code, :class_name => "Spree::TireSpeedCode"
 
   attr_accessible :count_on_hand, :cost_price, :price, :price_in_offert
 
