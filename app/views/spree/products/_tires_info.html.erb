@@ -5,19 +5,19 @@
         css_class = cycle('even', 'odd') %>
         <tr class="<%= css_class %>">
           <td><strong>Ancho</strong></td>
-          <td><%= variant.tire_width.name %></td>
+          <td><%= variant.tire_width.name rescue t(:product_has_no_width) %></td>
         </tr>
         <tr class="<%= css_class %>">
           <td><strong>Perfil</strong></td>
-          <td><%= variant.tire_serial.name %></td>
+          <td><%= variant.tire_serial.name rescue t(:product_has_no_serial) %></td>
         </tr>
         <tr class="<%= css_class %>">
           <td><strong>Llanta</strong></td>
-          <td><%= variant.tire_innertube.name %></td>
+          <td><%= variant.tire_innertube.name rescue t(:product_has_no_innertube)%></td>
         </tr>
         <tr class="<%= css_class %>">
           <td><strong>Codigo Velocidad</strong></td>
-          <td><%= variant.tire_speed_code.name %></td>
+          <td><%= variant.tire_speed_code.name rescue t(:product_has_no_speed_code)%></td>
         </tr>
       <% end %>
     </tbody>
