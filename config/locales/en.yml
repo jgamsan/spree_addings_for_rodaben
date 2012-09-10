@@ -3,3 +3,4 @@
 
 en:
   hello: "Hello world"
+  product_has_no_width: "Product has no width"
