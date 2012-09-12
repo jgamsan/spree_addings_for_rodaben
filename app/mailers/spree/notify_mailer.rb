@@ -29,11 +29,11 @@ module Spree
     @line_items = line_items
     subject = (resend ? "[#{t(:resend).upcase}] " : '')
     subject += "Prueba de envio de Orden a la Compañia #{@line_items.first.variant.product.supplier.title}"
-    subject += "#{@order.number}"
-    mail(:to => "miguel.gamazo@galiclick.com",
-         :subject => subject)
-    #mail(:to => ["miguel.gamazo@galiclick.com", "juan.tato@galiclick.com", "rodaben71@gmail.com"],
+    subject += " Pedido N° #{@order.number}"
+    #mail(:to => "miguel.gamazo@galiclick.com",
     #     :subject => subject)
+    mail(:to => ["miguel.gamazo@galiclick.com", "juan.tato@galiclick.com", "rodaben71@gmail.com"],
+         :subject => subject)
   end
   end
 end
