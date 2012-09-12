@@ -32,3 +32,11 @@ es:
   product_has_no_serial: "Este Producto no tiene Perfil"
   product_has_no_innertube: "Este Producto no tiene Llanta"
   product_has_no_speed_code: "Este Producto no tiene Codigo Velocidad"
+  order_mailer:
+    confirm_email:
+      dear_customer: "Estimado Cliente"
+      instructions: "Le remito los datos de facturacion del pedido realizado en Neumaticosdecoche.com"
+      order_summary: "Resumen del pedido"
+      subtotal: "Subtotal"
+      total: "Total"
+      thanks: "Gracias por confiar en Neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo "
