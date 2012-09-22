@@ -18,10 +18,10 @@ Spree::Variant.class_eval do
   ]
 
   def existe_tire?(name, width, serial, innertube, speed_code)
-    ancho = Spree::TireWidth.find_by_name(width) unless width.nil?
-    serial = Spree::TireSerial.find_by_name(serial) unless serial.nil?
-    llanta = Spree.TireInnertube.find_by_name(innertube) unless innertube.nil?
-    vel = Spree::TireSpeedCode.find_by_name(speed_code) unless speed_code.nil?
+    ancho = Spree::TireWidth.find_by_name(width) unless width.empty?
+    serial = Spree::TireSerial.find_by_name(serial) unless serial.empty?
+    llanta = Spree.TireInnertube.find_by_name(innertube) unless innertube.empty?
+    vel = Spree::TireSpeedCode.find_by_name(speed_code) unless speed_code.empty?
 
     base = "Select * from spree_variants where name = #{name}"
     base << " and tire_width_id = #{ancho}" unless ancho.nil?
