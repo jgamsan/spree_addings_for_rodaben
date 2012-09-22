@@ -27,7 +27,7 @@ Spree::Variant.class_eval do
     vel = Spree::TireSpeedCode.find_by_name(speed_code) unless speed_code.nil?
     vel_1 = vel.id unless vel.nil?
     nombre = name.to_s
-    base = "Select * from spree_products as a, spree_variants as b where a.name = #{'nombre'} and b.product_id = a.id"
+    base = "Select * from spree_products as a, spree_variants as b where a.name = '#{nombre}' and b.product_id = a.id"
     base << " and b.tire_width_id = #{ancho_1}" unless ancho_1.nil?
     base << " and b.tire_serial_id = #{serial_1}" unless serial_1.nil?
     base << " and b.tire_innertube_id = #{llanta_1}" unless llanta_1.nil?
