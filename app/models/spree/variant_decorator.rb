@@ -17,7 +17,7 @@ Spree::Variant.class_eval do
   ["RU", 3]
   ]
 
-  def existe_tire?(name, width, serial, innertube, speed_code)
+  def self.existe_tire?(name, width, serial, innertube, speed_code)
     ancho = Spree::TireWidth.find_by_name(width) unless width.empty?
     serial = Spree::TireSerial.find_by_name(serial) unless serial.empty?
     llanta = Spree.TireInnertube.find_by_name(innertube) unless innertube.empty?
