@@ -18,16 +18,20 @@ Spree::Variant.class_eval do
   ]
 
   def self.existe_tire?(name, width, serial, innertube, speed_code)
-    ancho = Spree::TireWidth.find_by_name(width).id unless width.empty?
-    serial = Spree::TireSerial.find_by_name(serial).id unless serial.empty?
-    llanta = Spree::TireInnertube.find_by_name(innertube).id unless innertube.empty?
-    vel = Spree::TireSpeedCode.find_by_name(speed_code).id unless speed_code.empty?
-
-    base = "Select * from spree_variants where name = #{name}"
-    base << " and tire_width_id = #{ancho}" unless ancho.nil?
-    base << " and tire_serial_id = #{serial}" unless serial.nil?
-    base << " and tire_innertube_id = #{llanta}" unless llanta.nil?
-    base << " and tire_speed_code_id = #{vel}" unless vel.nil?
+    ancho = Spree::TireWidth.find_by_name(width)
+    ancho_1 = ancho.id unless width.empty?
+    serial = Spree::TireSerial.find_by_name(serial)
+    serial_1 = serial.id unless serial.empty?
+    llanta = Spree::TireInnertube.find_by_name(innertube)
+    llanta_1 = llanta.id unless innertube.empty?
+    vel = Spree::TireSpeedCode.find_by_name(speed_code)
+    vel_1 = vel.id unless speed_code.empty?
+    nombre = name.to_s
+    base = "Select * from spree_variants where name = #{nombre}"
+    base << " and tire_width_id = #{ancho_1}" unless ancho_1.nil?
+    base << " and tire_serial_id = #{serial_1}" unless serial_1.nil?
+    base << " and tire_innertube_id = #{llanta_1}" unless llanta_1.nil?
+    base << " and tire_speed_code_id = #{vel_1}" unless vel_1.nil?
     base << ";"
 
     item = Spree::Variant.find_by_sql(base)
