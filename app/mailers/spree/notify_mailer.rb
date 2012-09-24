@@ -1,7 +1,8 @@
 # encoding: UTF-8
 module Spree
   class NotifyMailer < ActionMailer::Base
-    default :to => ["miguel.gamazo@galiclick.com", "juan.tato@galiclick.com", "rodaben71@gmail.com"]
+    #default :to => ["miguel.gamazo@galiclick.com", "juan.tato@galiclick.com", "rodaben71@gmail.com"]
+    default :to => "info@neumaticosdecoche.com"
 
     def file_notification(file)
       attachments[file] = File.read("#{Rails.root}/public/images/uploads/" + file)
