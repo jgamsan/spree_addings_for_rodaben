@@ -7,7 +7,7 @@ Datos del Pedido
 ============================================================
 <% total = 0 -%>
 <% @line_items.each do |item| %>
-  <%= item.variant.sku %> <%= raw(item.variant.product.name) %> <%= raw(item.variant.tire_width.name) -%>/<%= raw(item.variant.tire_serial.name) -%>/<%= raw(item.variant.tire_innertube.name) -%>/<%= raw(item.variant.tire_speed_code.name) -%> (<%=item.quantity%>)  <%= number_to_currency item.variant.cost_price %> = <%= number_to_currency(item.variant.cost_price * item.quantity) %> <% total += item.variant.cost_price * item.quantity %>
+  <%= item.variant.sku %> <%= raw(item.variant.product.name) %> <%= raw(item.variant.tire_width.name) unless item.variant.tire_width_id.nil? -%>/<%= raw(item.variant.tire_serial.name) unless item.variant.tire_serial_id.nil? -%>/<%= raw(item.variant.tire_innertube.name) unless item.variant.tire_innertube_id.nil? -%>/<%= raw(item.variant.tire_speed_code.name) unless item.variant.tire_speed_code_id.nil? -%> (<%=item.quantity%>)  <%= number_to_currency item.variant.cost_price %> = <%= number_to_currency(item.variant.cost_price * item.quantity) %> <% total += item.variant.cost_price * item.quantity %>
 <% end %>
 ============================================================
 Subtotal: <%= number_to_currency total %>
