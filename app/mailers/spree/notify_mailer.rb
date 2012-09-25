@@ -1,7 +1,6 @@
 # encoding: UTF-8
 module Spree
   class NotifyMailer < ActionMailer::Base
-    #default :to => ["miguel.gamazo@galiclick.com", "juan.tato@galiclick.com", "rodaben71@gmail.com"]
     default :to => "info@neumaticosdecoche.com"
 
     def file_notification(file)
@@ -29,11 +28,9 @@ module Spree
     @order = order
     @line_items = line_items
     subject = (resend ? "[#{t(:resend).upcase}] " : '')
-    subject += "Prueba de envio de Orden a la Compañia #{@line_items.first.variant.product.supplier.title}"
+    subject += "Solicitud de envio de Pedido a la Compañia #{@line_items.first.variant.product.supplier.title}"
     subject += " Pedido N° #{@order.number}"
-    #mail(:to => "miguel.gamazo@galiclick.com",
-    #     :subject => subject)
-    mail(:to => ["miguel.gamazo@galiclick.com", "juan.tato@galiclick.com", "rodaben71@gmail.com"],
+    mail(:to => @line_items.first.variant.product.supplier.email,
          :subject => subject)
   end
   end
