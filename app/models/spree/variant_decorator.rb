@@ -43,13 +43,13 @@ Spree::Variant.class_eval do
   end
 
   def self.search_tire(name, width, serial, innertube, speed_code)
-    ancho = Spree::TireWidth.find_by_name(width) unless width.nil?
+    ancho = Spree::TireWidth.find_by_name(width) unless width.blank?
     ancho_1 = ancho.id unless ancho.nil?
-    serial = Spree::TireSerial.find_by_name(serial) unless serial.nil?
+    serial = Spree::TireSerial.find_by_name(serial) unless serial.blank?
     serial_1 = serial.id unless serial.nil?
-    llanta = Spree::TireInnertube.find_by_name(innertube) unless innertube.nil?
+    llanta = Spree::TireInnertube.find_by_name(innertube) unless innertube.blank?
     llanta_1 = llanta.id unless llanta.nil?
-    vel = Spree::TireSpeedCode.find_by_name(speed_code) unless speed_code.nil?
+    vel = Spree::TireSpeedCode.find_by_name(speed_code) unless speed_code.blank?
     vel_1 = vel.id unless vel.nil?
     nombre = name.to_s
     base = "Select * from spree_products as a, spree_variants as b where a.name = '#{nombre}' and b.product_id = a.id"
