@@ -36,9 +36,9 @@ Spree::Variant.class_eval do
 
     item = Spree::Variant.find_by_sql(base)
     if item.nil?
-      false
+      return false
     else
-      true
+      return true
     end
   end
 
