@@ -6,5 +6,4 @@ Deface::Override.new(:virtual_path => "spree/shared/_nav_bar",
     <%= form_tag products_path, :method => :get do -%>
       <%= render :partial => 'spree/shared/search_tires' %>
       <%= submit_tag t(:search), :name => nil %>
-<% end -%>
-</li>})
+<% end -%>})
