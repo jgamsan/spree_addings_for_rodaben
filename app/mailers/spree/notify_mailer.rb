@@ -24,6 +24,12 @@ module Spree
       mail(:subject => "Enviando Informe de Items Borrados en Articulos")
     end
 
+    def report_deleted_tires(gane, eurotyre)
+      @gane = gane
+      @eurotyre = eurotyre
+      mail(:subject => "Enviando Informe con las estadisticas de los productos borrados en Neumaticosdecoche.com")
+    end
+
     def send_email_to_provider(order, line_items, resend = false)
     @order = order
     @line_items = line_items
