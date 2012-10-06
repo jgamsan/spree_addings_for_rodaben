@@ -1,5 +1,6 @@
 Spree::Order.class_eval do
-
+  attr_accessor :workshop
+  attr_accessible :workshop
   def finalize!
       touch :completed_at
       Spree::InventoryUnit.assign_opening_inventory(self)
