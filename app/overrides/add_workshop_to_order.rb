@@ -1,4 +1,4 @@
-Deface::Override.new(:virtual_path => %q{spree/payment/_address},
+Deface::Override.new(:virtual_path => %q{spree/checkout/_address},
                      :name => %q{add_workshop_to_order},
                      :insert_before => %q{p#scity},
                      :text => %q{
