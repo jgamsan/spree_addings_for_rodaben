@@ -1,0 +1,21 @@
+<fieldset id='workshop_options' data-hook>
+  <legend><%= t(:workshop_options) %></legend>
+  <div class="inner" data-hook="workshop_options_inner">
+    <div id="options">
+      <p class="field radios">
+        <% Spree::Workshop.all.each do |workshop| %>
+          <label>
+            <%= radio_button(:order, :workshop, workshop[:id]) %>
+            <%= workshop.name %> <%#= workshop.display_price %>
+          </label>
+        <% end %>
+      </p>
+    </div>
+  </div>
+</fieldset>
+
+<br />
+
+<div class="form-buttons" data-hook="buttons">
+  <%= submit_tag t(:save_and_continue), :class => 'continue button primary' %>
+</div>
