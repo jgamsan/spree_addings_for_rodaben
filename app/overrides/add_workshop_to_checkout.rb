@@ -7,4 +7,4 @@ Deface::Override.new(:virtual_path => "spree/shared/_order_details",
     <div class="address">
       <%= order.workshop %>
     </div>
-  </div>
+  </div>})
