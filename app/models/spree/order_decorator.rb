@@ -1,5 +1,8 @@
 Spree::Order.class_eval do
 
+  attr_accessor :workshop
+  attr_accessible :workshop
+
   checkout_flow do
     go_to_state :address
     go_to_state :delivery
@@ -10,8 +13,7 @@ Spree::Order.class_eval do
     remove_transition :from => :delivery, :to => :confirm
   end
 
-  attr_accessor :workshop
-  attr_accessible :workshop
+
   def finalize!
       touch :completed_at
       Spree::InventoryUnit.assign_opening_inventory(self)
