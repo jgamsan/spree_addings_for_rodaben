@@ -1,19 +1,19 @@
 <ul id="shipping_specs">
   <li>
     <%= f.label :tire_speed_code_id, t(:speed_code) %>
-    <%= f.collection_select(:tire_speed_code_id, Spree::TireSpeedCode.all, :id, :name, { :include_blank => true }, { 'style' => 'width:50px' }) %>
+    <%= f.collection_select(:tire_speed_code_id, Spree::TireSpeedCode.order('name'), :id, :name, { :include_blank => true }, { 'style' => 'width:50px' }) %>
   </li>
   <li>
     <%= f.label :tire_width_id, t(:width) %>
-    <%= f.collection_select(:tire_width_id, Spree::TireWidth.all, :id, :name, { :include_blank => true }, { 'style' => 'width:60px' }) %>
+    <%= f.collection_select(:tire_width_id, Spree::TireWidth.order('name'), :id, :name, { :include_blank => true }, { 'style' => 'width:60px' }) %>
   </li>
   <li>
     <%= f.label :tire_serial_id, t(:serial) %>
-    <%= f.collection_select(:tire_serial_id, Spree::TireSerial.all, :id, :name, { :include_blank => true }, { 'style' => 'width:60px' }) %>
+    <%= f.collection_select(:tire_serial_id, Spree::TireSerial.order('name'), :id, :name, { :include_blank => true }, { 'style' => 'width:60px' }) %>
   </li>
   <li>
     <%= f.label :tire_innertube_id, t(:innertube) %>
-    <%= f.collection_select(:tire_innertube_id, Spree::TireInnertube.all, :id, :name, { :include_blank => true }, { 'style' => 'width:60px' }) %>
+    <%= f.collection_select(:tire_innertube_id, Spree::TireInnertube.order('name'), :id, :name, { :include_blank => true }, { 'style' => 'width:60px' }) %>
   </li>
  </ul>
  <ul id="shipping_specs">
