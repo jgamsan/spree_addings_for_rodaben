@@ -1,4 +1,4 @@
-Deface::Override.new(:virtual_path => "spree/shared/_order_details",
+Deface::Override.new(:virtual_path => "spree/checkout/_delivery",
                       :name => "add_workshop_to_checkout",
                       :insert_after => "</fieldset>",
                       :text => %q{
