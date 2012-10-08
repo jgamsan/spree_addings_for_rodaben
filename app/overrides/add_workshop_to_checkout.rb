@@ -1,10 +1,20 @@
 Deface::Override.new(:virtual_path => "spree/shared/_order_details",
                       :name => "add_workshop_to_checkout",
-                      :insert_before => "code[erb-loud]:contains('if @order.has_step?('delivery')')",
+                      :insert_after => "</fieldset>",
                       :text => %q{
-    <div class="columns alpha four">
-    <h6><%= t(:workshop) %> <%= link_to "(#{t(:edit)})", checkout_state_path(:workshop) unless @order.completed? %></h6>
-    <div class="address">
-      <%= order.workshop %>
+    <fieldset id='workshop_options' data-hook>
+  <legend><%= t(:workshop_options) %></legend>
+  <div class="inner" data-hook="workshop_options_inner">
+    <div id="options">
+      <p class="field radios">
+        <% Spree::Workshop.all.each do |workshop| %>
+          <label>
+            <%= radio_button(:order, :workshop, workshop[:id]) %>
+            <%= workshop.name %> <%#= workshop.display_price %>
+          </label>
+        <% end %>
+      </p>
     </div>
-  </div>})
+  </div>
+</fieldset>
+    })
