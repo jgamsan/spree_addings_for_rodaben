@@ -13,3 +13,18 @@ ul#products li .price {
   font-size: 16px;
   display: inline;
 }
+
+#workshop_options {
+    margin-top: 10px;
+    border: 1px solid lighten($body_text_color, 60);
+    padding: 10px;
+
+    legend {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: $base_font_size + 2;
+      color: $link_text_color;
+      padding: 5px;
+      margin-left: 15px;
+    }
+  }
