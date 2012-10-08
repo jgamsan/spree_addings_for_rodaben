@@ -1,6 +1,7 @@
 Spree::Order.class_eval do
 
   attr_accessible :workshop_id
+  belongs_to :workshop
 
   def finalize!
       touch :completed_at
