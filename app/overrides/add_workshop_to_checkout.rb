@@ -8,7 +8,7 @@ Deface::Override.new(:virtual_path => "spree/checkout/_delivery",
     <div id="options">
       <p class="field radios">
         <label>
-        <%= radio_button(:order, "workshop", 0) %>
+        <%= radio_button(:order, "workshop", nil) %>
         No enviar a Taller
         </label>
         <% Spree::Workshop.all.each do |workshop| %>
