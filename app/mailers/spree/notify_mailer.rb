@@ -38,6 +38,16 @@ module Spree
     subject += " Pedido N° #{@order.number}"
     mail(:to => @line_items.first.variant.product.supplier.email,
          :subject => subject)
-  end
+    end
+
+    def send_email_to_workshop(order, line_items)
+      @order = order
+      @line_items = line_items
+      subject = "Notificacion de recepcion de Pedido de Neumaticos para instalacion"
+      subject += " Pedido N° #{@order.number}"
+      mail(:to => @order.workshop.email,
+         :subject => subject)
+    end
+
   end
 end
