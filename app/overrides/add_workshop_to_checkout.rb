@@ -1,6 +1,6 @@
 Deface::Override.new(:virtual_path => "spree/checkout/_delivery",
                       :name => "add_workshop_to_checkout",
-                      :insert_bottom => "fieldset#shipping_method",
+                      :insert_after => "fieldset#shipping_method",
                       :text => %q{
     <fieldset id='workshop_options' data-hook>
   <legend><%= t(:workshop_options) %></legend>
