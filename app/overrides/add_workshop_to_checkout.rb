@@ -7,8 +7,10 @@ Deface::Override.new(:virtual_path => "spree/checkout/_delivery",
   <div class="inner" data-hook="workshop_options_inner">
     <div id="options">
       <p class="field radios">
+        <label>
         <%= radio_button(:order, "workshop", 99999) %>
         No enviar a Taller <%#= workshop.display_price %>
+        </label>
         <% Spree::Workshop.all.each do |workshop| %>
           <label>
             <%= radio_button(:order, :workshop, workshop[:id]) %>
