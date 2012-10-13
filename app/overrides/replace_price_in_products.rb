@@ -17,6 +17,7 @@ Deface::Override.new(:virtual_path => %q{spree/shared/_products},
 
 Deface::Override.new(:virtual_path => %q{spree/shared/_products},
                      :name => %q{add_tires_info_in_products},
-                     :insert_before => %q{span.price},
+                     :replace => "code[erb-loud]:contains('link_to truncate')",
                      :text => %q{
+     <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
      <br> <%= product.calculate_tires(product.id) %>})
