@@ -1,6 +1,6 @@
 Deface::Override.new(:virtual_path => %q{spree/shared/_products},
                      :name => %q{add_tires_info_in_products},
-                     :replace => "ul#products",
+                     :replace => "#products",
                      :text => %q{
    <ul id="products" class="inline product-listing" data-hook>
   <% reset_cycle('default') %>
