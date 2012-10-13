@@ -17,6 +17,6 @@ Deface::Override.new(:virtual_path => %q{spree/shared/_products},
 
 Deface::Override.new(:virtual_path => %q{spree/shared/_products},
                      :name => %q{add_tires_info_in_products},
-                     :insert_after => %q{span.price},
+                     :insert_before => %q{span.price},
                      :text => %q{
      <br> <%= product.calculate_tires(product.id) %>})
