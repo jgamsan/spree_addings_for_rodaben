@@ -3,7 +3,7 @@ Deface::Override.new(:virtual_path => %q{spree/shared/_products},
                      :replace => %q{span.price},
                      :text => %q{
       <br>
-      <%= product.calculate_tires(product.id) %
+      <%= product.calculate_tires(product.id) %>
       <% if (product.price - product.price_in_offert) < 0 %>
         <span class="price selling" style="color:red">
           <%= product.display_price %></span>
