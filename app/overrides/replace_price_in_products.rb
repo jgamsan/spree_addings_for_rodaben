@@ -10,7 +10,7 @@ Deface::Override.new(:virtual_path => %q{spree/shared/_products},
         <div class="product-image">
           <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
         </div>
-        <%= link_to (truncate(product.name, :length => 50) <br> product.calculate_tires(product.id)), product, :class => 'info', :itemprop => "name", :title => product.name %>
+        <%= link_to (truncate(product.name, :length => 50) product.calculate_tires(product.id)), product, :class => 'info', :itemprop => "name", :title => product.name %>
         <% if (product.price - product.price_in_offert) < 0 %>
         <span class="price selling" style="color:red">
           <%= product.display_price %></span>
