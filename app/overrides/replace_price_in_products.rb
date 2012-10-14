@@ -7,10 +7,11 @@ Deface::Override.new(:virtual_path => %q{spree/shared/_products},
   <% products.each do |product| %>
     <% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
       <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+        <%= product.calculate_tires(product.id) %>
         <div class="product-image">
           <%= link_to small_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
         </div>
-        <%= link_to (truncate(product.name, :length => 50) product.calculate_tires(product.id)), product, :class => 'info', :itemprop => "name", :title => product.name %>
+        <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
         <% if (product.price - product.price_in_offert) < 0 %>
         <span class="price selling" style="color:red">
           <%= product.display_price %></span>
