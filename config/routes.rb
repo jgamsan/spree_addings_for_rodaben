@@ -1,5 +1,7 @@
 Spree::Core::Engine.routes.draw do
-  get "about/index"
+  resources :about,
+    :controller => 'about',
+    :only       => [:index]
 
   namespace :admin do
     resources :tire_settings, :only => :index
