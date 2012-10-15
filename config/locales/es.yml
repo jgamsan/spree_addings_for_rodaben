@@ -1,5 +1,4 @@
 es:
-  about: "Nuestra Empresa"
   speed_code: "C. Velocidad"
   width: "Ancho"
   widths: "Gestion de Anchos"
@@ -45,3 +44,5 @@ es:
       thanks: "Gracias por confiar en Neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo "
   checkout_steps:
     workshop: "Taller"
+  spree:
+    about: "Nuestra Empresa"
