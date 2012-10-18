@@ -62,4 +62,18 @@ Spree::Variant.class_eval do
     item = Spree::Variant.find_by_sql(base)
   end
 
+  def self.existe_moto_tire(codigo)
+    existe = Spree::Variant.find_by_sku(codigo)
+    if existe.nil?
+      false
+    else
+      true
+    end
+  end
+
+  def self.search_moto_tire(codigo)
+    variante = Spree::Variant.find_by_sku(codigo)
+    return variante unless variante.nil?
+  end
+
 end
