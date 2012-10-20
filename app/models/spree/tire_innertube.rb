@@ -3,6 +3,6 @@ class Spree::TireInnertube < ActiveRecord::Base
   has_many :variants, :class_name => "Spree::Variant"
 
   scope :in_moto, lambda { |value|
-    joins(:variants => {:product => :taxons}).where("spree_taxons.id = ?", value).group("spree_tire_innertubes.id")
+    joins(:variants => {:product => :taxons}).where("spree_taxons.id = ?", value).group("spree_tire_innertubes.id").order("spree_tire_innertubes.name")
   }
 end
