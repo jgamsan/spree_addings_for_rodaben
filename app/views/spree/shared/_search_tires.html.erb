@@ -1,4 +1,4 @@
-<% if @vehicle == moto -%>
+<% if @vehicle == "moto" -%>
   <%= select_tag :tire_width_id, options_for_select([[t(:width), '']] +
                 Spree::TireWidth.in_moto(9).map {|t| [t.name, t.id]},
                 @width ? @width.id : params[:tire_width_id]) %>
