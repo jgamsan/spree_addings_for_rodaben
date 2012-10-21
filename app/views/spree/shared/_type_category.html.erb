@@ -1,8 +1,2 @@
 <%= label_tag t(:search_vehicle), nil, :class => "title_search" %>
-<div class="radio_search">
-  <%= select_tag "count", "<option selected='selected'>Turismo</option><option>Moto</option>".html_safe %>
-  <%= label_tag :Turismos, t(:car) %>
-  <%= radio_button_tag "type", "turismo", true %>
-  <%= label_tag :Motos, t(:moto) %>
-  <%= radio_button_tag "type", "moto" %>
-</div>
+<%= select_tag "count", "<option selected='selected'>Turismo</option><option>Moto</option>".html_safe %>
