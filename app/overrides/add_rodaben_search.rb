@@ -7,6 +7,8 @@ Deface::Override.new(:virtual_path => "spree/shared/_nav_bar",
 </li>
 <li id="tires-search-bar" data-hook>
     <%= form_tag products_path, :method => :get do -%>
-      <%= render :partial => 'spree/shared/search_tires' %>
+      <div id="searchTyres">
+        <%= render :partial => 'spree/shared/search_tires' %>
+      >/div>
       <%= submit_tag t(:search), :name => nil %>
 <% end -%>})
