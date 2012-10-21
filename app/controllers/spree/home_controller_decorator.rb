@@ -11,7 +11,9 @@ Spree::HomeController.class_eval do
   end
 
   def choose_vehicle
-
+    @vehicle = params[:id]
+    session[:vehicle] = @vehicle
+    render :partial => "spree/shared/search_tires"
   end
 
 end
