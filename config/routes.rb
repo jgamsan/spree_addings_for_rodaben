@@ -10,4 +10,6 @@ Spree::Core::Engine.routes.draw do
     resources :tire_innertubes
     resources :tire_speed_codes
   end
+
+
 end
