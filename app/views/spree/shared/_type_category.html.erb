@@ -1,5 +1,7 @@
 <%= label_tag t(:search_vehicle), nil, :class => "title_search" %>
-<%= label_tag :Turismos, t(:car) %>
-<%= radio_button_tag "type", "turismo", true %>
-<%= label_tag :Motos, t(:moto) %>
-<%= radio_button_tag "type", "moto" %>
+<div class="radio_search">
+  <%= label_tag :Turismos, t(:car) %>
+  <%= radio_button_tag "type", "turismo", true %>
+  <%= label_tag :Motos, t(:moto) %>
+  <%= radio_button_tag "type", "moto" %>
+</div>
