@@ -12,8 +12,11 @@
                   Spree::TireSpeedCode.in_moto(9).map {|t| [t.name, t.id]},
                   @speed ? @speed.id : params[:tire_speed_code_id]) %>
 <% else -%>
-  <%= select_tag :tire_width_id, options_for_select([[t(:width), '']] +
+  <%#= select_tag :tire_width_id, options_for_select([[t(:width), '']] +
                 Spree::TireWidth.order('name').map {|t| [t.name, t.id]},
+                @width ? @width.id : params[:tire_width_id]) %>
+  <%= select_tag :tire_width_id, grouped_options_for_select([[t(:width), '']] +
+                Spree::TireWidth.by_measure,
                 @width ? @width.id : params[:tire_width_id]) %>
   <%= select_tag :tire_serial_id, options_for_select([[t(:serial), '']] +
                   Spree::TireSerial.order('name').map {|t| [t.name, t.id]},
