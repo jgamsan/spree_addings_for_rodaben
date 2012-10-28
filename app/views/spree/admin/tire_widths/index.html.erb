@@ -14,6 +14,7 @@
 <table class="index" id="tire_widths_listing">
   <thead data-hook="admin_tire_widths_index_headers">
     <th><%= t(:name) %></th>
+    <th><%= t(:is_mm?) %></th>
     <th data-hook="admin_tire_widths_index_header_actions">
     </th>
   </thead>
@@ -21,6 +22,7 @@
     <% @tire_widths.each do |width|%>
       <tr id="<%= spree_dom_id width %>" data-hook="admin_tire_widths_index_rows">
         <td width="60px"><%= width.name %></td>
+        <td width="60px"><%= width.is_mm %></td>
         <td width="140px" data-hook="admin_tire_widths_index_row_actions">
           <%= link_to_edit width %> &nbsp;
           <%= link_to_delete width %>

@@ -15,6 +15,7 @@
   <thead data-hook="admin_tire_innertubes_index_headers">
     <th><%= t(:name) %></th>
     <th>Precio de Venta</th>
+    <th><%= t(:is_mm?) %></th>
     <th data-hook="admin_tire_innertubes_index_header_actions">
     </th>
   </thead>
@@ -23,6 +24,7 @@
       <tr id="<%= spree_dom_id innertube %>" data-hook="admin_tire_innertubes_index_rows">
         <td widht="60px"><%= innertube.name %></td>
         <td widht="60px"><%= innertube.sale_price %></td>
+        <td width="60px"><%= innertube.is_mm %></td>
         <td innertube="140px" data-hook="admin_tire_innertubes_index_row_actions">
           <%= link_to_edit innertube %> &nbsp;
           <%= link_to_delete innertube %>
