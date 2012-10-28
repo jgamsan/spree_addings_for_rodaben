@@ -1,5 +1,5 @@
 class Spree::TireInnertube < ActiveRecord::Base
-  attr_accessible :name, :sale_price
+  attr_accessible :name, :sale_price, :is_mm
   has_many :variants, :class_name => "Spree::Variant"
 
   scope :in_moto, lambda { |value|
