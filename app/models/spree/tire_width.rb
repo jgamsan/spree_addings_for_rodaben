@@ -8,8 +8,6 @@ class Spree::TireWidth < ActiveRecord::Base
   scope :in_mm, lambda { |value| where(:is_mm => value).order("name")}
 
   def self.by_measure
-    Spree::TireWidth.in_mm(true).map do |width|
-      ["Pulgadas", [width.name, width.id]]
-    end
+    ["Pulgadas", Spree::TireWidth.in_mm(true).map {|c| [c.name, c.id]}]
   end
 end
