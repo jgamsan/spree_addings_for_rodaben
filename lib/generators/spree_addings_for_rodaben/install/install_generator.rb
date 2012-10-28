@@ -14,14 +14,14 @@ module SpreeAddingsForRodaben
 
       def add_datas
         run 'mkdir db/default' unless Dir.exist?('db/default')
-        copy_file "tire_widths.yml", "db/default/tire_widths.yml"
-        copy_file "tire_innertubes.yml", "db/default/tire_innertubes.yml"
-        copy_file "tire_serials.yml", "db/default/tire_serials.yml"
-        copy_file "tire_speed_codes.yml", "db/default/tire_speed_codes.yml"
-        copy_file "states.yml", "db/default/states.yml"
-        copy_file "taxons.yml", "db/default/taxons.yml"
-        copy_file "suppliers.yml", "db/default/suppliers.yml"
-        copy_file "taxonomies.yml", "db/default/taxonomies.yml"
+        copy_file "tire_widths.yml", "db/default/spree/tire_widths.yml"
+        copy_file "tire_innertubes.yml", "db/default/spree/tire_innertubes.yml"
+        copy_file "tire_serials.yml", "db/default/spree/tire_serials.yml"
+        copy_file "tire_speed_codes.yml", "db/default/spree/tire_speed_codes.yml"
+        copy_file "states.yml", "db/default/spree/states.yml"
+        copy_file "taxons.yml", "db/default/spree/taxons.yml"
+        copy_file "suppliers.yml", "db/default/spree/suppliers.yml"
+        copy_file "taxonomies.yml", "db/default/spree/taxonomies.yml"
       end
 
       def add_migrations
