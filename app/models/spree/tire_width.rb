@@ -10,7 +10,7 @@ class Spree::TireWidth < ActiveRecord::Base
   def self.by_measure
     tipos = ["Milimetros", "Pulgadas"]
     tipos.map do |tipo|
-      [tipo, Spree::TireWidth.in_mm(tipo = "Milimetros" ? true : false).map {|c| [c.name, c.id]}]
+      [tipo, Spree::TireWidth.in_mm(tipo == "Milimetros" ? true : false).map {|c| [c.name, c.id]}]
     end
   end
 end
