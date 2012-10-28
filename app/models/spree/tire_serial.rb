@@ -5,4 +5,5 @@ class Spree::TireSerial < ActiveRecord::Base
   scope :in_moto, lambda { |value|
     joins(:variants => {:product => :taxons}).where("spree_taxons.id = ?", value).group("spree_tire_serials.id").order("spree_tire_serials.name")
   }
+  scope :in_mm, lambda { where(:is_mm => true).order("name")}
 end
