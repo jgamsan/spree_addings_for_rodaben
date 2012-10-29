@@ -1,1 +1,3 @@
-<h3>El Diametro de la rueda es <%= equivalents %>mm </h3>
+<h4>El Diametro de la rueda es <%= diametro %>mm </h4>
+<%= select_tag :lista, options_for_select([["Equivalentes", '']] +
+      equivalentes, @width ? @width.id : params[:width]) %>
