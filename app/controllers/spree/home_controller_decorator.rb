@@ -9,4 +9,8 @@ Spree::HomeController.class_eval do
     respond_with(@products)
   end
 
+  def calc_tires
+
+  end
+
 end
