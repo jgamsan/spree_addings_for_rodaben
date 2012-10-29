@@ -15,7 +15,7 @@ module Spree
         tp.each do |serial|
           tl.each do |innertube|
             parcial = calculo_diametro(width, serial, innertube)
-            if (parcial <= maximum) && parcial >= minimum)
+            if (parcial <= maximum) && (parcial >= minimum)
               neumatico = ta + "/" + tp + "R" + tl
               @equivalentes << [neumatico, neumatico]
             end
