@@ -1,4 +1,10 @@
 Spree::Core::Engine.routes.draw do
+  resources :calc_tires, :only => [:index] do
+    collection do
+      get 'calc_equivalents'
+    end
+  end
+
   resources :about,
     :controller => 'about',
     :only       => [:index]
@@ -11,5 +17,4 @@ Spree::Core::Engine.routes.draw do
     resources :tire_speed_codes
   end
   match '/choose_vehicle/:id' => 'home#choose_vehicle'
-  get "home/calc_tires"
 end

@@ -1,0 +1,17 @@
+<%= form_for(@calc_tire) do |f| %>
+  <% if @calc_tire.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@calc_tire.errors.count, "error") %> prohibited this calc_tire from being saved:</h2>
+
+      <ul>
+      <% @calc_tire.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

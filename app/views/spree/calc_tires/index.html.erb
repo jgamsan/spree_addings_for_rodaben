@@ -1,0 +1,21 @@
+<h1>Listing calc_tires</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @calc_tires.each do |calc_tire| %>
+  <tr>
+    <td><%= link_to 'Show', calc_tire %></td>
+    <td><%= link_to 'Edit', edit_calc_tire_path(calc_tire) %></td>
+    <td><%= link_to 'Destroy', calc_tire, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Calc tire', new_calc_tire_path %>

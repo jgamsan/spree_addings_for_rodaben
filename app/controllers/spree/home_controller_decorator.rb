@@ -19,8 +19,4 @@ Spree::HomeController.class_eval do
     render :partial => "spree/shared/search_tires"
   end
 
-  def calc_tires
-    
-  end
-
 end
