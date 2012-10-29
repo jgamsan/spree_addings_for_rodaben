@@ -14,6 +14,7 @@
 <table class="index" id="tire_serials_listing">
   <thead data-hook="admin_tire_serials_index_headers">
     <th><%= t(:name) %></th>
+    <th><%= t(:is_mm?) %></th>
     <th data-hook="admin_tire_serials_index_header_actions">
     </th>
   </thead>
@@ -21,6 +22,7 @@
     <% @tire_serials.each do |serial|%>
       <tr id="<%= spree_dom_id serial %>" data-hook="admin_tire_serials_index_rows">
         <td serial="60px"><%= serial.name %></td>
+        <td width="60px"><%= serial.is_mm %></td>
         <td serial="140px" data-hook="admin_tire_serials_index_row_actions">
           <%= link_to_edit serial %> &nbsp;
           <%= link_to_delete serial %>

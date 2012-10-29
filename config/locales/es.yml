@@ -35,6 +35,10 @@ es:
   product_has_no_serial: "Este Producto no tiene Perfil"
   product_has_no_innertube: "Este Producto no tiene Llanta"
   product_has_no_speed_code: "Este Producto no tiene Codigo Velocidad"
+  search_vehicle: "Seleccione tipo vehiculo para busqueda"
+  car: "Turismo"
+  moto: "Moto"
+  is_mm?: "Esta en mm?"
   order_mailer:
     confirm_email:
       dear_customer: "Estimado Cliente"
