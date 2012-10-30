@@ -29,6 +29,12 @@ module Spree
       end
     end
 
+    def search_equivalents
+      respond_to do |format|
+        format.js
+      end
+    end
+
     private
 
     def calculo_diametro(ancho, perfil, llanta)
