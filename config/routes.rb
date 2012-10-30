@@ -2,6 +2,7 @@ Spree::Core::Engine.routes.draw do
   resources :calc_tires, :only => [:index] do
     collection do
       get 'calc_equivalents'
+      get 'search_equivalents'
     end
   end
 
