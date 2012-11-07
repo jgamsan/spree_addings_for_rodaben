@@ -14,7 +14,7 @@ module Spree
       def upload_file
         productos = params[:product_ids]
         imagen = params[:image]
-        type = file.split(".").last
+        type = imagen.split(".").last
         for product in productos
           t = Spree::Product.find(product)
           i = Spree::Image.new(:attachment => Rack::Test::UploadedFile.new(imagen, "image/#{type}"))
