@@ -17,7 +17,7 @@ module Spree
         type = imagen.split(".").last
         for product in productos
           t = Spree::Product.find(product)
-          i = Spree::Image.new(:attachment => Rack::Test::UploadedFile.new(imagen, "image/#{type}"))
+          i = Spree::Image.new(:attachment => (imagen, "image/#{type}"))
           i.viewable = t.master
           i.save
         end
