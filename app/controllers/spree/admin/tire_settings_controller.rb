@@ -12,7 +12,15 @@ module Spree
       end
 
       def upload_file
-
+        productos = params[:product_ids]
+        imagen = params[:image]
+        type = file.split(".").last
+        for product in productos
+          t = Spree::Product.find(product)
+          i = Spree::Image.new(:attachment => Rack::Test::UploadedFile.new(file, "image/#{type}"))
+          i.viewable = t.master
+          i.save
+        end
       end
 
       def load_massive_images
