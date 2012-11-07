@@ -10,7 +10,12 @@ Spree::Core::Engine.routes.draw do
     :only       => [:index]
 
   namespace :admin do
-    resources :tire_settings, :only => :index
+    resources :tire_settings, :only => :index do
+      collection do
+        post 'upload_file'
+        get 'load_massive_images'
+      end
+    end
     resources :tire_widths
     resources :tire_serials
     resources :tire_innertubes
