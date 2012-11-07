@@ -36,8 +36,6 @@ module Spree
           end
         end
       end
-
-
       respond_to do |format|
         format.js
       end

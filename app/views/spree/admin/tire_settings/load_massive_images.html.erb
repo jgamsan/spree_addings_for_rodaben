@@ -1,5 +1,18 @@
 <%= render :partial => 'spree/admin/shared/tires_setting_menu' %>
 <h1><%= t(:nueva_carga_masiva_de_imagenes) %></h1>
+<% form_tag search_tyre_admin_tire_settings_path, :remote => true do -%>
+  <div data-hook="admin_search_tyre_form_fields">
+    <table data-hook="tyre">
+      <tr>
+        <td><%= label_tag :name, "Nombre Neumatico" %>:</td>
+        <td><%= text_field_tag :tyre, {'style' => 'width:100px'} %></td>
+      </tr>
+    </table>
+  </div>
+  <%= submit_tag "Submit" %>
+<% end -%>
+<div id="products_table"></div>
+
 <%= form_tag upload_file_admin_tire_settings_path, :html => {:multipart => true} do %>
   <div data-hook="admin_load_massive_images_form_fields">
     <table data-hook="name">
