@@ -1,7 +1,11 @@
 module Spree
   class CalcTiresController < BaseController
     helper 'spree/products'
-    respond_to :html
+
+    def index
+
+    end
+
     def calc_equivalents
       @equivalentes = []
       ancho = Spree::TireWidth.find(params[:width]).name
@@ -40,7 +44,7 @@ module Spree
       llanta = Spree::TireInnertube.find_by_name(r[2]).id
       @searcher = Spree::Config.searcher_class.new(params.merge(:tire_width_id => ancho, :tire_serial_id => serial, :tire_innertube_id => llanta))
       @products = @searcher.retrieve_products
-      respond_with(@products)
+      render :partial => "spree/shared/products", :locals => { :products => @products}
     end
 
     private
