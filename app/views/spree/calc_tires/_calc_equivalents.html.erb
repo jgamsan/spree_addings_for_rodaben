@@ -1,3 +1,6 @@
 <h4>El Diametro de la rueda es <%= diametro %>mm </h4>
-<%= select_tag :lista, options_for_select([["Equivalentes", '']] +
+<%= form_tag search_equivalents_calc_tires_path, :method => :get, :remote => true do -%>
+  <%= select_tag :lista, options_for_select([["Equivalentes", '']] +
       equivalentes, @width ? @width.id : params[:width]) %>
+  <%= submit_tag t(:search), :name => nil %>
+<% end -%>

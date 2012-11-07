@@ -8,9 +8,9 @@ module Spree
       @diametro = calculo_diametro(ancho, perfil, llanta)
       minimum = @diametro * 0.97
       maximum = @diametro * 1.03
-      ta = Spree::TireWidth.in_mm(true).map {|c| c.name}
-      tp = Spree::TireSerial.in_mm(true).map {|c| c.name}
-      tl = Spree::TireInnertube.in_mm(true).map {|c| c.name}
+      ta = Spree::TireWidth.in_mm(true).by_taxon(4).map {|c| c.name}
+      tp = Spree::TireSerial.in_mm(true).by_taxon(4).map {|c| c.name}
+      tl = Spree::TireInnertube.in_mm(true).by_taxon(4).map {|c| c.name}
       ta.each do |width|
         tp.each do |serial|
           tl.each do |innertube|
@@ -24,6 +24,12 @@ module Spree
       end
 
 
+      respond_to do |format|
+        format.js
+      end
+    end
+
+    def search_equivalents
       respond_to do |format|
         format.js
       end

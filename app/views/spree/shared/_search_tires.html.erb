@@ -1,31 +1,32 @@
 <% if @vehicle == "moto" -%>
   <%= select_tag :tire_width_id, options_for_select([[t(:width), '']] +
-                Spree::TireWidth.in_moto(9).map {|t| [t.name, t.id]},
+                Spree::TireWidth.by_taxon(9).map {|t| [t.name, t.id]},
                 @width ? @width.id : params[:tire_width_id]) %>
   <%= select_tag :tire_serial_id, options_for_select([[t(:serial), '']] +
-                  Spree::TireSerial.in_moto(9).map {|t| [t.name, t.id]},
+                  Spree::TireSerial.by_taxon(9).map {|t| [t.name, t.id]},
                   @serial ? @serial.id : params[:tire_serial_id]) %>
   <%= select_tag :tire_innertube_id, options_for_select([[t(:innertube), '']] +
-                  Spree::TireInnertube.in_moto(9).map {|t| [t.name, t.id]},
+                  Spree::TireInnertube.by_taxon(9).map {|t| [t.name, t.id]},
                   @innertube ? @innertube.id : params[:tire_innertube_id]) %>
   <%= select_tag :tire_speed_code_id, options_for_select([[t(:speed_code), '']] +
-                  Spree::TireSpeedCode.in_moto(9).map {|t| [t.name, t.id]},
+                  Spree::TireSpeedCode.by_taxon(9).map {|t| [t.name, t.id]},
                   @speed ? @speed.id : params[:tire_speed_code_id]) %>
 <% else -%>
-  <%#= select_tag :tire_width_id, options_for_select([[t(:width), '']] +
-                Spree::TireWidth.order('name').map {|t| [t.name, t.id]},
-                @width ? @width.id : params[:tire_width_id]) %>
-  <%= select_tag :tire_width_id, grouped_options_for_select([[t(:width), '']] +
+
+  <%#= select_tag :tire_width_id, grouped_options_for_select([[t(:width), '']] +
                 Spree::TireWidth.by_measure,
                 @width ? @width.id : params[:tire_width_id]) %>
+  <%= select_tag :tire_width_id, options_for_select([[t(:width), '']] +
+                Spree::TireWidth.by_taxon(4).map {|t| [t.name, t.id]},
+                @width ? @width.id : params[:tire_width_id]) %>
   <%= select_tag :tire_serial_id, options_for_select([[t(:serial), '']] +
-                  Spree::TireSerial.order('name').map {|t| [t.name, t.id]},
+                  Spree::TireSerial.by_taxon(4).map {|t| [t.name, t.id]},
                   @serial ? @serial.id : params[:tire_serial_id]) %>
   <%= select_tag :tire_innertube_id, options_for_select([[t(:innertube), '']] +
-                  Spree::TireInnertube.order('name').map {|t| [t.name, t.id]},
+                  Spree::TireInnertube.by_taxon(4).map {|t| [t.name, t.id]},
                   @innertube ? @innertube.id : params[:tire_innertube_id]) %>
   <%= select_tag :tire_speed_code_id, options_for_select([[t(:speed_code), '']] +
-                  Spree::TireSpeedCode.order('name').map {|t| [t.name, t.id]},
+                  Spree::TireSpeedCode.by_taxon(4).map {|t| [t.name, t.id]},
                   @speed ? @speed.id : params[:tire_speed_code_id]) %>
   <%= select_tag :tire_season, options_for_select([[t(:tire_season), '']] +
                   Spree::Variant::SEASON_OPTIONS) %>
