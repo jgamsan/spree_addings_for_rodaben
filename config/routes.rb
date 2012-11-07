@@ -12,7 +12,7 @@ Spree::Core::Engine.routes.draw do
 
   namespace :admin do
     resources :tire_settings, :only => :index do
-      collection do
+      member do
         post 'upload_file'
         get 'load_massive_images'
       end
