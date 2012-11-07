@@ -30,9 +30,10 @@ module Spree
     end
 
     def search_equivalents
-      respond_to do |format|
-        format.js
-      end
+      @equivalente = params[:equivalente]
+      @searcher = Spree::Config.searcher_class.new(params.merge(:in_offert => true))
+      @products = @searcher.retrieve_products
+      respond_with(@products)
     end
 
     private

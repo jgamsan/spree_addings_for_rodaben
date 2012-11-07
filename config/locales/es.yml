@@ -39,6 +39,7 @@ es:
   car: "Turismo"
   moto: "Moto"
   is_mm?: "Esta en mm?"
+  load_massive_images: "Carga Masiva Imagenes"
   order_mailer:
     confirm_email:
       dear_customer: "Estimado Cliente"
