@@ -22,7 +22,7 @@ module Spree
           i.viewable = t.master
           i.save
         end
-
+        redirect_to load_massive_images_admin_tire_settings_url
       end
 
       def load_massive_images
