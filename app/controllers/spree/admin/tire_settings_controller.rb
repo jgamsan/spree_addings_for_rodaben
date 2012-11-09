@@ -14,7 +14,6 @@ module Spree
       def upload_file
         productos = params[:product_ids]
         imagen = params[:image]
-        type = imagen.split(".").last
         for product in productos
           t = Spree::Product.find(product)
           img = Spree::Image.create!({:attachment => File.open(imagen), :viewable => t}, :without_protection => true)
