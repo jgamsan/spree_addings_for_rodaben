@@ -13,10 +13,9 @@ module Spree
 
       def upload_file
         productos = params[:product_ids]
-        imagen = params[:image]
         for product in productos
           t = Spree::Product.find(product)
-          img = Spree::Image.create!({:attachment => File.open(imagen), :viewable => t}, :without_protection => true)
+          img = Spree::Image.create!({:attachment => params[:image], :viewable => t}, :without_protection => true)
           t.images << img
         end
         redirect_to load_massive_images_admin_tire_settings_url
