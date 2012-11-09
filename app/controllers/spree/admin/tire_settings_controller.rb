@@ -17,10 +17,8 @@ module Spree
         type = imagen.split(".").last
         for product in productos
           t = Spree::Product.find(product)
-          i = Spree::Image.new
-          i.attachment = imagen
-          i.viewable = t.master
-          i.save
+          img = Spree::Image.create!({:attachment => File.open(imagen), :viewable => t}, :without_protection => true)
+          t.images << img
         end
         redirect_to load_massive_images_admin_tire_settings_url
       end
