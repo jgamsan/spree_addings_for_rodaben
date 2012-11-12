@@ -10,7 +10,7 @@
       <td><%= product.name %></td>
       <% if product.images.first.nil? -%>
         <td style="background:red">No Tiene Imagen</td>
-      <% elsif product.images.first.attachment_file_name = "default.png" -%>
+      <% elsif product.images.first.attachment_file_name == "default.png" -%>
         <td style="background:yellow">Imagen por defecto</td>
       <% else -%>
         <td style="background:green"><%= product.images.first.attachment_file_name %></td>
