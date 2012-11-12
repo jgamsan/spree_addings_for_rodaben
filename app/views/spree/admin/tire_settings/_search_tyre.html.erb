@@ -27,4 +27,4 @@
     <%= paginate paginated_products, :remote => true %>
   </div>
 <% end %>
-<div id="progress_bar"></div>
+<div id="progress_bar"><%= progress_bar(33, :color => 'blue', :rounded => true) %></div>
