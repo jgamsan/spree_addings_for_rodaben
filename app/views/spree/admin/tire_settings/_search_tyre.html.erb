@@ -9,9 +9,9 @@
       <td><%= check_box_tag "product_ids[]", product.id %></td>
       <td><%= product.name %></td>
       <% if product.images.first.nil? -%>
-        <td style="background:red">No Tiene Imagen</td>
+        <td style="background:tomato">No Tiene Imagen</td>
       <% elsif product.images.first.attachment_file_name == "default.png" -%>
-        <td style="background:yellow">Imagen por defecto</td>
+        <td style="background:gold">Imagen por defecto</td>
       <% else -%>
         <td style="background:greenyellow"><%= product.images.first.attachment_file_name %></td>
       <% end -%>
