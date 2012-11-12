@@ -23,5 +23,7 @@
   <% end -%>
 </table>
 <% if paginated_products.respond_to?(:num_pages) %>
-  <%= paginate paginated_products %>
+  <div id="paginator">
+    <%= paginate paginated_products, :remote => true %>
+  </div>
 <% end %>
