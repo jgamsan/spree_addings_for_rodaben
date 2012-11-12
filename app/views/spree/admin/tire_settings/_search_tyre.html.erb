@@ -8,7 +8,7 @@
     <tr>
       <td><%= check_box_tag "product_ids[]", product.id %></td>
       <td><%= product.name %></td>
-      <td><%= product.images.first.attachment_file_name unless product.images.nil? %></td>
+      <td><%= product.images.first.attachment_file_name unless product.images.first.nil? %></td>
     </tr>
   <% end -%>
 </table>
