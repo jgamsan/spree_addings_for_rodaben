@@ -15,6 +15,9 @@ module Spree
         productos = params[:product_ids]
         for product in productos
           t = Spree::Product.find(product)
+          unless t.images.empty?
+            t.images.destroy_all
+          end
           img = Spree::Image.create!({:attachment => params[:image], :viewable => t}, :without_protection => true)
           t.images << img
         end
