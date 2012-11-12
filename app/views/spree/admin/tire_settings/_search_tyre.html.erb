@@ -2,11 +2,13 @@
   <tr>
     <th>Seleccionar</th>
     <th>Nombre</th>
+    <th>Imagen actual</th>
   </tr>
   <% products.each do |product| -%>
     <tr>
       <td><%= check_box_tag "product_ids[]", product.id %></td>
       <td><%= product.name %></td>
+      <td><%= product.images.first.attachment_file_name %></td>
     </tr>
   <% end -%>
 </table>
