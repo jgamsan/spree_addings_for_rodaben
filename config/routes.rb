@@ -16,6 +16,7 @@ Spree::Core::Engine.routes.draw do
         post 'upload_file'
         get 'load_massive_images'
         get 'search_tyre'
+        post 'search_tyre'
       end
     end
     resources :tire_widths
