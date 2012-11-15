@@ -5,7 +5,7 @@ Deface::Override.new(:virtual_path => %q{spree/shared/_products},
    <ul id="products" class="inline product-listing" data-hook>
   <% reset_cycle('default') %>
   <% products.each do |product| %>
-    <% if Spree::Config[:show_zero_stock_products] || product.has_stock? %>
+    <% if (Spree::Config[:show_zero_stock_products] || product.has_stock?) && product.price >= Spree::Config[:minimum_price_to_show] %>
       <li id="product_<%= product.id %>" class="columns three <%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
         <%#= product.calculate_tires(product.id) %>
         <div class="product-image">
