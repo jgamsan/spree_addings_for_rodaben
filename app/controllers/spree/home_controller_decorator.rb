@@ -8,7 +8,7 @@ Spree::HomeController.class_eval do
       session[:vehicle] = "car"
       @vehicle = "car"
     end
-    @searcher = Spree::Config.searcher_class.new(params.merge(:in_offert => true))
+    @searcher = Spree::Config.searcher_class.new(params.merge(:in_offert => true, :per_page => 4))
     @products = @searcher.retrieve_products
     respond_with(@products)
   end
