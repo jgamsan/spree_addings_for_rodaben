@@ -1,5 +1,6 @@
 module Spree
   class CalcTiresController < BaseController
+    layout "contenido"
     helper 'spree/products'
     respond_to :html
     def index
