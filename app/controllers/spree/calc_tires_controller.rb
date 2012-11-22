@@ -10,9 +10,13 @@ module Spree
       ancho = Spree::TireWidth.find_by_name(r[0]).id
       serial = Spree::TireSerial.find_by_name(r[1]).id
       llanta = Spree::TireInnertube.find_by_name(r[2]).id
-      @searcher = Spree::Config.searcher_class.new(params.merge(:tire_width_id => ancho, :tire_serial_id => serial, :tire_innertube_id => llanta))
+      @searcher = Spree::Config.searcher_class.new(params.merge(:tire_width_id => ancho, :tire_serial_id => serial, :tire_innertube_id => llanta, :per_page => 3))
       @products = @searcher.retrieve_products
       respond_with(@products)
+    end
+
+    def show_options
+
     end
 
     def calc_equivalents
