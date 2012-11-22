@@ -1,9 +1,22 @@
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <%= render :partial => 'spree/shared/taxonomies' %>
-  </div>
-<% end %>
+<div class="row">
+  <div class="span6">
+    <%= label_tag "Europeo", nil %>
+    <%= radio_button_tag 'calc', nil, true %>
+    <%= label_tag "Americano", nil %>
+    <%= radio_button_tag 'calc', nil, false, :disabled => true %>
+    <br />
 
-<div data-hook="homepage_products">
-  <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+    <%= form_tag calc_equivalents_calc_tires_path, :method => :get, :remote => true do -%>
+      <%= select_tag :width, options_for_select([[t(:width), '']] +
+          Spree::TireWidth.order('name').map {|t| [t.name, t.id]}, @width ? @width.id : params[:width]) %>
+      <%= select_tag :serial, options_for_select([[t(:serial), '']] +
+          Spree::TireSerial.order('name').map {|t| [t.name, t.id]}, @serial ? @serial.id : params[:serial]) %>
+      <%= select_tag :innertube, options_for_select([[t(:innertube), '']] +
+          Spree::TireInnertube.order('name').map {|t| [t.name, t.id]}, @innertube ? @innertube.id : params[:innertube]) %>
+      <%= submit_tag t(:search), :name => nil %>
+    <% end %>
+  </div>
+  <div class="span6">
+    <div id="resultado"></div>
+  </div>
 </div>
