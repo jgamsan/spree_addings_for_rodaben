@@ -1,10 +1,12 @@
 <div class="row">
   <h2>Calcula Tu Equivalencia</h2>
   <div class="span6">
-    <%= label_tag "Europeo", nil %>
-    <%= radio_button_tag 'calc', nil, true %>
-    <%= label_tag "Americano", nil %>
-    <%= radio_button_tag 'calc', nil, false, :disabled => true %>
+    <label class="radio inline">
+       <%= radio_button_tag 'calc', nil, true %> "Europeo"
+    </label>
+    <label class="radio inline">
+      <%= radio_button_tag 'calc', nil, false, :disabled => true %> "Americano"
+    </label>
     <br />
 
     <%= form_tag calc_equivalents_calc_tires_path, :method => :get, :remote => true do -%>
