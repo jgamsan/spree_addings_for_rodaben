@@ -16,7 +16,9 @@ module Spree
     end
 
     def show_options
-
+      @widths = Spree::TireWidth.in_mm(true).map {|t| [t.name, t.id]}
+      @serials = Spree::TireSerial.in_mm(true).map {|t| [t.name, t.id]}
+      @innertubes = Spree::TireInnertube.in_mm(true).map {|t| [t.name, t.id]}
     end
 
     def calc_equivalents

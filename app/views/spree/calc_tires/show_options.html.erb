@@ -16,19 +16,19 @@
       <div class="control-group">
         <div class="controls">
           <%= select_tag :width, options_for_select([[t(:width), '']] +
-            Spree::TireWidth.order('name').map {|t| [t.name, t.id]}, @width ? @width.id : params[:width]), :class => "span2" %>
+            @widths, @width ? @width.id : params[:width]), :class => "span2" %>
         </div>
       </div>
       <div class="control-group">
         <div class="controls">
           <%= select_tag :serial, options_for_select([[t(:serial), '']] +
-            Spree::TireSerial.order('name').map {|t| [t.name, t.id]}, @serial ? @serial.id : params[:serial]), :class => "span2" %>
+            @serials, @serial ? @serial.id : params[:serial]), :class => "span2" %>
         </div>
       </div>
       <div class="control-group">
         <div class="controls">
           <%= select_tag :innertube, options_for_select([[t(:innertube), '']] +
-            Spree::TireInnertube.order('name').map {|t| [t.name, t.id]}, @innertube ? @innertube.id : params[:innertube]), :class => "span2" %>
+            @innertubes, @innertube ? @innertube.id : params[:innertube]), :class => "span2" %>
         </div>
       </div>
       <%= submit_tag t(:search), :name => nil, :class => "btn btn-primary btn-small" %>
