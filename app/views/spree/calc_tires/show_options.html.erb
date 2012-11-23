@@ -1,23 +1,39 @@
 <div class="row">
   <h2>Calcula Tu Equivalencia</h2>
   <div class="span6">
-    <label class="radio inline">
-       <%= radio_button_tag 'calc', nil, true %> "Europeo"
-    </label>
-    <label class="radio inline">
-      <%= radio_button_tag 'calc', nil, false, :disabled => true %> "Americano"
-    </label>
-    <br />
-
-    <%= form_tag calc_equivalents_calc_tires_path, :method => :get, :remote => true do -%>
-      <%= select_tag :width, options_for_select([[t(:width), '']] +
-          Spree::TireWidth.order('name').map {|t| [t.name, t.id]}, @width ? @width.id : params[:width]), :class => "span2" %>
-      <%= select_tag :serial, options_for_select([[t(:serial), '']] +
-          Spree::TireSerial.order('name').map {|t| [t.name, t.id]}, @serial ? @serial.id : params[:serial]), :class => "span2" %>
-      <%= select_tag :innertube, options_for_select([[t(:innertube), '']] +
-          Spree::TireInnertube.order('name').map {|t| [t.name, t.id]}, @innertube ? @innertube.id : params[:innertube]), :class => "span2" %>
+    <% field_set_tag 'Selecciona' do -%>
+      <div class="control-group">
+        <div class="controls">
+          <label class="radio inline">
+             <%= radio_button_tag 'calc', nil, true %> "Europeo"
+          </label>
+          <label class="radio inline">
+            <%= radio_button_tag 'calc', nil, false, :disabled => true %> "Americano"
+          </label>
+        </div>
+      </div>
+      <%= form_tag calc_equivalents_calc_tires_path, :method => :get, :remote => true do -%>
+      <div class="control-group">
+        <div class="controls">
+          <%= select_tag :width, options_for_select([[t(:width), '']] +
+            Spree::TireWidth.order('name').map {|t| [t.name, t.id]}, @width ? @width.id : params[:width]), :class => "span2" %>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= select_tag :serial, options_for_select([[t(:serial), '']] +
+            Spree::TireSerial.order('name').map {|t| [t.name, t.id]}, @serial ? @serial.id : params[:serial]), :class => "span2" %>
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= select_tag :innertube, options_for_select([[t(:innertube), '']] +
+            Spree::TireInnertube.order('name').map {|t| [t.name, t.id]}, @innertube ? @innertube.id : params[:innertube]), :class => "span2" %>
+        </div>
+      </div>
       <%= submit_tag t(:search), :name => nil, :class => "btn btn-primary btn-small" %>
-    <% end %>
+      <% end %>
+    <% end -%>
   </div>
   <div class="span6">
     <div id="resultado"></div>
