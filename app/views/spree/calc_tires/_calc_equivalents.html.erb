@@ -1,6 +1,13 @@
-<h4>El Diametro de la rueda es <%= diametro %>mm </h4>
-<%= form_tag calc_tires_path, :method => :get do -%>
-  <%= select_tag :lista, options_for_select([["Equivalentes", '']] +
-      equivalentes, @width ? @width.id : params[:width]), :class => "small" %>
-  <%= submit_tag t(:search), :name => nil, :class => "btn btn-primary btn-small" %>
+<%= field_set_tag 'Resultados' do -%>
+  <h4>El Diametro de la rueda es </h4>
+  <span class="input-xlarge uneditable-input"><%= diametro %>mm</span>
+  <%= form_tag calc_tires_path, :method => :get do -%>
+    <div class="control-group">
+      <div class="controls">
+        <%= select_tag :lista, options_for_select([["Equivalentes", '']] +
+        equivalentes, @width ? @width.id : params[:width]), :class => "small" %>
+      </div>
+      <%= submit_tag t(:search), :name => nil, :class => "btn btn-primary btn-small" %>
+    </div>
+  <% end -%>
 <% end -%>
