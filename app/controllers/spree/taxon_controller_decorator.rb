@@ -1,3 +1,3 @@
-Spree::TaxonController.class_eval do
+Spree::TaxonsController.class_eval do
   layout "contenido"
 end
