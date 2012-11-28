@@ -25,5 +25,4 @@ Spree::Core::Engine.routes.draw do
     resources :tire_innertubes
     resources :tire_speed_codes
   end
-  match '/choose_vehicle/:id' => 'home#choose_vehicle'
 end
