@@ -67,17 +67,17 @@
                                 </tr>
                               <% end -%>
                               <tr mc:repeatable>
-                                <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00"><%= t('order_mailer.confirm_email.subtotal') %></td>
+                                <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00"><h5><%= t('order_mailer.confirm_email.subtotal') %></h5></td>
                                 <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= money @order.item_total %></td>
                               </tr>
                               <% @order.adjustments.eligible.each do |adjustment| %>
                                 <tr mc:repeatable>
-                                  <td colspan="4" valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= raw(adjustment.label) %></td>
+                                  <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00"><%= raw(adjustment.label) %></td>
                                   <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= money(adjustment.amount) %></td>
                                 </tr>
                               <% end %>
                               <tr mc:repeatable>
-                                <td colspan="4" valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= t('order_mailer.confirm_email.total') %></td>
+                                <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00"><%= t('order_mailer.confirm_email.total') %></td>
                                 <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= money(@order.total) %></td>
                               </tr>
                             </table>
