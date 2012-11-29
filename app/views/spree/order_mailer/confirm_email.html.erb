@@ -67,7 +67,7 @@
                                 </tr>
                               <% end -%>
                               <tr mc:repeatable>
-                                <td colspan="4" valign="top" text-align="right" class="dataTableContent" mc:edit="data_table_content00"><%= t('order_mailer.confirm_email.subtotal') %></td>
+                                <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00"><%= t('order_mailer.confirm_email.subtotal') %></td>
                                 <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= money @order.item_total %></td>
                               </tr>
                               <% @order.adjustments.eligible.each do |adjustment| %>
