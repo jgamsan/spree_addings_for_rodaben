@@ -61,8 +61,8 @@
                                   <td valign="top" class="dataTableContent" mc:edit="data_table_content01"><%= raw(item.variant.product.name) %></td>
                                   <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%= raw(item.variant.tire_width.name) unless item.variant.tire_width_id.nil? -%>/<%= raw(item.variant.tire_serial.name) unless item.variant.tire_serial_id.nil? -%>/<%= raw(item.variant.tire_innertube.name) unless item.variant.tire_innertube_id.nil? -%>/<%= raw(item.variant.tire_speed_code.name) unless item.variant.tire_speed_code_id.nil? -%></td>
                                   <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%=item.quantity%></td>
-                                  <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%= money item.variant.cost_price %></td>
-                                  <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%= money(item.variant.cost_price * item.quantity) %></td>
+                                  <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%= number_to_currency item.variant.cost_price %></td>
+                                  <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%= mnumber_to_currency(item.variant.cost_price * item.quantity) %></td>
                                 </tr>
                                 <% total += item.variant.cost_price * item.quantity %>
                               <% end -%>
