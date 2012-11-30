@@ -67,18 +67,48 @@
                                 <% total += item.variant.cost_price * item.quantity %>
                               <% end -%>
                               <tr mc:repeatable>
-                                <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00"><%= t('order_mailer.confirm_email.subtotal') %></td>
+                                <td colspan="5" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00"><%= t('order_mailer.confirm_email.subtotal') %></td>
                                 <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= number_to_currency @order.item_total %></td>
                               </tr>
                               <% @order.adjustments.eligible.each do |adjustment| %>
                                 <tr mc:repeatable>
-                                  <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00"><%= raw(adjustment.label) %></td>
+                                  <td colspan="5" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00"><%= raw(adjustment.label) %></td>
                                   <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= number_to_currency(adjustment.amount) %></td>
                                 </tr>
                               <% end %>
                               <tr mc:repeatable>
-                                <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00">Pedido Total</td>
+                                <td colspan="5" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00">Pedido Total</td>
                                 <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= number_to_currency total %></td>
+                              </tr>
+                              <tr>
+                                <td valign="top" class="bodyContent">
+                                  <div mc:edit="std_content01">
+                                    Los datos del cliente son los siguientes:
+                                  </div>
+                                  <table border="0" cellpadding="0" cellspacing="0" width="600">
+                                    <tr>
+                                      <td>Nombre:</td><td><%= @order.bill_address.firstname %></td>
+                                    </tr>
+                                    <tr>
+                                      <td>Apellidos:</td><td><%= @order.bill_address.lastname %></td>
+                                    </tr>
+                                    <tr>
+                                      <td>Direccion:</td><td><%= @order.bill_address.address1 %></td>
+                                    </tr>
+                                    <tr>
+                                      <td>Poblacion:</td><td><%= @order.bill_address.city %></td>
+                                    </tr>
+                                    <tr>
+                                      <td>Codigo Postal:</td><td><%= @order.bill_address.zipcode %></td>
+                                    </tr>
+                                    <tr>
+                                      <td>Provincia:</td><td><%= @order.bill_address.state.name %></td>
+                                    </tr>
+                                    <tr>
+                                      <td>Teléfono:</td><td><%= @order.bill_address.phone %></td>
+                                    </tr>
+                                  </table>
+                                </td>
                               </tr>
                                                             </div>
                                                         </td>
@@ -135,31 +165,6 @@
                                                         <td colspan="2" valign="middle" id="social">
                                                             <div mc:edit="std_social">
                                                                 &nbsp;<a href="http://twitter.com/NeuCoche">Siguenos en Twitter</a> | <a href="http://facebook.com/neumaticosdecochecom">Amigo en Facebook</a> | <a href="http://www.neumaticosdecoche.com">Visita nuestra pagina</a>&nbsp;
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td valign="top" width="350">
-                                                            <div mc:edit="std_footer">
-                                                                <em>Copyright &copy; *|CURRENT_YEAR|* *|LIST:COMPANY|*, All rights reserved.</em>
-                                                                <br />
-                                                                *|IFNOT:ARCHIVE_PAGE|* *|LIST:DESCRIPTION|*
-                                                                <br />
-                                                                <strong>Our mailing address is:</strong>
-                                                                <br />
-                                                                *|HTML:LIST_ADDRESS_HTML|**|END:IF|*
-                                                            </div>
-                                                        </td>
-                                                        <td valign="top" width="190" id="monkeyRewards">
-                                                            <div mc:edit="monkeyrewards">
-                                                                *|IF:REWARDS|* *|HTML:REWARDS|* *|END:IF|*
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td colspan="2" valign="middle" id="utility">
-                                                            <div mc:edit="std_utility">
-                                                                &nbsp;<a href="*|UNSUB|*">unsubscribe from this list</a> | <a href="*|UPDATE_PROFILE|*">update subscription preferences</a>&nbsp;
                                                             </div>
                                                         </td>
                                                     </tr>
