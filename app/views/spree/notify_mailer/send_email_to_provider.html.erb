@@ -68,12 +68,12 @@
                               <% end -%>
                               <tr mc:repeatable>
                                 <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00"><%= t('order_mailer.confirm_email.subtotal') %></td>
-                                <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= money @order.item_total %></td>
+                                <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= number_to_currency @order.item_total %></td>
                               </tr>
                               <% @order.adjustments.eligible.each do |adjustment| %>
                                 <tr mc:repeatable>
                                   <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00"><%= raw(adjustment.label) %></td>
-                                  <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= money(adjustment.amount) %></td>
+                                  <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= number_to_currency(adjustment.amount) %></td>
                                 </tr>
                               <% end %>
                               <tr mc:repeatable>
@@ -134,7 +134,7 @@
                                                     <tr>
                                                         <td colspan="2" valign="middle" id="social">
                                                             <div mc:edit="std_social">
-                                                                &nbsp;<a href="*|TWITTER:PROFILEURL|*">follow on Twitter</a> | <a href="*|FACEBOOK:PROFILEURL|*">friend on Facebook</a> | <a href="*|FORWARD|*">forward to a friend</a>&nbsp;
+                                                                &nbsp;<a href="http://twitter.com/NeuCoche">Siguenos en Twitter</a> | <a href="http://facebook.com/neumaticosdecochecom">Amigo en Facebook</a> | <a href="http://www.neumaticosdecoche.com">Visita nuestra pagina</a>&nbsp;
                                                             </div>
                                                         </td>
                                                     </tr>
