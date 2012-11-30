@@ -41,7 +41,7 @@
                                                     <tr>
                                                         <td valign="top" style="padding-right:0;">
                                                             <div mc:edit="std_content00">
-                                                                <h3 class="h3">Estimada Empresa <%= @line_items.first.variant.product.supplier.title %></h3>
+                                                              <h3 class="h3">Estimada Empresa <%= @line_items.first.variant.product.supplier.title %></h3>
                                                                 Le remito los datos del pedido de neumaticos con destino a la direccion abajo reseñada.
                                                                 <br />
                                                                 <br />
@@ -85,36 +85,7 @@
                                   <div mc:edit="std_content01">
                                     Los datos del cliente son los siguientes:
                                   </div>
-                                  <table border="0" cellpadding="0" cellspacing="0" width="600">
-                                    <tr>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00">Nombre:</td>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.firstname %></td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00">Apellidos:</td>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.lastname %></td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00">Direccion:</td>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.address1 %></td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00">Poblacion:</td>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.city %></td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00">Codigo Postal:</td>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.zipcode %></td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00">Provincia:</td>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.state.name %></td>
-                                    </tr>
-                                    <tr>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00">Teléfono:</td>
-                                      <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.phone %></td>
-                                    </tr>
-                                  </table>
+
                                 </td>
                               </tr>
                                                             </div>
