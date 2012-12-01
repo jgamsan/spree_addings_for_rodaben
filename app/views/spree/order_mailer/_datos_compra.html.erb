@@ -1,0 +1,45 @@
+<h4><%= t('order_mailer.confirm_email.order_summary') %></h4>
+<table border="0" cellpadding="10" cellspacing="0" width="100%" class="templateDataTable">
+  <tr>
+    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading00">CODIGO</th>
+    <th scope="col" valign="top" width="50%" class="dataTableHeading" mc:edit="data_table_heading01">NOMBRE</th>
+    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading02">CANTIDAD</th>
+    <th scope="col" valign="top" width="15%" class="dataTableHeading" mc:edit="data_table_heading03">PRECIO</th>
+    <th scope="col" valign="top" width="15%" class="dataTableHeading" mc:edit="data_table_heading04">TOTAL</th>
+  </tr>
+  <% @order.line_items.each do |item| %>
+    <tr mc:repeatable>
+      <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= item.variant.sku %></td>
+      <td valign="top" class="dataTableContent" mc:edit="data_table_content01"><%= raw(item.variant.product.name) %></td>
+      <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%=item.quantity%></td>
+      <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%= money item.price %></td>
+      <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%= money(item.price * item.quantity) %></td>
+    </tr>
+  <% end -%>
+  <tr mc:repeatable>
+    <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00">
+      <%= t('order_mailer.confirm_email.subtotal') %>
+    </td>
+    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
+      <%= money @order.item_total %>
+    </td>
+  </tr>
+  <% @order.adjustments.eligible.each do |adjustment| %>
+    <tr mc:repeatable>
+      <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00">
+        <%= raw(adjustment.label) %>
+      </td>
+      <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
+        <%= money(adjustment.amount) %>
+      </td>
+    </tr>
+  <% end %>
+  <tr mc:repeatable>
+    <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00">
+      <%= t('order_mailer.confirm_email.total') %>
+    </td>
+    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
+      <%= money(@order.total) %>
+    </td>
+  </tr>
+</table>
