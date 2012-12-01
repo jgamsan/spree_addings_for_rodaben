@@ -2,11 +2,11 @@
   <tr>
     <td valign="top" style="padding-right:0;">
       <div mc:edit="std_content00">
-        <h3 class="h3">Estimada Empresa <%= @line_items.first.variant.product.supplier.title %></h3>
-        Le remito los datos del pedido de neumaticos con destino a la direccion abajo reseñada.
+        <h3 class="h3">Para el Taller <%= @order.workshop.name %>,</h3>
+        Le remito los datos del pedido de neumaticos con destino a su taller para ser instalados en vehiculo propiedad del cliente cuyos datos se reseñan mas abajo.
         <br />
         <br />
-        <%= render :partial => 'spree/notify_mailer/provider/tabla_datos' %>
+        <%= render :partial => 'spree/notify_mailer/workshop/tabla_datos' %>
       </div>
     </td>
   </tr>
@@ -18,7 +18,7 @@
         <br />
       </div>
       <div mc:edit="std_content00">
-        <%= render :partial => 'spree/notify_mailer/provider/datos_cliente' %>
+        <%= render :partial => 'spree/notify_mailer/workshop/datos_cliente' %>
       </div>
     </td>
   </tr>

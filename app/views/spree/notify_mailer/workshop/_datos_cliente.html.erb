@@ -1,0 +1,48 @@
+<table border="0" cellpadding="10" cellspacing="0" width="100%" class="templateDataTable">
+  <tr>
+    <th scope="col" valign="top" width="20%" class="dataTableHeading" mc:edit="data_table_heading00">
+      NOMBRE
+    </th>
+    <th scope="col" valign="top" width="20%" class="dataTableHeading" mc:edit="data_table_heading01">
+      APELLIDOS
+    </th>
+    <th scope="col" valign="top" width="20%" class="dataTableHeading" mc:edit="data_table_heading02">
+      DIRECCION
+    </th>
+    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading02">
+      POBLACION
+    </th>
+    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading03">
+      PROVINCIA
+    </th>
+    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading04">
+      C.P.
+    </th>
+    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading04">
+      TELEFONO
+    </th>
+  </tr>
+  <tr mc:repeatable>
+    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
+      <%= @order.bill_address.firstname %>
+    </td>
+    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
+      <%= @order.bill_address.lastname %>
+    </td>
+    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
+      <%= @order.bill_address.address1 %>
+    </td>
+    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
+      <%= @order.bill_address.city %>
+    </td>
+    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
+      <%= @order.bill_address.state.name %>
+    </td>
+    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
+      <%= @order.bill_address.zipcode %>
+    </td>
+    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
+      <%= @order.bill_address.phone %>
+    </td>
+  </tr>
+</table>
