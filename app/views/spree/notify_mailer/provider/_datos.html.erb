@@ -15,6 +15,15 @@
       <div mc:edit="std_content00">
         Los datos del cliente son los siguientes:
       </div>
+      <div mc:edit="std_content00">
+        Nombre: <%= @order.bill_address.firstname %>
+        Apellidos: <%= @order.bill_address.lastname %>
+        Direccion: <%= @order.bill_address.address1 %>
+        Poblacion: <%= @order.bill_address.city %>
+        Codigo Postal: <%= @order.bill_address.zipcode %>
+        Provincia: <%= @order.bill_address.state.name %>
+        Teléfono: <%= @order.bill_address.phone %>
+      </div>
     </td>
   </tr>
 </table>
