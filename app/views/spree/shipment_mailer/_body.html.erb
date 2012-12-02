@@ -29,7 +29,7 @@
                 <%= render :partial => 'spree/shipment_mailer/datos_workshop' %>
                 <br />
                 <br />
-                Asimismo recordarle, que el precio de la instalacion de los neumaticos (<%= money(@order.workshop.price_for_car) %>) no esta incluido en el precio de la compra y que debera abonar al taller con la finalizacion de la instalacion.
+                Asimismo recordarle, que el precio de la instalacion de los neumaticos (<%= money(@shipment.order.workshop.price_for_car) %>) no esta incluido en el precio de la compra y que debera abonar al taller con la finalizacion de la instalacion.
               <% end -%>
               <%= t('shipment_mailer.confirm_email.thanks') %>
             </div>

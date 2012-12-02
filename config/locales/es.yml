@@ -51,8 +51,8 @@ es:
       thanks: "Gracias por confiar en neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo."
   shipment_mailer:
     shipped_email:
-      shipped_email.dear_customer: "Estimado Cliente"
-      shipped_email.instructions: "Su pedido ya ha sido enviado."
+      dear_customer: "Estimado Cliente"
+      instructions: "Su pedido ya ha sido enviado."
       shipment_summary: "Le recordamos los datos de su pedido:"
       thanks: "Gracias por confiar en neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo."
   checkout_steps:
