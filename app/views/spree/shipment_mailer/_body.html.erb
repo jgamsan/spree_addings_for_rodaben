@@ -20,7 +20,7 @@
           <td valign="top" class="bodyContent">
             <div mc:edit="std_content01">
               <% if @shipment.order.workshop.nil? -%>
-                <%= t('shipment_mailer.confirm_email.thanks') %>
+                <%= t('shipment_mailer.shipped_email.thanks') %>
               <% else -%>
                 Nos permitimos recordarle que su pedido de neumaticos ha sido enviado al Taller que Ud. solicito en su proceso de compra.
                 Los datos son los siguientes:
@@ -30,8 +30,8 @@
                 <br />
                 <br />
                 Asimismo recordarle, que el precio de la instalacion de los neumaticos (<%= money(@shipment.order.workshop.price_for_car) %>) no esta incluido en el precio de la compra y que debera abonar al taller con la finalizacion de la instalacion.
+                <%= t('shipment_mailer.shipped_email.thanks') %>
               <% end -%>
-              <%= t('shipment_mailer.confirm_email.thanks') %>
             </div>
           </td>
         </tr>

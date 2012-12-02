@@ -30,8 +30,8 @@
                 <br />
                 <br />
                 Asimismo recordarle, que el precio de la instalacion de los neumaticos (<%= money(@order.workshop.price_for_car) %>) no esta incluido en el precio de la compra y que debera abonar al taller con la finalizacion de la instalacion.
+                <%= t('order_mailer.confirm_email.thanks') %>
               <% end -%>
-              <%= t('order_mailer.confirm_email.thanks') %>
             </div>
           </td>
         </tr>
