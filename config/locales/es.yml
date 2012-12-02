@@ -48,7 +48,13 @@ es:
       order_summary: "Resumen del pedido"
       subtotal: "Subtotal"
       total: "Total"
-      thanks: "Gracias por confiar en Neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo "
+      thanks: "Gracias por confiar en neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo."
+  shipment_mailer:
+    shipped_email:
+      shipped_email.dear_customer: "Estimado Cliente"
+      shipped_email.instructions: "Su pedido ya ha sido enviado."
+      shipment_summary: "Le recordamos los datos de su pedido:"
+      thanks: "Gracias por confiar en neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo."
   checkout_steps:
     workshop: "Taller"
   spree:

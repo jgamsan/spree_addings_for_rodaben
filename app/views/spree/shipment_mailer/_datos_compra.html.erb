@@ -1,0 +1,17 @@
+<h4><%= t('shipment_mailer.shipped_email.shipment_summary') %></h4>
+<table border="0" cellpadding="10" cellspacing="0" width="100%" class="templateDataTable">
+  <tr>
+    <th scope="col" valign="top" width="20%" class="dataTableHeading" mc:edit="data_table_heading00">CODIGO</th>
+    <th scope="col" valign="top" width="50%" class="dataTableHeading" mc:edit="data_table_heading01">NOMBRE</th>
+    <th scope="col" valign="top" width="15%" class="dataTableHeading" mc:edit="data_table_heading03">VARIANTE</th>
+    <th scope="col" valign="top" width="15%" class="dataTableHeading" mc:edit="data_table_heading02">CANTIDAD</th>
+  </tr>
+  <% @shipment.manifest.each do |item| %>
+    <tr mc:repeatable>
+      <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= item.variant.sku %></td>
+      <td valign="top" class="dataTableContent" mc:edit="data_table_content01"><%= item.variant.product.name %></td>
+      <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%= variant_options(item.variant, :include_style => false) %></td>
+      <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%=item.quantity%></td>
+    </tr>
+  <% end -%>
+</table>

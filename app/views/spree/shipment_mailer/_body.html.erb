@@ -6,32 +6,32 @@
         <tr>
           <td valign="top" class="bodyContent">
             <div mc:edit="std_content00">
-              <strong><%= t('order_mailer.confirm_email.dear_customer') %></strong>
-              <%= t('order_mailer.confirm_email.instructions') %>
+              <strong><%= t('shipment_mailer.shipped_email.dear_customer') %></strong>
+              <%= t('shipment_mailer.shipped_email.instructions') %>
             </div>
           </td>
         </tr>
         <tr>
           <td valign="top" style="padding-top:0; padding-bottom:0;">
-            <%= render :partial => 'spree/order_mailer/datos_compra' %>
+            <%= render :partial => 'spree/shipment_mailer/datos_compra' %>
           </td>
         </tr>
         <tr>
           <td valign="top" class="bodyContent">
             <div mc:edit="std_content01">
-              <% if @order.workshop.nil? -%>
-                <%= t('order_mailer.confirm_email.thanks') %>
+              <% if @shipment.order.workshop.nil? -%>
+                <%= t('shipment_mailer.confirm_email.thanks') %>
               <% else -%>
-                Nos permitimos recordarle que su pedido de neumaticos va a ser enviado al Taller que Ud. solicito en su proceso de compra.
+                Nos permitimos recordarle que su pedido de neumaticos ha sido enviado al Taller que Ud. solicito en su proceso de compra.
                 Los datos son los siguientes:
                 <br />
                 <br />
-                <%= render :partial => 'spree/notify_mailer/provider/datos_workshop' %>
+                <%= render :partial => 'spree/shipment_mailer/datos_workshop' %>
                 <br />
                 <br />
                 Asimismo recordarle, que el precio de la instalacion de los neumaticos (<%= money(@order.workshop.price_for_car) %>) no esta incluido en el precio de la compra y que debera abonar al taller con la finalizacion de la instalacion.
               <% end -%>
-              <%= t('order_mailer.confirm_email.thanks') %>
+              <%= t('shipment_mailer.confirm_email.thanks') %>
             </div>
           </td>
         </tr>
