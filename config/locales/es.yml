@@ -54,7 +54,7 @@ es:
       dear_customer: "Estimado Cliente"
       instructions: "Su pedido ya ha sido enviado."
       shipment_summary: "Le recordamos los datos de su pedido:"
-      thanks: "Gracias por confiar en neumaticosdecoche.com.<br />Esperamos cumplir sus expectativas y vuelva a confiar en nosotros.<br />Un saludo."
+      thanks_html: "Gracias por confiar en neumaticosdecoche.com.<br />Esperamos cumplir sus expectativas y vuelva a confiar en nosotros.<br />Un saludo."
   checkout_steps:
     workshop: "Taller"
   spree:
