@@ -10,6 +10,7 @@ es:
   innertubes: "Gestion de Llantas"
   workshop: "Talleres"
   workshops: "Gestion Talleres"
+  workshop_options: "Opciones de Talleres"
   tire_season: "Clima"
   tire_rf: "RunFlat"
   tire_gr: "Agricola"
