@@ -1,29 +1,31 @@
 <%= render :partial => 'spree/admin/shared/tires_setting_menu' %>
 
-<div class="toolbar" data-hook="toolbar">
-  <ul class="actions">
-    <li>
-      <%= button_link_to t(:new_tire_serial), new_admin_tire_serial_url, :icon => 'add', :id => 'admin_new_tire_serial_link' %>
-    </li>
-  </ul>
-  <br class="clear" />
-</div>
+<% content_for :page_title do %>
+  <%= t(:tire_serials) %>
+<% end %>
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to t(:new_tire_serial), new_admin_tire_serial_url, :icon => 'icon-plus', :id => 'admin_new_tire_serial_link' %>
+  </li>
+<% end %>
 
-<h1><%= t(:tire_serials) %></h1>
-
-<table class="index" id="tire_serials_listing">
+<table class="index responsive" id="tire_serials_listing">
+  <colgroup>
+    <col style="width: 20%;">
+    <col style="width: 20%;">
+  </colgroup>
   <thead data-hook="admin_tire_serials_index_headers">
-    <th><%= t(:name) %></th>
-    <th><%= t(:is_mm?) %></th>
-    <th data-hook="admin_tire_serials_index_header_actions">
+    <th><%= sort_link @search, :name, t(:name) %></th>
+    <th><%= sort_link @search, :name, t(:is_mm?) %></th>
+    <th data-hook="admin_tire_serials_index_header_actions" class="actions">
     </th>
   </thead>
   <tbody>
     <% @tire_serials.each do |serial|%>
       <tr id="<%= spree_dom_id serial %>" data-hook="admin_tire_serials_index_rows">
-        <td serial="60px"><%= serial.name %></td>
-        <td width="60px"><%= serial.is_mm %></td>
-        <td serial="140px" data-hook="admin_tire_serials_index_row_actions">
+        <td class="align-center"><%= serial.name %></td>
+        <td class="align-center"><%= serial.is_mm %></td>
+        <td class="align-center" data-hook="admin_tire_serials_index_row_actions">
           <%= link_to_edit serial %> &nbsp;
           <%= link_to_delete serial %>
         </td>

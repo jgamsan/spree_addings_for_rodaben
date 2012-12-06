@@ -1,9 +1,18 @@
 <%= render :partial => 'spree/admin/shared/tires_setting_menu' %>
-
-<h1><%= t(:new_tire_innertube) %></h1>
-<%= render :partial => 'spree/shared/error_messages', :locals => { :target => @innertube } %>
+<% content_for :page_title do %>
+  <%= t(:new_tire_innertube) %>
+<% end %>
+<% content_for :page_actions do %>
+  <li><%= button_link_to t(:back_to_tire_innertubes_list), spree.admin_tire_innertubes_path, :icon => 'icon-arrow-left' %></li>
+<% end %>
+<%= csrf_meta_tags %>
+<div data-hook="admin_order_new_header">
+  <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @innertube } %>
+</div>
 
 <%= form_for [:admin, @tire_innertube] do |f| %>
   <%= render :partial => 'form', :locals => { :f => f } %>
-  <p class="form-buttons" data-hook="buttons"><%= button t(:create) %></p>
+  <div class="filter-actions actions" data-hook="buttons">
+    <%= button t(:create), 'icon-ok' %>
+  </div>
 <% end %>
