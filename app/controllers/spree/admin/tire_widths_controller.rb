@@ -3,9 +3,9 @@ module Spree
     class TireWidthsController < ResourceController
 
       def index
-        params[:q] ||= {}
+        params[:q] ||= "name asc"
         @search = Spree::TireWidth.ransack(params[:q])
-        @tire_widths = @search.order("name").page(params[:page]).per(10)
+        @tire_widths = @search.page(params[:page]).per(10)
 
       end
 
