@@ -5,7 +5,7 @@ module Spree
       def index
         params[:q] ||= "name asc"
         @search = Spree::TireWidth.ransack(params[:q])
-        @tire_widths = @search.page(params[:page]).per(10)
+        @tire_widths = @search.result.page(params[:page]).per(10)
 
       end
 
