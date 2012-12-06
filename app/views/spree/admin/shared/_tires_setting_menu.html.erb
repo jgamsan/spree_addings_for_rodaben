@@ -1,14 +1,14 @@
-<% content_for :sidebar do %>
-
+<% content_for :sidebar_title do %>
   <h3><%= t(:gestion_neumaticos) %></h3>
-  <br class="clear" />
-
-  <ul class="sidebar" data-hook="admin_tires_setting_sidebar_menu">
-    <%= configurations_sidebar_menu_item t(:widths), admin_tire_widths_path %>
-    <%= configurations_sidebar_menu_item t(:innertubes), admin_tire_innertubes_path %>
-    <%= configurations_sidebar_menu_item t(:serials), admin_tire_serials_path %>
-    <%= configurations_sidebar_menu_item t(:speed_codes), admin_tire_speed_codes_path %>
-    <%= configurations_sidebar_menu_item t(:workshops), admin_workshops_path %>
-    <%= configurations_sidebar_menu_item t(:load_massive_images), load_massive_images_admin_tire_settings_path %>
-  </ul>
+<% end -%>
+<% content_for :sidebar do %>
+  <nav class="menu">
+    <ul class="sidebar" data-hook="admin_tires_setting_sidebar_menu">
+      <%= configurations_sidebar_menu_item t(:widths), admin_tire_widths_path %>
+      <%= configurations_sidebar_menu_item t(:innertubes), admin_tire_innertubes_path %>
+      <%= configurations_sidebar_menu_item t(:serials), admin_tire_serials_path %>
+      <%= configurations_sidebar_menu_item t(:speed_codes), admin_tire_speed_codes_path %>
+      <%= configurations_sidebar_menu_item t(:workshops), admin_workshops_path %>
+      <%= configurations_sidebar_menu_item t(:load_massive_images), load_massive_images_admin_tire_settings_path %>
+    </ul>
 <% end %>
