@@ -17,6 +17,11 @@ Spree::Variant.class_eval do
   ["RU", 3]
   ]
 
+  POSITION_OPTIONS = [
+  ["Delantero", 1],
+  ["Trasero", 2]
+  ]
+
   def self.existe_tire?(name, width, serial, innertube, speed_code)
     ancho = Spree::TireWidth.find_by_name(width) unless width.blank?
     ancho_1 = ancho.id unless ancho.nil?

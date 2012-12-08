@@ -1,0 +1,18 @@
+<%= render :partial => 'spree/admin/shared/tires_setting_menu' %>
+<% content_for :page_title do %>
+  <%= t(:new_tire_load-code) %>
+<% end %>
+<% content_for :page_actions do %>
+  <li><%= button_link_to t(:back_to_tire_load_codes_list), spree.admin_tire_load_codes_path, :icon => 'icon-arrow-left' %></li>
+<% end %>
+<%= csrf_meta_tags %>
+<div data-hook="admin_load_codes_new_header">
+  <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @load_code } %>
+</div>
+
+<%= form_for [:admin, @tire_load_code] do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <div class="filter-actions actions" data-hook="buttons">
+    <%= button t(:create), 'icon-ok' %>
+  </div>
+<% end %>

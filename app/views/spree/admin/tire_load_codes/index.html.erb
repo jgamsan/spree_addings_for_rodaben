@@ -1,0 +1,35 @@
+<%= render :partial => 'spree/admin/shared/tires_setting_menu' %>
+<% content_for :page_title do %>
+  <%= t(:tire_load_codes) %>
+<% end %>
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to t(:new_tire_load_code), new_admin_tire_load_code_url, :icon => 'icon-plus', :id => 'admin_new_tire_load_code_link' %>
+  </li>
+<% end %>
+
+<table class="index responsive" id="tire_load_codes_listing">
+  <colgroup>
+    <col style="width: 20%;">
+    <col style="width: 20%;">
+  </colgroup>
+  <thead data-hook="admin_tire_innertubes_index_headers">
+    <th><%= sort_link @search, :name, t(:name) %></th>
+    <th>Peso</th>
+    <th data-hook="admin_tire_load_codes_index_header_actions" class="actions">
+    </th>
+  </thead>
+  <tbody>
+    <% @tire_load_codes.each do |code|%>
+      <tr id="<%= spree_dom_id code %>" data-hook="admin_tire_load_codes_index_rows">
+        <td class="align-center"><%= code.name %></td>
+        <td class="align-center"><%= code.weight %></td>
+        <td class="align-center" data-hook="admin_tire_load_codes_index_row_actions">
+          <%= link_to_edit code %> &nbsp;
+          <%= link_to_delete code %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= paginate @tire_load_codes %>
