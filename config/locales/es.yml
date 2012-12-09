@@ -1,6 +1,6 @@
 es:
   about: "Nuestra Empresa"
-  speed_code: "C. Velocidad"
+  speed_code: "CV"
   back_to_tire_widths_list: "Volver a Listado de Anchos"
   back_to_tire_serials_list: "Volver a Listado de Perfiles"
   back_to_tire_innertubes_list: "Volver a Listado de Llantas"
@@ -22,7 +22,6 @@ es:
   workshop: "Talleres"
   workshops: "Gestion Talleres"
   tire_season: "Clima"
-  tire_rf: "RunFlat"
   tire_gr: "Agricola"
   new_tire_width: "Nuevo Ancho"
   editing_tire_width: "Editando Ancho"
