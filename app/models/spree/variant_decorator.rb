@@ -19,7 +19,8 @@ Spree::Variant.class_eval do
 
   POSITION_OPTIONS = [
   ["Delantero", 1],
-  ["Trasero", 2]
+  ["Trasero", 2],
+  ["Ambas", 3]
   ]
 
   def self.existe_tire?(name, width, serial, innertube, speed_code)
