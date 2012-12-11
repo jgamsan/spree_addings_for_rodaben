@@ -5,7 +5,7 @@ Spree::Variant.class_eval do
   belongs_to :tire_speed_code, :class_name => "Spree::TireSpeedCode"
   belongs_to :tire_load_code, :class_name => "Spree::TireLoadCode"
 
-  attr_accessible :count_on_hand, :cost_price, :price, :price_in_offert
+  attr_accessible :count_on_hand, :cost_price, :price, :price_in_offert, :tire_rf, :tire_position
 
   SEASON_OPTIONS = [
   ["Invierno", 1],
