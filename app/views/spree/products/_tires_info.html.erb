@@ -1,21 +1,20 @@
 <h6 class="product-section-title"><%= t('tires_info')%></h6>
-  <table id="tires_info" class="table-display" data-hook width="75%">
+  <table id="tires_info" class="table table-stripped table-bordered table-hover" data-hook width="75%">
     <tbody>
       <% for variant in @variants
-        css_class = cycle('even', 'odd') %>
-        <tr class="<%= css_class %>">
+        <tr>
           <td><strong>Ancho</strong></td>
           <td><%= variant.tire_width.name rescue t(:product_has_no_width) %></td>
         </tr>
-        <tr class="<%= css_class %>">
+        <tr>
           <td><strong>Perfil</strong></td>
           <td><%= variant.tire_serial.name rescue t(:product_has_no_serial) %></td>
         </tr>
-        <tr class="<%= css_class %>">
+        <tr>
           <td><strong>Llanta</strong></td>
           <td><%= variant.tire_innertube.name rescue t(:product_has_no_innertube)%></td>
         </tr>
-        <tr class="<%= css_class %>">
+        <tr>
           <td><strong>Codigo Velocidad</strong></td>
           <td><%= variant.tire_speed_code.name rescue t(:product_has_no_speed_code)%></td>
         </tr>
