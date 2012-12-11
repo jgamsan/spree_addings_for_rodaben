@@ -3,6 +3,7 @@ Spree::Variant.class_eval do
   belongs_to :tire_serial, :class_name => "Spree::TireSerial"
   belongs_to :tire_innertube, :class_name => "Spree::TireInnertube"
   belongs_to :tire_speed_code, :class_name => "Spree::TireSpeedCode"
+  belongs_to :tire_load_code, :class_name => "Spree::TireLoadCode"
 
   attr_accessible :count_on_hand, :cost_price, :price, :price_in_offert
 
