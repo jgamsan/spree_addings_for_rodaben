@@ -6,7 +6,7 @@
       <div class="controls">
         <%= select_tag :lista, options_for_select([["Equivalentes", '']] +
         equivalentes, @width ? @width.id : params[:width]), :class => "small" %>
-        <%= select_tag :llantas, options_for_select([["Llantas Equivalentes", '']] +
+        <%= select_tag :llanta, options_for_select([["Llantas Equivalentes", '']] +
         llantas.uniq.sort, @width ? @width.id : params[:width]), :class => "small" %>
       </div>
       <%= submit_tag t(:search), :name => nil, :class => "btn btn-primary btn-small" %>
