@@ -4,7 +4,7 @@ module Spree
     helper 'spree/products'
     respond_to :html
     def index
-      if params[:lista].nil?
+      if params[:lista].blank?
         innertube = params[:llanta]
         llanta = Spree::TireInnertube.find_by_name(innertube).id
         @searcher = Spree::Config.searcher_class.new(params.merge(:tire_innertube_id => llanta)) 
