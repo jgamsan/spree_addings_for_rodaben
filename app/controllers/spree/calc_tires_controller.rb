@@ -4,10 +4,11 @@ module Spree
     helper 'spree/products'
     respond_to :html
     def index
+      vehiculo = params[:vehicle]
       if params[:lista].blank?
         innertube = params[:llanta]
         llanta = Spree::TireInnertube.find_by_name(innertube).id
-        @searcher = Spree::Config.searcher_class.new(params.merge(:tire_innertube_id => llanta)) 
+        @searcher = Spree::Config.searcher_class.new(params.merge(:tire_innertube_id => llanta, :vehicle => vehiculo)) 
       else
         rueda = params[:lista]
         rueda =~ %r{(\d+)(?:/|:)(\d+)(?:\D|:)(\d+)}
@@ -15,7 +16,7 @@ module Spree
         ancho = Spree::TireWidth.find_by_name(r[0]).id
         serial = Spree::TireSerial.find_by_name(r[1]).id
         llanta = Spree::TireInnertube.find_by_name(r[2]).id
-        @searcher = Spree::Config.searcher_class.new(params.merge(:tire_width_id => ancho, :tire_serial_id => serial, :tire_innertube_id => llanta))           
+        @searcher = Spree::Config.searcher_class.new(params.merge(:tire_width_id => ancho, :tire_serial_id => serial, :tire_innertube_id => llanta, :vehicle => vehiculo))           
       end
       @products = @searcher.retrieve_products
       respond_with(@products)
