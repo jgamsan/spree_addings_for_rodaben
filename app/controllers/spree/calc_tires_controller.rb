@@ -50,7 +50,7 @@ module Spree
             parcial = calculo_diametro(width, serial, innertube)
             if (parcial <= maximum) && (parcial >= minimum)
               neumatico = width + "/" + serial + "R" + innertube
-              @equivalentes << [neumatico, neumatico]
+              @equivalentes << [neumatico, neumatico] if Spree::Product.existe_neumatico?(params[:width],params[:serial],params[:innertube])
               @innertubes << [innertube, innertube]
             end
           end
