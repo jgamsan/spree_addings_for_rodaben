@@ -15,6 +15,10 @@ module Spree
       respond_with(@products)
     end
 
+    def method_name
+      
+    end
+
     def show_options
       @widths = Spree::TireWidth.in_mm(true).map {|t| [t.name, t.id]}
       @serials = Spree::TireSerial.in_mm(true).map {|t| [t.name, t.id]}
@@ -40,7 +44,7 @@ module Spree
             if (parcial <= maximum) && (parcial >= minimum)
               neumatico = width + "/" + serial + "R" + innertube
               @equivalentes << [neumatico, neumatico]
-              @innertubes << innertube
+              @innertubes << [innertube, innertube]
             end
           end
         end
