@@ -6,6 +6,7 @@
       <div class="controls">
         <%= select_tag :lista, options_for_select([["Equivalentes", '']] +
         equivalentes, @width ? @width.id : params[:width]), :class => "small" %>
+        <h5>o</h5>
         <%= select_tag :llanta, options_for_select([["Llantas Equivalentes", '']] +
         llantas.uniq.sort, @width ? @width.id : params[:width]), :class => "small" %>
       </div>
