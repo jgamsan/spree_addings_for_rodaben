@@ -1,7 +1,7 @@
 <%= render :partial => 'spree/admin/shared/tires_setting_menu' %>
 
 <% content_for :page_title do %>
-  <%= t(:gestion_neumaticos) %> %>
+  <%= t(:gestion_neumaticos) %>
 <% end %>
 
 <table class="table table-stripped table-bordered" data-hook="tire_management">
@@ -13,12 +13,16 @@
   </thead>
   <tbody data-hook="admin_tire_management_menu">
     <tr>
-      <td>Numero de Neumaticos Disponibles</td>
+      <td>Cantidad de Neumaticos Disponibles</td>
       <td><%= Spree::Product.sum(:count_on_hand) %></td>
     </tr>
     <tr>
       <td>Numero de Modelos a dia de hoy</td>
       <td><%= Spree::Product.count %></td>
+    </tr>
+    <tr>
+      <td>Valor Monetario Total</td>
+      <td><%= Spree::Money.new(Spree::Variant.joins(:prices).select("sum(count_on_hand * spree_prices.amount) as valor_total").valor_total) %></td>
     </tr>
   </tbody>
 </table>
