@@ -50,7 +50,7 @@ module Spree
             parcial = calculo_diametro(width, serial, innertube)
             if (parcial <= maximum) && (parcial >= minimum)
               neumatico = width + "/" + serial + "R" + innertube
-              @equivalentes << [neumatico, neumatico] if existe_neumatico?(width, serial, innertube)
+              @equivalentes << [neumatico, neumatico] if Spree::Product.existe_neumatico?(width, serial, innertube)
               @innertubes << [innertube, innertube]
             end
           end
@@ -78,16 +78,5 @@ module Spree
     def calculo_diametro(ancho, perfil, llanta)
       ((((ancho.to_f / 25.4) * (perfil.to_f/100) * 2) + llanta.to_f) * 25.4).round(2)
     end
-
-    def existe_neumatico?(ancho, perfil, llanta)
-      width = Spree::TireWidth.find_by_name(ancho)
-      serial = Spree::TireSerial.find_by_name(perfil)
-      innertube = Spree::TireInnertube.find_by_name(llanta)
-      w = width.id
-      s = serial.id
-      i = innertube.id
-      true unless Spree::Product.by_width(w).by_serial(s).by_innertube(i).empty?
-    end
-
   end
 end
