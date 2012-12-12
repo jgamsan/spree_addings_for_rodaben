@@ -23,6 +23,7 @@ module Spree
 
     def calc_equivalents
       @equivalentes = []
+      @innertubes = []
       ancho = Spree::TireWidth.find(params[:width]).name
       perfil = Spree::TireSerial.find(params[:serial]).name
       llanta = Spree::TireInnertube.find(params[:innertube]).name
@@ -39,6 +40,7 @@ module Spree
             if (parcial <= maximum) && (parcial >= minimum)
               neumatico = width + "/" + serial + "R" + innertube
               @equivalentes << [neumatico, neumatico]
+              @innertubes << innertube
             end
           end
         end
