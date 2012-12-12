@@ -1,36 +1,24 @@
-<h1><%= t(:gestion_neumaticos) %></h1>
+<%= render :partial => 'spree/admin/shared/tires_setting_menu' %>
 
-<table class="index" data-hook="tire_management">
+<% content_for :page_title do %>
+  <%= <%= t(:gestion_neumaticos) %> %>
+<% end %>
+
+<table class="table table-stripped table-bordered" data-hook="tire_management">
   <thead>
     <tr>
-      <th><%= t(:system) %></th>
-      <th><%= t(:description) %></th>
+      <th>Dato tecnico</th>
+      <th>Valor</th>
     </tr>
   </thead>
   <tbody data-hook="admin_tire_management_menu">
     <tr>
-      <td><%= link_to t(:width), admin_tire_widths_path %></td>
-      <td><%= t(:gestion_de_anchos) %></td>
+      <td>Numero de Neumaticos Disponibles</td>
+      <td><%= Spree::Product.sum(:count_on_hand) %></td>
     </tr>
     <tr>
-      <td><%= link_to t(:innertube), admin_tire_innertubes_path %></td>
-      <td><%= t(:gestion_de_Llantas) %></td>
-    </tr>
-    <tr>
-      <td><%= link_to t(:serial), admin_tire_serials_path %></td>
-      <td><%= t(:gestion_de_series) %></td>
-    </tr>
-    <tr>
-      <td><%= link_to t(:speed_code), admin_tire_speed_codes_path %></td>
-      <td><%= t(:gestion_de_codigos_de_velocidad) %></td>
-    </tr>
-    <tr>
-      <td><%= link_to t(:workshop), admin_workshops_path %></td>
-      <td><%= t(:gestion_de_talleres) %></td>
-    </tr>
-    <tr>
-      <td><%= link_to t(:load_massive_images), load_massive_images_admin_tire_settings_path %></td>
-      <td><%= t(:carga_masiva_de_imagenes) %></td>
+      <td>Numero de Modelos a dia de hoy</td>
+      <td><%= Spree::Product.count %></td>
     </tr>
   </tbody>
 </table>
