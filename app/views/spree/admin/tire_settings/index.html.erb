@@ -22,7 +22,7 @@
     </tr>
     <%=  Spree::Product.group("supplier_id").count.each do |supplier, valor| %>
       <tr>
-        <td><%= supplier.name %></td>
+        <td><%= Spree::Supplier.find(supplier).name %></td>
         <td>valor</td>
       </tr>
     <% end -%>
