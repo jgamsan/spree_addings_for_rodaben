@@ -20,6 +20,12 @@
       <td>Numero de Modelos a dia de hoy</td>
       <td><%= Spree::Product.count %></td>
     </tr>
+    <%=  Spree::Product.group("supplier_id").count.each do |supplier, valor| %>
+      <tr>
+        <td><%= supplier.name %></td>
+        <td>valor</td>
+      </tr>
+    <% end -%>
     <tr>
       <td>Valor Monetario Total</td>
       <td><%= Spree::Money.new(Spree::Variant.joins(:prices).select("sum(count_on_hand * spree_prices.amount) as valor_total").map {|x| x.valor_total.to_f}[0]) %></td>
