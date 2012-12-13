@@ -20,7 +20,7 @@
       <td>Numero de Modelos a dia de hoy</td>
       <td><%= Spree::Product.count %></td>
     </tr>
-    <%=  Spree::Product.group("supplier_id").count.each do |supplier, valor| %>
+    <% Spree::Product.group("supplier_id").count.each do |supplier, valor| %>
       <tr>
         <td><%= Spree::Supplier.find(supplier).name %></td>
         <td><%= valor %></td>
