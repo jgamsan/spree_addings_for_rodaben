@@ -3,7 +3,7 @@
     <td valign="top" style="padding-right:0;">
       <div mc:edit="std_content00">
         <h3 class="h3">Estimada Empresa <%= @line_items.first.variant.product.supplier.title %></h3>
-        Le remito los datos del pedido de neumaticos con destino a la direccion abajo reseñada.
+        Le remito los datos del pedido de neumaticos nº <%= @order.number %> con destino a la direccion abajo reseñada.
         <br />
         <br />
         <%= render :partial => 'spree/notify_mailer/provider/tabla_datos' %>
@@ -23,6 +23,11 @@
         <% else -%>
           <%= render :partial => 'spree/notify_mailer/provider/datos_workshop' %>
         <% end -%>
+      </div>
+      <div mc:edit="std_content00">
+        Ruego comuniquen el envio del pedido a este <%=  mail_to "info@neumaticosdecoche.com", "email", :subject => "Enviado pedido orden #{@order.number}" %>
+        <br />
+        <br />
       </div>
     </td>
   </tr>
