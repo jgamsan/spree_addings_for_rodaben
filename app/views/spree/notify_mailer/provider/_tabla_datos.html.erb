@@ -35,10 +35,10 @@
         <%=item.quantity%>
       </td>
       <td valign="top" class="dataTableContent" mc:edit="data_table_content02">
-        <%= number_to_currency item.variant.cost_price %>
+        <%= Spree::Money.new(item.variant.cost_price, { :currency => currency })  %>
       </td>
       <td valign="top" class="dataTableContent" mc:edit="data_table_content02">
-        <%= number_to_currency(item.variant.cost_price * item.quantity) %>
+        <%= Spree::Money.new((item.variant.cost_price * item.quantity), { :currency => currency }) %>
       </td>
     </tr>
     <% @total += item.variant.cost_price * item.quantity %>
@@ -48,7 +48,7 @@
       <%= t('order_mailer.confirm_email.subtotal') %>
     </td>
     <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      <%= number_to_currency @total %>
+      <%= Spree::Money.new(@total, { :currency => currency }) %>
     </td>
   </tr>
   <tr mc:repeatable>
@@ -56,7 +56,7 @@
       Pedido Total
     </td>
     <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      <%= number_to_currency @total %>
+      <%= Spree::Money.new(@total, { :currency => currency }) %>
     </td>
   </tr>
 </table>
