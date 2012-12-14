@@ -1,0 +1,42 @@
+<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+  <tr>
+    <td valign="top">
+      <!-- // Begin Module: Standard Content \\ -->
+      <table border="0" cellpadding="20" cellspacing="0" width="100%">
+        <tr>
+          <td valign="top" class="bodyContent">
+            <div mc:edit="std_content00">
+              <strong><%= t('shipment_mailer.shipped_email.dear_customer') %></strong>
+              <%= t('shipment_mailer.shipped_email.instructions') %>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" style="padding-top:0; padding-bottom:0;">
+            <%= render :partial => 'spree/shipment_mailer/datos_compra' %>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" class="bodyContent">
+            <div mc:edit="std_content01">
+              <% if @shipment.order.workshop.nil? -%>
+                <%= t('shipment_mailer.shipped_email.thanks_html') %>
+              <% else -%>
+                Nos permitimos recordarle que su pedido de neumaticos ha sido enviado al Taller que Ud. solicito en su proceso de compra.
+                Los datos son los siguientes:
+                <br />
+                <br />
+                <%= render :partial => 'spree/shipment_mailer/datos_workshop' %>
+                <br />
+                <br />
+                Asimismo recordarle, que el precio de la instalacion de los neumaticos (<%= money(@shipment.order.workshop.price_for_car) %>) no esta incluido en el precio de la compra y que debera abonar al taller con la finalizacion de la instalacion.
+                <%= t('shipment_mailer.shipped_email.thanks_html') %>
+              <% end -%>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <!-- // End Module: Standard Content \\ -->
+    </td>
+  </tr>
+</table>

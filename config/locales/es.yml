@@ -21,6 +21,7 @@ es:
   innertubes: "Gestion de Llantas"
   workshop: "Talleres"
   workshops: "Gestion Talleres"
+  workshop_options: "Opciones de Talleres"
   tire_season: "Clima"
   tire_gr: "Agricola"
   new_tire_width: "Nuevo Ancho"
@@ -58,7 +59,13 @@ es:
       order_summary: "Resumen del pedido"
       subtotal: "Subtotal"
       total: "Total"
-      thanks: "Gracias por confiar en Neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo "
+      thanks: "Gracias por confiar en neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo."
+  shipment_mailer:
+    shipped_email:
+      dear_customer: "Estimado Cliente"
+      instructions: "Su pedido ya ha sido enviado."
+      shipment_summary: "Le recordamos los datos de su pedido:"
+      thanks_html: "Gracias por confiar en neumaticosdecoche.com.<br />Esperamos cumplir sus expectativas y vuelva a confiar en nosotros.<br />Un saludo."
   checkout_steps:
     workshop: "Taller"
   spree:

@@ -1,0 +1,25 @@
+<table border="0" cellpadding="10" cellspacing="0" width="100%">
+  <tr>
+    <td valign="top" style="padding-right:0;">
+      <div mc:edit="std_content00">
+        <h3 class="h3">Para <%= @order.workshop.name %>,</h3>
+        Le remito los datos del pedido de neumaticos con destino a su taller para ser instalados en vehiculo propiedad del cliente cuyos datos se reseñan mas abajo.
+        <br />
+        <br />
+        <%= render :partial => 'spree/notify_mailer/workshop/tabla_datos' %>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td valign="top" style="padding-right:0;">
+      <div mc:edit="std_content00">
+        Los datos del cliente son los siguientes:
+        <br />
+        <br />
+      </div>
+      <div mc:edit="std_content00">
+        <%= render :partial => 'spree/notify_mailer/workshop/datos_cliente' %>
+      </div>
+    </td>
+  </tr>
+</table>
