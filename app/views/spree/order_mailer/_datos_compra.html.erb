@@ -12,8 +12,8 @@
       <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= item.variant.sku %></td>
       <td valign="top" class="dataTableContent" mc:edit="data_table_content01"><%= raw(item.variant.product.name) %></td>
       <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%=item.quantity%></td>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%= money item.price %></td>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%= money(item.price * item.quantity) %></td>
+      <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%= item.variant.display_amount %></td>
+      <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%= item.display_amount %></td>
     </tr>
   <% end -%>
   <tr mc:repeatable>
@@ -21,7 +21,7 @@
       <%= t('order_mailer.confirm_email.subtotal') %>
     </td>
     <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      <%= money @order.item_total %>
+      <%= @order.display_item_total %>
     </td>
   </tr>
   <% @order.adjustments.eligible.each do |adjustment| %>
@@ -30,7 +30,7 @@
         <%= raw(adjustment.label) %>
       </td>
       <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-        <%= money(adjustment.amount) %>
+        <%= adjustment.display_amount %>
       </td>
     </tr>
   <% end %>
@@ -39,7 +39,7 @@
       <%= t('order_mailer.confirm_email.total') %>
     </td>
     <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      <%= money(@order.total) %>
+      <%= @order.display_total %>
     </td>
   </tr>
 </table>
