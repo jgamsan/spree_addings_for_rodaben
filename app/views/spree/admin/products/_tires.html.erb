@@ -20,7 +20,7 @@
 <% end -%>
 <%= f.field_container :tire_innertube do %>
   <%= f.label :tire_season, t(:tire_season) %>
-  <%= f.select(:tire_season, ([[t(:tire_season), '']] + Spree::Variant::SEASON_OPTIONS), , { :include_blank => true }, { :class => 'select2' })  %>
+  <%= f.select(:tire_season, ([[t(:tire_season), '']] + Spree::Variant::SEASON_OPTIONS), { :include_blank => true }, { :class => 'select2' })  %>
   <%= f.error_message_on :tire_innertube %>
 <% end -%>
 
