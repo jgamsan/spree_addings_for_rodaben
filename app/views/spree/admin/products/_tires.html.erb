@@ -1,21 +1,21 @@
 <%= f.field_container :tire_speed_code do %>
   <%= f.label :tire_speed_code_id, t(:speed_code) %>
-  <%= f.collection_select(:tire_speed_code_id, Spree::TireSpeedCode.order('name'), :id, :name, { :include_blank => true }, { 'style' => 'width:50px' }, { :class => 'select2' }) %>
+  <%= f.collection_select(:tire_speed_code_id, Spree::TireSpeedCode.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2' }) %>
   <%= f.error_message_on :tire_speed_code %>
 <% end -%>
 <%= f.field_container :tire_width do %>
   <%= f.label :tire_width_id, t(:width) %>
-  <%= f.collection_select(:tire_width_id, Spree::TireWidth.order('name'), :id, :name, { :include_blank => true }, { 'style' => 'width:60px' }, { :class => 'select2' }) %>
+  <%= f.collection_select(:tire_width_id, Spree::TireWidth.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2' }) %>
   <%= f.error_message_on :tire_width %>
 <% end -%>
 <%= f.field_container :tire_serial do %>
   <%= f.label :tire_serial_id, t(:serial) %>
-  <%= f.collection_select(:tire_serial_id, Spree::TireSerial.order('name'), :id, :name, { :include_blank => true }, { 'style' => 'width:60px' }, { :class => 'select2' }) %>
+  <%= f.collection_select(:tire_serial_id, Spree::TireSerial.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2' }) %>
   <%= f.error_message_on :tire_serial %>
 <% end -%>
 <%= f.field_container :tire_innertube do %>
   <%= f.label :tire_innertube_id, t(:innertube) %>
-  <%= f.collection_select(:tire_innertube_id, Spree::TireInnertube.order('name'), :id, :name, { :include_blank => true }, { 'style' => 'width:60px' }, { :class => 'select2' }) %>
+  <%= f.collection_select(:tire_innertube_id, Spree::TireInnertube.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2' }) %>
   <%= f.error_message_on :tire_innertube %>
 <% end -%>
 <%= f.field_container :tire_innertube do %>
