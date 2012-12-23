@@ -4,10 +4,10 @@
   <div data-hook="admin_assign_massive_green_rate_form_fields">
     <%= select_tag :tires_massive, options_for_select([[t(:brands), '']] +
                 @brands.map {|t| [t.name, t.id]},
-                @width ? @width.id : params[:tires_massive]) %>
+                @width ? @width.id : params[:tires_massive]), { :class => 'select2', :style => "width:120px;" } %>
     <%= select_tag :width, options_for_select([[t(:width), '']] +
                   @widths.map {|t| [t.name, t.id]},
-                  @serial ? @serial.id : params[:width]) %>
+                  @serial ? @serial.id : params[:width]), { :class => 'select2', :style => "width:120px;" } %>
   </div>
   <p class="form-buttons">
     <%= submit_tag t(:search) %>
