@@ -1,0 +1,23 @@
+<%
+  paginated_products = @searcher.retrieve_products if params.key?(:keywords)
+  paginated_products ||= products
+%>
+<table class="index">
+  <tr>
+    <th> <%= check_box_tag "check_all", nil %> Seleccionar Todos </th>
+    <th>Nombre</th>
+    <th>Imagen actual</th>
+  </tr>
+  <% products.each do |product| -%>
+    <tr>
+      <td><%= check_box_tag "product_ids[]", product.id %></td>
+      <td><%= product.name %></td>
+      <td><%= product.tire_green_rate.name %></td>
+    </tr>
+  <% end -%>
+</table>
+<% if paginated_products.respond_to?(:num_pages) %>
+  <div id="paginator">
+    <%= paginate paginated_products, :remote => true %>
+  </div>
+<% end %>
