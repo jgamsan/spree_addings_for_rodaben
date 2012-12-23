@@ -12,7 +12,7 @@
     <tr>
       <td><%= check_box_tag "product_ids[]", product.id %></td>
       <td><%= product.name %></td>
-      <td><%= product.tire_green_rate.name %></td>
+      <td><%= product.tire_green_rate_id.nil? ? t(:sin_ecotasa) : product.tire_green_rate.name %></td>
     </tr>
   <% end -%>
 </table>
