@@ -19,6 +19,7 @@ Spree::Core::Engine.routes.draw do
         get 'search_tyre'
         post 'search_tyre'
         post 'assign_massive_green_rate'
+        get 'assign_massive_green_rate'
         get 'search_tires_for_green_rate'
         post 'load_green_rate'
       end
