@@ -52,6 +52,7 @@ es:
   moto: "Moto"
   is_mm?: "Esta en mm?"
   load_massive_images: "Carga Masiva Imagenes"
+  search_tires_for_green_rate: "Asignacion masiva de Ecotasas"
   order_mailer:
     confirm_email:
       dear_customer: "Estimado Cliente"

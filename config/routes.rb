@@ -18,6 +18,8 @@ Spree::Core::Engine.routes.draw do
         get 'load_massive_images'
         get 'search_tyre'
         post 'search_tyre'
+        get 'assign_massive_green_rate'
+        get 'search_tires_for_green_rate'
       end
     end
     resources :tire_widths

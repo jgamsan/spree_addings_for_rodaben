@@ -1,0 +1,15 @@
+<%= render :partial => 'spree/admin/shared/tires_setting_menu' %>
+<h1><%= t(:busqueda_de_neumaticos_para_carga_masiva_de_ecotasas) %></h1>
+<%= form_tag assign_massive_green_rate_admin_tire_settings_path, :remote => true do -%>
+  <div data-hook="admin_assign_massive_green_rate_form_fields">
+    <%= select_tag :tires_massive, options_for_select([[t(:brands), '']] +
+                @brands.map {|t| [t.name, t.id]},
+                @width ? @width.id : params[:tires_massive]) %>
+    <%= select_tag :width, options_for_select([[t(:width), '']] +
+                  @widths.map {|t| [t.name, t.id]},
+                  @serial ? @serial.id : params[:width]) %>
+  </div>
+  <p class="form-buttons">
+    <%= submit_tag t(:search) %>
+  </p>
+<% end -%>
