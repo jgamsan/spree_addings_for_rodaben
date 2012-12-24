@@ -3,6 +3,11 @@
   paginated_products ||= products
 %>
 <table class="index">
+  <colgroup>
+    <col style="width: 10%;">
+    <col style="width: 20%;">
+    <col style="width: 20%;">
+  </colgroup>
   <tr>
     <th> <%= check_box_tag "check_all", nil %> Seleccionar Todos </th>
     <th>Nombre</th>
