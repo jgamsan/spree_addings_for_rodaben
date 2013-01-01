@@ -5,9 +5,18 @@ Spree::Variant.class_eval do
   belongs_to :tire_speed_code, :class_name => "Spree::TireSpeedCode"
   belongs_to :tire_load_code, :class_name => "Spree::TireLoadCode"
   belongs_to :tire_green_rate, :class_name => "Spree::TireGreenRate"
+  belongs_to :tire_fuel_consumption, :class_name => "Spree::TireFuelConsumption"
+  belongs_to :tire_wet_grip, :class_name => "Spree::TireWetGrip"
 
   attr_accessible :count_on_hand, :cost_price, :price, :price_in_offert, :tire_rf, :tire_position,
-                  :tire_load_code_id, :tire_green_rate_id
+                  :tire_load_code_id, :tire_green_rate_id, :tire_fuel_consumption_id,
+                  :tire_wet_grip_id, :tire_rolling_noise_db, :tire_rolling_noise_wave
+
+  validates_numericality_of :tire_rolling_noise_wave, :on => :create,
+                            :greater_than_or_equal_to => 1,
+                            :less_than_or_equal_to => 3,
+                            :message => "No es un valor Valido. Debe ser entre 1 y 3"
+  validates :tire_rolling_noise_db, :numericality => { :only_integer => true }
 
   SEASON_OPTIONS = [
   ["Invierno", 1],
