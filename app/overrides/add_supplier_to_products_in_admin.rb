@@ -7,5 +7,4 @@ Deface::Override.new(:virtual_path => "spree/admin/products/_form",
         <%= f.collection_select(:supplier_id, Spree::Supplier.all, :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
         <%= f.error_message_on :supplier_id %>
       <% end %>
-      <%= render :partial => "spree/admin/products/tires", :locals => {:f => f} %>
       })
