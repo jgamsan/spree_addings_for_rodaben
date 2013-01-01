@@ -43,6 +43,24 @@
       <%= f.collection_select(:supplier_id, Spree::Supplier.all, :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
       <%= f.error_message_on :supplier_id %>
     <% end %>
+    <%= f.field_container :tire_fuel_consumption do %>
+      <%= f.label :tire_fuel_consumption_id, t(:fuel_consumption) %><br />
+      <%= f.collection_select(:tire_fuel_consumption_id, Spree::TireFuelConsumption.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
+      <%= f.error_message_on :tire_fuel_consumption %>
+    <% end -%>
+    <%= f.field_container :tire_wet_grip do %>
+      <%= f.label :tire_wet_grip_id, t(:wet_grip) %><br />
+      <%= f.collection_select(:tire_wet_grip_id, Spree::TireWetGrip.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
+      <%= f.error_message_on :tire_wet_grip %>
+    <% end -%>
+    <%= f.field_container :tire_rolling_noise_db do %>
+      <%= f.label :tire_rolling_noise_db, t(:rolling_noise_db) %>
+      <%= f.number_field :tire_rolling_noise_db, :min => 0 %>
+    <% end %>
+    <%= f.field_container :tire_rolling_noise_wave do %>
+      <%= f.label :tire_rolling_noise_wave, t(:rolling_noise_wave) %>
+      <%= f.number_field :tire_rolling_noise_wave, :min => 1 %>
+    <% end %>
   </div>
   <div class="clear"></div>
 </div>  
