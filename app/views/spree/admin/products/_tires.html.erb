@@ -1,45 +1,48 @@
-<div class="left eight columns alpha" data-hook="admin_product_form_left">
-  <%= f.field_container :tire_speed_code do %>
-    <%= f.label :tire_speed_code_id, t(:speed_code) %><br />
-    <%= f.collection_select(:tire_speed_code_id, Spree::TireSpeedCode.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
-    <%= f.error_message_on :tire_speed_code %>
-  <% end -%>
-  <%= f.field_container :tire_width do %>
-    <%= f.label :tire_width_id, t(:width) %><br />
-    <%= f.collection_select(:tire_width_id, Spree::TireWidth.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
-    <%= f.error_message_on :tire_width %>
-  <% end -%>
-  <%= f.field_container :tire_serial do %>
-    <%= f.label :tire_serial_id, t(:serial) %><br />
-    <%= f.collection_select(:tire_serial_id, Spree::TireSerial.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
-    <%= f.error_message_on :tire_serial %>
-  <% end -%>
-  <%= f.field_container :tire_innertube do %>
-    <%= f.label :tire_innertube_id, t(:innertube) %><br />
-    <%= f.collection_select(:tire_innertube_id, Spree::TireInnertube.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
-    <%= f.error_message_on :tire_innertube %>
-  <% end -%>
-  <%= f.field_container :tire_innertube do %>
-    <%= f.label :tire_season, t(:tire_season) %><br />
-    <%= f.select(:tire_season, ([[t(:tire_season), '']] + Spree::Variant::SEASON_OPTIONS), { :include_blank => true }, { :class => 'select2', :style => "width:120px;" })  %>
-    <%= f.error_message_on :tire_innertube %>
-  <% end -%>
+<div data-hook="admin_product_form_fields">
+  <div class="left eight columns alpha" data-hook="admin_product_form_left">
+    <%= f.field_container :tire_speed_code do %>
+      <%= f.label :tire_speed_code_id, t(:speed_code) %><br />
+      <%= f.collection_select(:tire_speed_code_id, Spree::TireSpeedCode.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
+      <%= f.error_message_on :tire_speed_code %>
+    <% end -%>
+    <%= f.field_container :tire_width do %>
+      <%= f.label :tire_width_id, t(:width) %><br />
+      <%= f.collection_select(:tire_width_id, Spree::TireWidth.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
+      <%= f.error_message_on :tire_width %>
+    <% end -%>
+    <%= f.field_container :tire_serial do %>
+      <%= f.label :tire_serial_id, t(:serial) %><br />
+      <%= f.collection_select(:tire_serial_id, Spree::TireSerial.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
+      <%= f.error_message_on :tire_serial %>
+    <% end -%>
+    <%= f.field_container :tire_innertube do %>
+      <%= f.label :tire_innertube_id, t(:innertube) %><br />
+      <%= f.collection_select(:tire_innertube_id, Spree::TireInnertube.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
+      <%= f.error_message_on :tire_innertube %>
+    <% end -%>
+    <%= f.field_container :tire_innertube do %>
+      <%= f.label :tire_season, t(:tire_season) %><br />
+      <%= f.select(:tire_season, ([[t(:tire_season), '']] + Spree::Variant::SEASON_OPTIONS), { :include_blank => true }, { :class => 'select2', :style => "width:120px;" })  %>
+      <%= f.error_message_on :tire_innertube %>
+    <% end -%>
 
-  <%= f.field_container :tire_innertube do %>
-    <%= f.label :tire_rf, t(:tire_rf) %>
-    <%= f.check_box :tire_rf, { 'style' => 'width:40px' } %>
-    <%= f.error_message_on :tire_innertube %>
-  <% end -%>
-  <%= f.field_container :tire_innertube do %>
-    <%= f.label :tire_gr, t(:tire_gr) %>
-    <%= f.check_box :tire_gr, { 'style' => 'width:40px' } %>
-    <%= f.error_message_on :tire_innertube %>
-  <% end -%>
-</div>
-<div class="right four columns omega" data-hook="admin_product_form_right">
-  <%= f.field_container :supplier do %>
-    <%= f.label :supplier_id, t(:supplier_id) %><br />
-    <%= f.collection_select(:supplier_id, Spree::Supplier.all, :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
-    <%= f.error_message_on :supplier_id %>
-  <% end %>
-</div>
+    <%= f.field_container :tire_innertube do %>
+      <%= f.label :tire_rf, t(:tire_rf) %>
+      <%= f.check_box :tire_rf, { 'style' => 'width:40px' } %>
+      <%= f.error_message_on :tire_innertube %>
+    <% end -%>
+    <%= f.field_container :tire_innertube do %>
+      <%= f.label :tire_gr, t(:tire_gr) %>
+      <%= f.check_box :tire_gr, { 'style' => 'width:40px' } %>
+      <%= f.error_message_on :tire_innertube %>
+    <% end -%>
+  </div>
+  <div class="right four columns omega" data-hook="admin_product_form_right">
+    <%= f.field_container :supplier do %>
+      <%= f.label :supplier_id, t(:supplier_id) %><br />
+      <%= f.collection_select(:supplier_id, Spree::Supplier.all, :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
+      <%= f.error_message_on :supplier_id %>
+    <% end %>
+  </div>
+  <div class="clear"></div>
+</div>  
