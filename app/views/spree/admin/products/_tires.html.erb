@@ -45,7 +45,7 @@
     <% end -%>
     <%= f.field_container :tire_load_code do %>
       <%= f.label :tire_load_code_id, t(:load_code) %><br />
-      <%= f.collection_select(:tire_load_code_id, Spree::TireSpeedCode.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
+      <%= f.collection_select(:tire_load_code_id, Spree::TireLoadCode.order('name'), :id, :name, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
       <%= f.error_message_on :tire_load_code %>
     <% end -%>
   </div>    
