@@ -29,13 +29,13 @@
   <div class="left four columns omega" data-hook="admin_product_form_center">
     <%= f.field_container :tire_innertube do %>
       <%= f.label :tire_season, t(:tire_season) %><br />
-      <%= f.select(:tire_season, Spree::Variant::SEASON_OPTIONS), { :include_blank => true }, { :class => 'select2', :style => "width:150px;" })  %>
+      <%= f.select(:tire_season, Spree::Variant::SEASON_OPTIONS, { :include_blank => true }, { :class => 'select2', :style => "width:150px;" })  %>
       <%= f.error_message_on :tire_innertube %>
     <% end -%>
 
     <%= f.field_container :tire_rf do %>
       <%= f.label :tire_rf, t(:tire_rf) %><br />
-      <%= f.select(:tire_rf, Spree::Variant::TUBE_OPTIONS), { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
+      <%= f.select(:tire_rf, Spree::Variant::TUBE_OPTIONS, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
       <%= f.error_message_on :tire_rf %>
     <% end -%>
     <%= f.field_container :tire_position do %>
