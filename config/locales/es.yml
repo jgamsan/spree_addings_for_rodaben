@@ -57,7 +57,7 @@ es:
   is_mm?: "Esta en mm?"
   load_massive_images: "Carga Masiva Imagenes"
   search_tires_for_green_rate: "Asignacion masiva de Ecotasas"
-  product_tires_info: "Caracteristicas Especificas Neumaticos"
+  product_tires_info: "Propiedades Especificas Neumaticos"
   order_mailer:
     confirm_email:
       dear_customer: "Estimado Cliente"
