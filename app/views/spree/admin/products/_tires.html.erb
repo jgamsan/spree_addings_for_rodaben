@@ -26,15 +26,15 @@
       <%= f.error_message_on :tire_innertube %>
     <% end -%>
 
-    <%= f.field_container :tire_innertube do %>
+    <%= f.field_container :tire_rf do %>
       <%= f.label :tire_rf, t(:tire_rf) %>
-      <%= f.check_box :tire_rf, { 'style' => 'width:40px' } %>
-      <%= f.error_message_on :tire_innertube %>
+      <%= f.select(:tire_rf, ([[t(:tire_rf), '']] + Spree::Variant::TUBE_OPTIONS), { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
+      <%= f.error_message_on :tire_rf %>
     <% end -%>
-    <%= f.field_container :tire_innertube do %>
+    <%= f.field_container :tire_gr do %>
       <%= f.label :tire_gr, t(:tire_gr) %>
       <%= f.check_box :tire_gr, { 'style' => 'width:40px' } %>
-      <%= f.error_message_on :tire_innertube %>
+      <%= f.error_message_on :tire_gr %>
     <% end -%>
   </div>
   <div class="right four columns omega" data-hook="admin_product_form_right">
@@ -61,6 +61,11 @@
       <%= f.label :tire_rolling_noise_wave, t(:rolling_noise_wave) %>
       <%= f.number_field :tire_rolling_noise_wave, :min => 1 %>
     <% end %>
+    <%= f.field_container :tire_position do %>
+      <%= f.label :tire_position, t(:tire_position) %>
+      <%= f.select(:tire_position, ([[t(:tire_po), '']] + Spree::Variant::POSITION_OPTIONS), { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
+      <%= f.error_message_on :tire_position %>
+    <% end -%>
   </div>
   <div class="clear"></div>
 </div>  
