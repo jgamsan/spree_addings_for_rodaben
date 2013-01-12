@@ -6,6 +6,4 @@ Deface::Override.new(:virtual_path => "spree/admin/products/_form",
   <%= f.label :tire_green_rate_id, t(:green_rate) %><br />
   <%= f.collection_select(:tire_green_rate_id, Spree::TireGreenRate.order('cat'), :id, :cat, { :include_blank => true }, { :class => 'select2', :style => "width:120px;" }) %>
   <%= f.error_message_on :tire_green_rate %>
-<% end -%>
-
-                      })
+<% end -%>})

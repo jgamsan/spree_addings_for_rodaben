@@ -1,19 +1,24 @@
 <h4>Resumen del pedido</h4>
 <table border="0" cellpadding="10" cellspacing="0" width="100%" class="templateDataTable">
+  <col width="10%" valign="middle" halign="center">
+  <col width="50%" valign="middle">
+  <col width="10%" valign="middle" halign="center">
+  <col width="15%" valign="middle" halign="center">
+  <col width="15%" valign="middle" halign="center">
   <tr>
-    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading00">CODIGO</th>
-    <th scope="col" valign="top" width="50%" class="dataTableHeading" mc:edit="data_table_heading01">NOMBRE</th>
-    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading02">CANTIDAD</th>
-    <th scope="col" valign="top" width="15%" class="dataTableHeading" mc:edit="data_table_heading03">PRECIO</th>
-    <th scope="col" valign="top" width="15%" class="dataTableHeading" mc:edit="data_table_heading04">TOTAL</th>
+    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading00">CODIGO</th>
+    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading01">NOMBRE</th>
+    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading02">CANTIDAD</th>
+    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading03">PRECIO</th>
+    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading04">TOTAL</th>
   </tr>
   <% @order.line_items.each do |item| %>
     <tr mc:repeatable>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= item.variant.sku %></td>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content01"><%= raw(item.variant.product.name) %></td>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content02" style="text-align:center;"><%=item.quantity%></td>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content02" style="text-align:center;"><%= item.variant.display_amount %></td>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content02" style="text-align:center;"><%= item.display_amount %></td>
+      <td  class="dataTableContent" mc:edit="data_table_content00"><%= item.variant.sku %></td>
+      <td  class="dataTableContent" mc:edit="data_table_content01"><%= raw(item.variant.product.name) %></td>
+      <td  class="dataTableContent" mc:edit="data_table_content02"><%=item.quantity%></td>
+      <td  class="dataTableContent" mc:edit="data_table_content02"><%= item.variant.display_amount %></td>
+      <td  class="dataTableContent" mc:edit="data_table_content02"><%= item.display_amount %></td>
     </tr>
   <% end -%>
   <tr mc:repeatable>
