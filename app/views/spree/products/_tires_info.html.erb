@@ -18,6 +18,26 @@
           <td><strong>Codigo Velocidad</strong></td>
           <td><%= variant.tire_speed_code.name rescue t(:product_has_no_speed_code)%></td>
         </tr>
+        <tr>
+          <td><strong>Indice de Carga</strong></td>
+          <td><%= variant.tire_load_code.name rescue t(:product_has_no_load_code) %></td>
+        </tr>
+        <tr>
+          <td><strong>Consumo de Combustible</strong></td>
+          <td><%= variant.tire_fuel_consumption.name rescue t(:product_has_no_fuel_consumption) %></td>
+        </tr> 
+        <tr>
+          <td><strong>Agarre en Mojado</strong></td>
+          <td><%= variant.tire_wet_grip.name rescue t(:product_has_no_wet_grip) %></td>
+        </tr>
+        <tr>
+          <td><strong>Ruido de Rodadura(ondas)</strong></td>
+          <td><%= variant.tire_rolling_noise_wave rescue t(:product_has_no_rolling_noise_wave) %></td>
+        </tr>
+        <tr>
+          <td><strong>Ruido de Rodadura(dB)</strong></td>
+          <td><%= variant.tire_rolling_noise_db rescue t(:product_has_no_rolling_noise_db) %></td>
+        </tr>
       <% end %>
     </tbody>
   </table>

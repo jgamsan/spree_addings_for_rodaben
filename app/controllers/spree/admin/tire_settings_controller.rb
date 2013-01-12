@@ -27,6 +27,26 @@ module Spree
       def load_massive_images
 
       end
+
+      def assign_massive_green_rate
+        taxon = params[:tires_massive]
+        width = params[:width]
+        @searcher = Spree::Config.searcher_class.new(params.merge(:taxon => taxon, :tire_width_id => width))
+        @products = @searcher.retrieve_products
+
+        respond_to do |format|
+          format.js
+        end
+      end
+
+      def load_green_rate
+        
+      end
+
+      def search_tires_for_green_rate
+        @brands = Spree::Taxon.where(:parent_id => 2)
+        @widths = Spree::TireWidth.in_mm(true)
+      end
     end
   end
 end

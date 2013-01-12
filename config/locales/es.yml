@@ -42,6 +42,10 @@ es:
   price_in_offert: "Precio Original"
   supplier_id: "Proveedor"
   tires_info: "Informacion Tecnica Neumatico"
+  wet_grip: "Agarre en Mojado"
+  fuel_consumption: "Consumo de Combustible"
+  rolling_noise_db: "Ruido de Rodadura(dB)"
+  rolling_noise_wave: "Ruido de Rodadura(Ondas)"
   show_in_offert: "Mostrar en Ofertas"
   product_has_no_width: "Este Producto no tiene Ancho"
   product_has_no_serial: "Este Producto no tiene Perfil"
@@ -52,6 +56,8 @@ es:
   moto: "Moto"
   is_mm?: "Esta en mm?"
   load_massive_images: "Carga Masiva Imagenes"
+  search_tires_for_green_rate: "Asignacion masiva de Ecotasas"
+  product_tires_info: "Propiedades Especificas Neumaticos"
   order_mailer:
     confirm_email:
       dear_customer: "Estimado Cliente"

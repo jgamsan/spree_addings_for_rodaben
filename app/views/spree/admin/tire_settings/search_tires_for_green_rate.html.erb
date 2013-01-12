@@ -1,0 +1,26 @@
+<%= render :partial => 'spree/admin/shared/tires_setting_menu' %>
+<h1><%= t(:busqueda_de_neumaticos_para_carga_masiva_de_ecotasas) %></h1>
+<%= form_tag assign_massive_green_rate_admin_tire_settings_path, :remote => true do -%>
+  <div data-hook="admin_assign_massive_green_rate_form_fields">
+    <%= select_tag :tires_massive, options_for_select([[t(:brand), '']] +
+                @brands.map {|t| [t.name, t.id]},
+                @width ? @width.id : params[:tires_massive]), { :class => 'select2', :style => "width:150px;" } %>
+    <%= select_tag :width, options_for_select([[t(:width), '']] +
+                  @widths.map {|t| [t.name, t.id]},
+                  @serial ? @serial.id : params[:width]), { :class => 'select2', :style => "width:120px;" } %>
+    <%= submit_tag t(:search) %>
+  </div>
+<% end -%>
+
+<%= form_tag assign_massive_green_rate_admin_tire_settings_path  do %>
+  <div data-hook="admin_assign_massive_green_rate_form_fields">
+    <div id="green_rate_products_table"></div>
+    <table data-hook="name">
+      <tr>
+        <td><%= label_tag :Archivo, "Archivo a importar" %>:</td>
+        <td><%= file_field_tag :image %></td>
+      </tr>
+    </table>
+  </div>
+  <%= submit_tag "Enviar" %>
+<% end %>
