@@ -7,9 +7,9 @@
   </tr>
   <% @shipment.manifest.each do |item| %>
     <tr mc:repeatable>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content00"><%= item.variant.sku %></td>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content01"><%= item.variant.product.name %></td>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content02"><%=item.quantity%></td>
+      <td class="dataTableContent" mc:edit="data_table_content00" style="vertical-align:middle;text-align:center;"><%= item.variant.sku %></td>
+      <td class="dataTableContent" mc:edit="data_table_content01" style="vertical-align:middle;text-align:center;"><%= item.variant.product.name %></td>
+      <td class="dataTableContent" mc:edit="data_table_content02" style="vertical-align:middle;text-align:center;"><%=item.quantity%></td>
     </tr>
   <% end -%>
 </table>
