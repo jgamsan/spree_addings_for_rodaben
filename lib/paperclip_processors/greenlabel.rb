@@ -1,6 +1,7 @@
 module Paperclip
   class Greenlabel < Processor
     attr_accessor :format
+    
     def initialize file, options = {}, attachment = nil
       @file = file
       @id_path = "Rails.root.to_s/app/assets/images"
@@ -19,7 +20,6 @@ module Paperclip
       
       begin
         success = Paperclip.run(command, params)
-        end  
       rescue Exception => e
         raise e, "Hubo un error en el proceso de creacion etiqueta CEE"
       end
