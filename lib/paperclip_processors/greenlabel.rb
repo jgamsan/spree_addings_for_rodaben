@@ -15,7 +15,7 @@ module Paperclip
       dst.binmode 
       
       command = "composite"
-      params = "-gravity #{@position} -geometry "-13-33" #{fromfile} #{overfile} #{tofile(dst)}"
+      params = "-gravity #{@position} -geometry -13-33 #{fromfile} #{overfile} #{tofile(dst)}"
       
       begin
         success = Paperclip.run(command, params)
