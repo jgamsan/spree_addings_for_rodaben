@@ -1,6 +1,7 @@
 module SpreeAddingsForRodaben
   class Engine < Rails::Engine
     require 'spree/core'
+    require "paperclip_processors/greenlabel.rb"
     engine_name 'spree_addings_for_rodaben'
 
     config.autoload_paths += %W(#{config.root}/lib)
