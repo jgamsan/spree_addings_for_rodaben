@@ -17,7 +17,7 @@ module Paperclip
       
       command = "composite"
       params = "-gravity #{@position} -geometry -13-33 #{overfile} #{fromfile} #{tofile(dst)}"
-      params2 = "-gravity #{@position} -geometry +103+13 #{Rails.root}/app/assets/images/d.jpg dst #{tofile(dst)}"
+      params2 = "-gravity #{@position} -geometry +103+13 #{Rails.root}/app/assets/images/d.jpg #{tofile(dst)} #{tofile(dst)}"
       
       begin
         success = Paperclip.run(command, params)
