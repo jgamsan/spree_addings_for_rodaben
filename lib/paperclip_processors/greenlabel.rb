@@ -22,7 +22,7 @@ module Paperclip
       params = "-gravity #{@position} -geometry -13-33 #{overfile} #{fromfile} #{tofile(dst)}"
       params2 = "-gravity #{@position} -geometry +103+13 #{Rails.root}/app/assets/images/d.jpg #{tofile(dst)} #{tofile(dst)}"
       params3 = "-gravity #{@position} -geometry -30+165 #{Rails.root}/app/assets/images/emision_ruido_2.jpg #{tofile(dst)} #{tofile(dst)}"
-      params4 = "-gravity center -pointsize 30 -draw "text 60,168 '73' -font monospace -fill '#ffffff' #{tofile(dst)} #{tofile(dst)}"
+      params4 = "-gravity center -pointsize 30 -draw text 60,168 '73' -font monospace -fill #ffffff #{tofile(dst)} #{tofile(dst)}"
       begin
         success = Paperclip.run(command, params)
         sucess = Paperclip.run(command, params2)
