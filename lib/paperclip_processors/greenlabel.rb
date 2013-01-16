@@ -16,10 +16,12 @@ module Paperclip
       dst.binmode 
       
       command = "composite"
-      params = "-gravity #{@position} -geometry -13-33 #{fromfile} #{overfile} #{tofile(dst)}"
+      params = "-gravity #{@position} -geometry -13-33 #{overfile} #{fromfile} #{tofile(dst)}"
+      params2 = "-gravity #{@position} -geometry +103+13 "#{Rails.root}/app/assets/images/d.jpg" dst #{tofile(dst)}"
       
       begin
         success = Paperclip.run(command, params)
+        sucess = Paperclip.run(command, params2)
       rescue Exception => e
         raise e, "Hubo un error en el proceso de creacion etiqueta CEE"
       end
