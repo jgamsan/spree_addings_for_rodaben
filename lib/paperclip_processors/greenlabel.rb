@@ -1,4 +1,5 @@
 module Paperclip
+  require 'mini_magick'
   class Greenlabel < Processor
     def initialize file, options = {}, attachment = nil
       @file = file
