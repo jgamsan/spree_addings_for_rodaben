@@ -27,12 +27,16 @@ module Paperclip
           c.gravity "center"
           c.geometry "+103+13"
         end
+        result = result.composite(MiniMagick::Image.open("#{Rails.root}/app/assets/images/emision_ruido_3.jpg", "jpg")) do |c|
+          c.gravity "center"
+          c.geometry "-30+165"
+        end
         result.combine_options do |c|
           c.gravity "center"
-          c.pointsize '16'
-          c.draw "text 0,0 '73'"
-          c.font 'monospace'
-          c.fill "#000000"
+          c.pointsize '30'
+          c.draw "text 60,168 '73'"
+          c.font 'arial'
+          c.fill "#FFFFFF"
         end
       rescue Exception => e
         raise e, "Hubo un error en el proceso de creacion etiqueta CEE"
