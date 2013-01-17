@@ -18,28 +18,29 @@ module Paperclip
       dst = Tempfile.new([@basename, @format].compact.join("."))
       dst.binmode
 
-      command = "composite"
-      command2 = "convert"
-      params = "-gravity #{@position} -geometry -13-33 #{overfile} #{fromfile} #{tofile(dst)}"
-      params2 = "-gravity #{@position} -geometry +103+13 #{Rails.root}/app/assets/images/d.jpg #{tofile(dst)} #{tofile(dst)}"
-      params3 = "-gravity #{@position} -geometry -30+165 #{Rails.root}/app/assets/images/emision_ruido_2.jpg #{tofile(dst)} #{tofile(dst)}"
-      params4 = "-gravity center -pointsize 30 -draw text '60,168 '73'' -font monospace -fill #ffffff #{tofile(dst)} #{tofile(dst)}"
       begin
-        #success = Paperclip.run(command, params)
-        #success = Paperclip.run(command, params2)
-        #success = Paperclip.run(command, params3)
-        #success = Paperclip.run(command2, params4)
-         result = @image.composite(MiniMagick::Image.open(overfile, "jpg")) do |c|
-           c.gravity "center"
-           c.geometry "-13-33"
-         end
+        result = @image.composite(MiniMagick::Image.open(overfile, "jpg")) do |c|
+          c.gravity "center"
+          c.geometry "-13-33"
+        end
+        result = result.composite(MiniMagick::Image.open("#{Rails.root}/app/assets/images/d.jpg", "jpg")) do |c|
+          c.gravity "center"
+          c.geometry "+103+13"
+        end
+        result.combine_options do |c|
+          c.gravity "center"
+          c.pointsize '16'
+          c.draw "text 0,0 '73'"
+          c.font 'monospace'
+          c.fill "#000000"
+        end
       rescue Exception => e
         raise e, "Hubo un error en el proceso de creacion etiqueta CEE"
       end
       result.write dst
     end
 
-    def fromfile
+    def basefile
       "#{Rails.root}/app/assets/images/base_etiqueta.jpg"
     end
 
