@@ -18,16 +18,16 @@ module Paperclip
       dst.binmode 
       
       command = "composite"
-      comman2 = "convert"
+      command2 = "convert"
       params = "-gravity #{@position} -geometry -13-33 #{overfile} #{fromfile} #{tofile(dst)}"
       params2 = "-gravity #{@position} -geometry +103+13 #{Rails.root}/app/assets/images/d.jpg #{tofile(dst)} #{tofile(dst)}"
       params3 = "-gravity #{@position} -geometry -30+165 #{Rails.root}/app/assets/images/emision_ruido_2.jpg #{tofile(dst)} #{tofile(dst)}"
-      params4 = "-gravity center -pointsize 30 -draw text 60,168 '73' -font monospace -fill #ffffff #{tofile(dst)} #{tofile(dst)}"
+      params4 = "-gravity center -pointsize 30 -draw text "60,168 '73'" -font monospace -fill #ffffff #{tofile(dst)} #{tofile(dst)}"
       begin
         success = Paperclip.run(command, params)
         success = Paperclip.run(command, params2)
         success = Paperclip.run(command, params3)
-        #success = Paperclip.run(command2, params4)
+        success = Paperclip.run(command2, params4)
       rescue Exception => e
         raise e, "Hubo un error en el proceso de creacion etiqueta CEE"
       end
