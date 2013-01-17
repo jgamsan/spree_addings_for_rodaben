@@ -27,7 +27,7 @@ module Paperclip
         success = Paperclip.run(command, params)
         success = Paperclip.run(command, params2)
         success = Paperclip.run(command, params3)
-        success = Paperclip.run(command2, params4)
+        #success = Paperclip.run(command2, params4)
       rescue Exception => e
         raise e, "Hubo un error en el proceso de creacion etiqueta CEE"
       end
