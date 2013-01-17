@@ -25,9 +25,9 @@ module Paperclip
       params4 = "-gravity center -pointsize 30 -draw text 60,168 '73' -font monospace -fill #ffffff #{tofile(dst)} #{tofile(dst)}"
       begin
         success = Paperclip.run(command, params)
-        sucess = Paperclip.run(command, params2)
-        sucess = Paperclip.run(command, params3)
-        sucess = Paperclip.run(command2, params4)
+        success = Paperclip.run(command, params2)
+        success = Paperclip.run(command, params3)
+        success = Paperclip.run(command2, params4)
       rescue Exception => e
         raise e, "Hubo un error en el proceso de creacion etiqueta CEE"
       end
