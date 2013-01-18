@@ -57,7 +57,7 @@ module Paperclip
     end
   end
 
-  class Offertmark
+  class Offertmark < Processor
     attr_accessor :format, :whiny, :position
     def initialize file, options = {}, attachment = nil
       @file = file
