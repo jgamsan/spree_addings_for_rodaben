@@ -58,12 +58,11 @@ module Paperclip
   end
 
   class Offertmark
-    attr_accessor :format, :whiny, :offertmark_path, :position
+    attr_accessor :format, :whiny, :position
     def initialize file, options = {}, attachment = nil
       @file = file
       @whiny = options[:whiny].nil? ? true : options[:whiny]
       @format = options[:format]
-      @offertmark_path = options[:offertmark_path]
       @position = options[:offertmark_position].nil? ? "SouthEast" : options[:offertmark_position]
 
       @current_format = File.extname(@file.path)
@@ -77,7 +76,7 @@ module Paperclip
       dst.binmode
 
       command = "composite"
-      params = "-gravity #{@position} #{offertmark_path} #{Rails.root}/app/assets/images/label_red.png #{fromfile} #{tofile(dst)}"
+      params = "-gravity #{@position} #{Rails.root}/app/assets/images/label_red.png #{fromfile} #{tofile(dst)}"
 
       begin
         success = Paperclip.run(command, params)
