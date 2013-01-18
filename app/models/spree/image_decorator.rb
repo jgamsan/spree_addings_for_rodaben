@@ -5,25 +5,25 @@ Spree::Image.class_eval do
                      :styles => {
                         :mini => {
                           :geometry => '48x48>',
-                          :offertmark_path => "#{Rails.root.to_s}/public/images/offertmarks/tiny.png",
+                          :offertmark_path => "#{Rails.root.to_s}/public/spree/products/offertmarks/tiny.png",
                           :offertmark_position => "SouthWest",
                           :format => :png,
                         },
                         :small => {
                           :geometry => '100x100>',
-                          :offertmark_path => "#{Rails.root.to_s}/public/images/offertmarks/small.png",
+                          :offertmark_path => "#{Rails.root.to_s}/public/spree/products/offertmarks/small.png",
                           :offertmark_position => "SouthWest",
                           :format => :png,
                         },
                         :product => {
                           :geometry => '240x240>',
-                          :offertmark_path => "#{Rails.root.to_s}/public/images/offertmarks/product.png",
+                          :offertmark_path => "#{Rails.root.to_s}/public/spree/products/offertmarks/product.png",
                           :offertmark_position => "SouthWest",
                           :format => :png,
                         },
                         :large => {
                           :geometry => '600x600>',
-                          :offertmark_path => "#{Rails.root.to_s}/public/images/offertmarks/large.png",
+                          :offertmark_path => "#{Rails.root.to_s}/public/spree/products/offertmarks/large.png",
                           :offertmark_position => "SouthWest",
                           :format => :png,
                         },
