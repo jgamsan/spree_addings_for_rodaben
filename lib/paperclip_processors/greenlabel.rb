@@ -70,7 +70,6 @@ module Paperclip
     end
 
     def make
-      return @file unless offertmark_path
 
       dst = Tempfile.new([@basename, @format].compact.join("."))
       dst.binmode
