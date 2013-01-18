@@ -1,7 +1,7 @@
 Spree::Image.class_eval do
   Spree::Image.attachment_definitions[:attachment][:styles].merge!(
       :ceelabel => {:format => :jpg, :processors => [:greenlabel]},
-      :watermark => {:processors => [:thumbnail, :offertmark],
+      :offertmark => {:processors => [:thumbnail, :offertmark],
                      :styles => {
                         :mini => {
                           :geometry => '48x48>',
