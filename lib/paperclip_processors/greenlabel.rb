@@ -77,7 +77,7 @@ module Paperclip
       dst.binmode
 
       command = "composite"
-      params = "-gravity #{@position} #{offertmark_path} #{fromfile} #{tofile(dst)}"
+      params = "-gravity #{@position} #{offertmark_path} #{Rails.root}/app/assets/images/label_red.png #{fromfile} #{tofile(dst)}"
 
       begin
         success = Paperclip.run(command, params)
