@@ -55,6 +55,46 @@ module Paperclip
     def tofile(destination)
       "\"#{ File.expand_path(destination.path) }[0]\""
     end
+  end
+
+  class Offertmark
+    def initialize file, options = {}, attachment = nil
+      @file = file
+      @whiny = options[:whiny].nil? ? true : options[:whiny]
+      @format = options[:format]
+      @offertmark_path = options[:offertmark_path]
+      @position = options[:offertmark_position].nil? ? "SouthEast" : options[:offertmark_position]
+
+      @current_format = File.extname(@file.path)
+      @basename = File.basename(@file.path, @current_format)
+    end
+
+    def make
+      return @file unless offertmark_path
+
+      dst = Tempfile.new([@basename, @format].compact.join("."))
+      dst.binmode
+
+      command = "composite"
+      params = "-gravity #{@position} #{offertmark_path} #{fromfile} #{tofile(dst)}"
+
+      begin
+        success = Paperclip.run(command, params)
+      rescue Cocaine::CommandLineError => ex
+        raise ex, "There was an error processing the watermark for #{@basename}" if @whiny
+      end
+
+      dst
+    end
+
+    def fromfile
+      "\"#{ File.expand_path(@file.path) }[0]\""
+    end
+
+    def tofile(destination)
+      "\"#{ File.expand_path(destination.path) }[0]\""
+    end
 
   end
+
 end
