@@ -58,6 +58,7 @@ module Paperclip
   end
 
   class Offertmark
+    attr_accessor :format, :whiny, :offertmark_path, :position
     def initialize file, options = {}, attachment = nil
       @file = file
       @whiny = options[:whiny].nil? ? true : options[:whiny]
