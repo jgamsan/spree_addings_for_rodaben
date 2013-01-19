@@ -48,11 +48,14 @@ module Paperclip
       dst = Tempfile.new([@basename, @format].compact.join("."))
       dst.binmode
 
-      command = "composite"
-      params = "-gravity #{@position} #{Rails.root}/app/assets/images/yellow.png #{fromfile} #{tofile(dst)}"
+      command = "convert"
+      params = "-resize 240x240 #{fromfile} #{tofile(dst)}"
+      command1 = "composite"
+      params1 = "-gravity #{@position} #{Rails.root}/app/assets/images/yellow-m.png #{tofile(dst)} #{tofile(dst)}"
 
       begin
         success = Paperclip.run(command, params)
+        success = Paperclip.run(command1, params1)
       rescue Cocaine::CommandLineError => ex
         raise ex, "There was an error processing the offertmark for #{@basename}" if @whiny
       end
@@ -86,11 +89,14 @@ module Paperclip
       dst = Tempfile.new([@basename, @format].compact.join("."))
       dst.binmode
 
-      command = "composite"
-      params = "-gravity #{@position} #{Rails.root}/app/assets/images/blue.png #{fromfile} #{tofile(dst)}"
+      command = "convert"
+      params = "-resize 240x240 #{fromfile} #{tofile(dst)}"
+      command1 = "composite"
+      params1 = "-gravity #{@position} #{Rails.root}/app/assets/images/blue.png #{tofile(dst)} #{tofile(dst)}"
 
       begin
         success = Paperclip.run(command, params)
+        success = Paperclip.run(command1, params1)
       rescue Cocaine::CommandLineError => ex
         raise ex, "There was an error processing the newmark for #{@basename}" if @whiny
       end
