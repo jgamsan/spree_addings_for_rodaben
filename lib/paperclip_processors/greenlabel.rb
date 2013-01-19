@@ -92,7 +92,7 @@ module Paperclip
       command = "convert"
       params = "-resize 240x240 #{fromfile} #{tofile(dst)}"
       command1 = "composite"
-      params1 = "-gravity #{@position} #{Rails.root}/app/assets/images/blue.png #{tofile(dst)} #{tofile(dst)}"
+      params1 = "-gravity #{@position} #{Rails.root}/app/assets/images/blue-m.png #{tofile(dst)} #{tofile(dst)}"
 
       begin
         success = Paperclip.run(command, params)
