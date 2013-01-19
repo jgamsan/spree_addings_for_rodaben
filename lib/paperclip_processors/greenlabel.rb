@@ -25,6 +25,10 @@ module Paperclip
       end
       dst
     end
+
+    def tofile(destination)
+      "\"#{ File.expand_path(destination.path) }[0]\""
+    end
   end
 
   class Offertmark < Processor
