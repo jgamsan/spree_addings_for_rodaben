@@ -16,8 +16,10 @@ module Paperclip
       dst = Tempfile.new([@basename, @format].compact.join("."))
       dst.binmode
 
+      command = "convert"
+      params = "-resize 300x500 #{@image} #{tofile(dst)}"
       begin
-        dst = @image
+        success = Paperclip.run(command, params)
       rescue Exception => e
         raise e, "Hubo un error en el proceso de creacion etiqueta CEE"
       end
