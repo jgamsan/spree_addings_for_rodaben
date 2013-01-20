@@ -9,7 +9,7 @@ module Paperclip
       @current_format = File.extname(@file.path)
       @basename = File.basename(@file.path, @current_format)
       @position = "center"
-      @image = "#{Rails.root}/app/assets/images/base_etiqueta.jpg"
+      @image = "#{Rails.root}/app/assets/images/base_etiqueta.png"
     end
 
     def make
