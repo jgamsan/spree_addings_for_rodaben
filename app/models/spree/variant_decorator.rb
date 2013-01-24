@@ -20,7 +20,7 @@ Spree::Variant.class_eval do
   validates :tire_rolling_noise_db, :numericality => { :only_integer => true }, :allow_nil => true
 
   def cee_label
-    if (tire_fuel_consumption_id == nil & tire_wet_grip_id == nil & tire_rolling_noise_db == nil & tire_rolling_noise_wave == nil)
+    if (tire_fuel_consumption_id.nil? & tire_wet_grip_id.nil? & tire_rolling_noise_db.nil? & tire_rolling_noise_wave.nil?)
       '????'
     else
       tire_fuel_consumption.name.to_s + tire_wet_grip.name.to_s + tire_rolling_noise_wave.to_s + tire_rolling_noise_db.to_s
