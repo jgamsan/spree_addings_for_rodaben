@@ -4,7 +4,6 @@ module Paperclip
 
     def initialize file, options = {}, attachment = nil
       @file = file
-      @id_path = "Rails.root.to_s/app/assets/images"
       @format = options[:format]
       @current_format = File.extname(@file.path)
       @basename = File.basename(@file.path, @current_format)

@@ -15,8 +15,9 @@ Spree::Variant.class_eval do
   validates_numericality_of :tire_rolling_noise_wave, :on => :create,
                             :greater_than_or_equal_to => 1,
                             :less_than_or_equal_to => 3,
-                            :message => "No es un valor Valido. Debe ser entre 1 y 3"
-  validates :tire_rolling_noise_db, :numericality => { :only_integer => true }
+                            :message => "No es un valor Valido. Debe ser entre 1 y 3",
+                            :allow_nil => true
+  validates :tire_rolling_noise_db, :numericality => { :only_integer => true }, :allow_nil => true
 
   SEASON_OPTIONS = [
   ["Invierno", 1],
