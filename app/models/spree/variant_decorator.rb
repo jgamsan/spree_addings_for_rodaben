@@ -53,7 +53,11 @@ Spree::Variant.class_eval do
     llanta_1 = llanta.id unless llanta.nil?
     vel = Spree::TireSpeedCode.find_by_name(speed_code) unless speed_code.blank?
     vel_1 = vel.id unless vel.nil?
-    nombre = name.to_s
+    if name.to_s =~ %r{(\d+)}
+      nombre = name + "-#{width}/#{serial}R#{innertube}"
+    else
+      nombre = name.to_s
+    end
     base = "Select * from spree_products as a, spree_variants as b where a.name = '#{nombre}' and b.product_id = a.id"
     base << " and b.tire_width_id = #{ancho_1}" unless ancho_1.nil?
     base << " and b.tire_serial_id = #{serial_1}" unless serial_1.nil?
