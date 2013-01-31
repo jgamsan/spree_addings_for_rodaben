@@ -9,7 +9,7 @@ Spree::Image.class_eval do
 
   def check_cee_label
     variante = Spree::Variant.find(self.viewable_id)
-    if (variante.images.count == 1 & !variante.tire_fuel_consumption_id.nil?)
+    if (variante.images.count == 1 && !variante.tire_fuel_consumption_id.nil?)
       update_cee_label_imagen(self, variante)
     end
   end
