@@ -19,7 +19,7 @@
       <tr>
         <td><%= label_tag :ecotasa, "Asigna Ecotasa" %>:</td>
         <td><%= select_tag :green_rate, options_for_select([[t(:green_rate), '']] +
-                  green_rates.map {|t| [t.cat, t.id]},
+                  @green_rates.map {|t| [t.cat, t.id]},
                   green_rate ? green_rate.id : params[:green_rate]),
                   { :class => 'select2', :style => "width:120px;" } %>
         </td>

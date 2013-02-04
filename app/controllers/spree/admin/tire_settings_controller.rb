@@ -39,7 +39,6 @@ module Spree
                                                                   :tire_innertube_id => innertube,
                                                                   :per_page => 25))
         @products = @searcher.retrieve_products
-        @green_rates = Spree::TireGreenRate.all
         respond_to do |format|
           format.js
         end
@@ -57,6 +56,7 @@ module Spree
       def search_tires_for_green_rate
         @brands = Spree::Taxon.where(:parent_id => 2)
         @innertubes = Spree::TireInnertube.in_mm(true)
+        @green_rates = Spree::TireGreenRate.all
       end
 
       private
