@@ -15,6 +15,16 @@
 <%= form_tag assign_massive_green_rate_admin_tire_settings_path  do %>
   <div data-hook="admin_assign_massive_green_rate_form_fields">
     <div id="green_rate_products_table"></div>
+    <table data-hook="name">
+      <tr>
+        <td><%= label_tag :ecotasa, "Asigna Ecotasa" %>:</td>
+        <td><%= select_tag :green_rate, options_for_select([[t(:green_rate), '']] +
+                  green_rates.map {|t| [t.cat, t.id]},
+                  green_rate ? green_rate.id : params[:green_rate]),
+                  { :class => 'select2', :style => "width:120px;" } %>
+        </td>
+      </tr>
+    </table>
   </div>
   <%= submit_tag "Enviar" %>
 <% end %>

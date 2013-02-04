@@ -35,24 +35,28 @@ module Spree
       def assign_massive_green_rate
         taxon = params[:tires_massive]
         innertube = params[:innertube]
-
+        @searcher = Spree::Config.searcher_class.new(params.merge(:taxon => taxon,
+                                                                  :tire_innertube_id => innertube,
+                                                                  :per_page => 25))
+        @products = @searcher.retrieve_products
+        @green_rates = Spree::TireGreenRate.all
+        respond_to do |format|
+          format.js
+        end
       end
 
       def load_green_rate
-
+        productos = params[:product_ids]
+        for product in productos
+          t = Spree::Product.find(product)
+          v = t.master
+          v.update_attributes(:tire_green_rate_id => params[:green_rate])
+        end
       end
 
       def search_tires_for_green_rate
         @brands = Spree::Taxon.where(:parent_id => 2)
         @innertubes = Spree::TireInnertube.in_mm(true)
-        @searcher = Spree::Config.searcher_class.new(params.merge(:taxon => taxon,
-                                                                  :tire_innertube_id => innertube,
-                                                                  :per_page => 25))
-        @products = @searcher.retrieve_products
-
-        respond_to do |format|
-          format.js
-        end
       end
 
       private
