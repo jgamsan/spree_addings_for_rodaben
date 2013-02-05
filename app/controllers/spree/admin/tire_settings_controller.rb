@@ -54,7 +54,7 @@ module Spree
       end
 
       def search_tires_for_green_rate
-        @brands = Spree::Taxon.where(:parent_id => 2)
+        @brands = Spree::Taxon.where(:parent_id => 2).order("name asc")
         @innertubes = Spree::TireInnertube.in_mm(true)
         @green_rates = Spree::TireGreenRate.all
       end
