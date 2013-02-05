@@ -5,9 +5,9 @@
     <%= select_tag :tires_massive, options_for_select([[t(:brand), '']] +
                 @brands.map {|t| [t.name, t.id]},
                 @width ? @width.id : params[:tires_massive]), { :class => 'select2', :style => "width:150px;" } %>
-    <%= select_tag :width, options_for_select([[t(:width), '']] +
-                  @widths.map {|t| [t.name, t.id]},
-                  @serial ? @serial.id : params[:width]), { :class => 'select2', :style => "width:120px;" } %>
+    <%= select_tag :innertube, options_for_select([[t(:innertube), '']] +
+                  @innertubes.map {|t| [t.name, t.id]},
+                  @innertube ? @innertube.id : params[:innertube]), { :class => 'select2', :style => "width:120px;" } %>
     <%= submit_tag t(:search) %>
   </div>
 <% end -%>
@@ -17,8 +17,12 @@
     <div id="green_rate_products_table"></div>
     <table data-hook="name">
       <tr>
-        <td><%= label_tag :Archivo, "Archivo a importar" %>:</td>
-        <td><%= file_field_tag :image %></td>
+        <td><%= label_tag :ecotasa, "Asigna Ecotasa" %>:</td>
+        <td><%= select_tag :green_rate, options_for_select([[t(:green_rate), '']] +
+                  @green_rates.map {|t| [t.cat, t.id]},
+                  green_rate ? green_rate.id : params[:green_rate]),
+                  { :class => 'select2', :style => "width:120px;" } %>
+        </td>
       </tr>
     </table>
   </div>

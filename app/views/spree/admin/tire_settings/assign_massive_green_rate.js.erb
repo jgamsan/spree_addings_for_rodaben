@@ -1,2 +1,2 @@
-$( "#green_rate_products_table" ).html( "<%= escape_javascript( render( :partial => "assign_massive_green_rate", :locals => { :products=> @products} ) ) %>" );
+$( "#green_rate_products_table" ).html( "<%= escape_javascript( render( :partial => "assign_massive_green_rate", :locals => { :products => @products} ) ) %>" );
 $('#paginator').html('<%= escape_javascript(paginate(@products, :remote => true).to_s) %>');

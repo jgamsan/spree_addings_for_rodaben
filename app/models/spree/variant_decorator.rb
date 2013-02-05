@@ -110,5 +110,4 @@ Spree::Variant.class_eval do
     variante = Spree::Variant.find_by_sku(codigo)
     return variante unless variante.nil?
   end
-
 end
