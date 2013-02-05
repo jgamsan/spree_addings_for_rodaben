@@ -51,6 +51,7 @@ module Spree
           v = t.master
           v.update_attributes(:tire_green_rate_id => params[:green_rate])
         end
+        redirect_to search_tires_for_green_rate_admin_tire_settings_url
       end
 
       def search_tires_for_green_rate
