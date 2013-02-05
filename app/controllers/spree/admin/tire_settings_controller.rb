@@ -13,7 +13,7 @@ module Spree
 
       def upload_file
         productos = params[:product_ids]
-        for product in productos
+        productos.each do |product|
           t = Spree::Product.find(product)
           v = t.master
           unless v.images.empty?
