@@ -12,7 +12,7 @@
     <tr>
       <td><%= check_box_tag "product_ids[]", product.id %></td>
       <td><%= product.name %></td>
-      <% if product.master.images.first.empty? -%>
+      <% if product.master.images.empty? -%>
         <td style="background:tomato">No Tiene Imagen</td>
       <% elsif product.master.images.first.attachment_file_name == "default.png" -%>
         <td style="background:gold">Imagen por defecto</td>
