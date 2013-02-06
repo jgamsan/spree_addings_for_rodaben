@@ -4,7 +4,6 @@ module Paperclip
 
     def initialize file, options = {}, attachment = nil
       @file = file
-      @format = options[:format]
       @current_format = File.extname(@file.path)
       @basename = File.basename(@file.path, @current_format)
       @position = "center"
@@ -12,7 +11,7 @@ module Paperclip
     end
 
     def make
-      dst = Tempfile.new([@basename, @format].compact.join("."))
+      dst = Tempfile.new([@basename, @current_format].compact.join("."))
       dst.binmode
 
       command = "convert"

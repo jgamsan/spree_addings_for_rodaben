@@ -13,13 +13,13 @@ module Spree
 
       def upload_file
         productos = params[:product_ids]
-        for product in productos
+        productos.each do |product|
           t = Spree::Product.find(product)
           v = t.master
           unless v.images.empty?
             v.images.destroy_all
           end
-          img = Spree::Image.create!({:attachment => params[:image], :viewable => t}, :without_protection => true)
+          img = Spree::Image.create!({:attachment => params[:image], :viewable => v}, :without_protection => true)
           v.images << img
           unless v.tire_fuel_consumption_id.nil?
             load_eco_label(v)
@@ -51,6 +51,7 @@ module Spree
           v = t.master
           v.update_attributes(:tire_green_rate_id => params[:green_rate])
         end
+        redirect_to search_tires_for_green_rate_admin_tire_settings_url
       end
 
       def search_tires_for_green_rate

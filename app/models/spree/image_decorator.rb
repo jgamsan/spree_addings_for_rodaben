@@ -1,8 +1,8 @@
 Spree::Image.class_eval do
   Spree::Image.attachment_definitions[:attachment][:styles].merge!(
-      "ceelabel" => {:format => :png, :processors => [:greenlabel]},
-      "offertmark" => {:format => :png, :processors => [:offertmark]},
-      "newmark" => {:format => :png, :processors => [:newmark]}
+      "ceelabel" => {:processors => [:greenlabel]},
+      "offertmark" => {:processors => [:offertmark]},
+      "newmark" => {:processors => [:newmark]}
   )
 
   after_save :check_cee_label, :on => :create

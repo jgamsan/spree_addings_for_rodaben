@@ -2,7 +2,7 @@
   paginated_products = @searcher.retrieve_products if params.key?(:keywords)
   paginated_products ||= products
 %>
-<table class="index">
+<table>
   <colgroup>
     <col style="width: 10%;">
     <col style="width: 20%;">
@@ -17,7 +17,7 @@
     <tr>
       <td><%= check_box_tag "product_ids[]", product.id %></td>
       <td><%= product.name %></td>
-      <td><%= product.tire_green_rate_id.nil? ? t(:sin_ecotasa) : product.tire_green_rate.name %></td>
+      <td><%= product.master.tire_green_rate_id.nil? ? t(:sin_ecotasa) : product.master.tire_green_rate.cat %></td>
     </tr>
   <% end -%>
 </table>
