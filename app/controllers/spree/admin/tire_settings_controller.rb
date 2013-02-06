@@ -19,7 +19,7 @@ module Spree
           unless v.images.empty?
             v.images.destroy_all
           end
-          img = Spree::Image.create({:attachment => params[:image], :viewable => v})
+          img = Spree::Image.create!({:attachment => params[:image], :viewable => v}, :without_protection => true)
           v.images << img
           unless v.tire_fuel_consumption_id.nil?
             load_eco_label(v)
