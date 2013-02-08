@@ -21,11 +21,15 @@ module Spree
           end
           img = Spree::Image.create!({:attachment => params[:image], :viewable => v}, :without_protection => true)
           v.images << img
+          respond_to do |format|
+            format.js
+          end
           unless v.tire_fuel_consumption_id.nil?
             load_eco_label(v)
           end
         end
-        redirect_to load_massive_images_admin_tire_settings_url
+
+        #redirect_to load_massive_images_admin_tire_settings_url
       end
 
       def load_massive_images

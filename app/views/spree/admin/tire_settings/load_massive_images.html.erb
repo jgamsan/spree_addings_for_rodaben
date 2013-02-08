@@ -13,8 +13,8 @@
     <%= submit_tag t(:search) %>
   </p>
 <% end -%>
-
-<%= form_tag upload_file_admin_tire_settings_path, :multipart => true do %>
+<div id="indicator"></div>
+<%= form_tag upload_file_admin_tire_settings_path, :multipart => true, :remote => true do %>
   <div data-hook="admin_load_massive_images_form_fields">
     <div id="products_table"></div>
     <table data-hook="name">
