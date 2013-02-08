@@ -15,6 +15,7 @@ Spree::Core::Engine.routes.draw do
     resources :tire_settings, :only => :index do
       collection do
         post 'upload_file'
+        get 'upload_file'
         get 'load_massive_images'
         get 'search_tyre'
         post 'search_tyre'
