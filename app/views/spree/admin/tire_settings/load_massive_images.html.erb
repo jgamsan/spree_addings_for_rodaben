@@ -14,10 +14,9 @@
   </p>
 <% end -%>
 
-<%= form_tag(upload_file_admin_tire_settings_path, :multipart => true, :remote => true) do %>
+<%= form_tag upload_file_admin_tire_settings_path, :multipart => true do %>
   <div data-hook="admin_load_massive_images_form_fields">
     <div id="products_table"></div>
-    <div id="indicator"></div>
     <table data-hook="name">
       <tr>
         <td><%= label_tag :Archivo, "Archivo a importar" %>:</td>

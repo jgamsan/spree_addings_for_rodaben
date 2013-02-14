@@ -24,12 +24,8 @@ module Spree
           unless v.tire_fuel_consumption_id.nil?
             load_eco_label(v)
           end
-          respond_to do |format|
-            format.js
-          end
         end
-
-        #redirect_to load_massive_images_admin_tire_settings_url
+        redirect_to load_massive_images_admin_tire_settings_url
       end
 
       def load_massive_images
