@@ -2,9 +2,7 @@
 <h1><%= t(:busqueda_de_neumaticos_para_carga_masiva_de_ecotasas) %></h1>
 <%= form_tag assign_massive_green_rate_admin_tire_settings_path, :remote => true do -%>
   <div data-hook="admin_assign_massive_green_rate_form_fields">
-    <%= select_tag :tires_massive, options_for_select([[t(:brand), '']] +
-                @brands.map {|t| [t.name, t.id]},
-                @width ? @width.id : params[:tires_massive]), { :class => 'select2', :style => "width:150px;" } %>
+    <%= text_field_tag :tires_massive, :size => 30 %>
     <%= select_tag :innertube, options_for_select([[t(:innertube), '']] +
                   @innertubes.map {|t| [t.name, t.id]},
                   @innertube ? @innertube.id : params[:innertube]), { :class => 'select2', :style => "width:120px;" } %>
