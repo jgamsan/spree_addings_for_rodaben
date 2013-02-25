@@ -25,7 +25,11 @@
               <tr>
                 <td align="center" valign="top">
                 <!-- // Begin Template Body \\ -->
-                  <%= render :partial => 'spree/order_mailer/body' %>
+                  <% if @order.payment_by_transfer? %>
+                    <%= render :partial => 'spree/order/mailer/body_transfer' %>
+                  <% else %>
+                    <%= render :partial => 'spree/order_mailer/body' %>
+                  <% end %>
                   <!-- // End Template Body \\ -->
                 </td>
               </tr>

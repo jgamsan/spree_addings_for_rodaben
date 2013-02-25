@@ -3,13 +3,16 @@ Spree::Order.class_eval do
   attr_accessible :workshop_id
   belongs_to :workshop
 
+  self.state_machine.after_transition :to => :payment,
+                          :do => :email_to_provider_if_payment
+
   def finalize!
       touch :completed_at
       Spree::InventoryUnit.assign_opening_inventory(self)
       # lock any optional adjustments (coupon promotions, etc.)
       adjustments.optional.each { |adjustment| adjustment.update_column('locked', true) }
       deliver_order_confirmation_email
-      deliver_order_company_provider_email
+      deliver_order_company_provider_email unless payment_by_transfer?
       deliver_order_workshop_email unless self.workshop_id.nil?
       self.state_changes.create({
         :previous_state => 'cart',
@@ -44,6 +47,10 @@ Spree::Order.class_eval do
       logger.error("#{e.class.name}: #{e.message}")
       logger.error(e.backtrace * "\n")
     end
+  end
+
+  def payment_by_transfer?
+    self.payment.payment_method_id == 2 ? true : false
   end
 
 
