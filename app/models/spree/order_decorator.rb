@@ -8,6 +8,11 @@ Spree::Order.class_eval do
       Spree::InventoryUnit.assign_opening_inventory(self)
       # lock any optional adjustments (coupon promotions, etc.)
       adjustments.optional.each { |adjustment| adjustment.update_column('locked', true) }
+      updater = OrderUpdater.new(self)
+      updater.update_payment_state
+      shipments.each { |shipment| shipment.update!(self) }
+      updater.update_shipment_state
+      save
       deliver_order_confirmation_email
       deliver_order_company_provider_email unless payment_by_transfer?
       deliver_order_workshop_email unless self.workshop_id.nil?
