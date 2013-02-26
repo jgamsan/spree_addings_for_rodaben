@@ -3,9 +3,6 @@ Spree::Order.class_eval do
   attr_accessible :workshop_id
   belongs_to :workshop
 
-  self.state_machine.after_transition :to => :payment,
-                          :do => :email_to_provider_if_payment
-
   def finalize!
       touch :completed_at
       Spree::InventoryUnit.assign_opening_inventory(self)
@@ -24,14 +21,6 @@ Spree::Order.class_eval do
 
   def request!
     deliver_order_company_provider_email
-  end
-
-  def email_to_provider_if_payment
-    if (self.payment.state == "completed" || self.payment.payment_method_id == 2)
-      deliver_order_company_provider_email
-    else
-
-    end
   end
 
   def deliver_order_company_provider_email
