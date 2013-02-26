@@ -26,6 +26,14 @@ Spree::Order.class_eval do
     deliver_order_company_provider_email
   end
 
+  def email_to_provider_if_payment
+    if (self.payment.state == "completed" || self.payment.payment_method_id == 2)
+      deliver_order_company_provider_email
+    else
+
+    end
+  end
+
   def deliver_order_company_provider_email
     begin
       @suppliers = Spree::Supplier.all
