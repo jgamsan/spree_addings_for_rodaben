@@ -11,7 +11,7 @@ module Paperclip
     end
 
     def make
-      dst = Tempfile.new([@basename, @current_format].compact.join("."))
+      dst = Tempfile.new([@basename, @current_format].compact)
       dst.binmode
 
       command = "convert"
