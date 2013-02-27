@@ -8,7 +8,7 @@ Spree::Order.class_eval do
       Spree::InventoryUnit.assign_opening_inventory(self)
       # lock any optional adjustments (coupon promotions, etc.)
       adjustments.optional.each { |adjustment| adjustment.update_column('locked', true) }
-      updater = OrderUpdater.new(self)
+      updater = Spree::OrderUpdater.new(self)
       updater.update_payment_state
       shipments.each { |shipment| shipment.update!(self) }
       updater.update_shipment_state
