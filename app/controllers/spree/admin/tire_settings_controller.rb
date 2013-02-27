@@ -33,9 +33,9 @@ module Spree
       end
 
       def assign_massive_green_rate
-        taxon = params[:tires_massive]
+        words = params[:tires_massive]
         innertube = params[:innertube]
-        @searcher = Spree::Config.searcher_class.new(params.merge(:taxon => taxon,
+        @searcher = Spree::Config.searcher_class.new(params.merge(:keywords => words,
                                                                   :tire_innertube_id => innertube,
                                                                   :per_page => 25))
         @products = @searcher.retrieve_products

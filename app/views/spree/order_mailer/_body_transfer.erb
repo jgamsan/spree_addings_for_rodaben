@@ -1,0 +1,59 @@
+<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+  <tr>
+    <td valign="top">
+      <!-- // Begin Module: Standard Content \\ -->
+      <table border="0" cellpadding="20" cellspacing="0" width="100%">
+        <tr>
+          <td valign="top" class="bodyContent">
+            <div mc:edit="std_content00">
+              <strong>Estimado Cliente</strong>
+              Le remito los datos de su pedido realizado en Neumaticosdecoche.com
+              A continuacion le proporcionamos los datos de la Cuenta Bancaria para la realización de la Transferencia:
+
+              <%= render :partial => 'spree/order_mailer/datos_cuenta_corriente' %>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" style="padding-top:10px; padding-bottom:0;">
+            <%= render :partial => 'spree/order_mailer/datos_compra' %>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" class="bodyContent">
+            <div mc:edit="std_content01">
+              <% if @order.workshop.nil? -%>
+                <% if @order.payment_by_transfer? %>
+                  Nos permitimos informarle, que tan pronto se confirme la ejecución de la Transferencia,
+                  recibirá un email con los datos de la misma y se procederá a dar la orden para el envio de su pedido.
+                <% end %>
+                Gracias por confiar en neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo.
+              <% else -%>
+                <% if @order.payment_by_transfer? %>
+                  Nos permitimos informarle, que tan pronto se confirme la ejecución de la Transferencia, recibirá un
+                  email con los datos de la misma y se procederá a dar la orden para el envio de su pedido.
+                  No olvide que su pedido de neumaticos será enviado al Taller que Ud. solicitó en su proceso de
+                  compra.
+                  Los datos son los siguientes:
+                <% else %>
+                  Nos permitimos recordarle que su pedido de neumaticos va a ser enviado al Taller que Ud. solicito en su proceso de compra.
+                  Los datos son los siguientes:
+                <% end %>
+                <br />
+                <br />
+                <%= render :partial => 'spree/notify_mailer/provider/datos_workshop' %>
+                <br />
+                <br />
+                Asimismo recordarle, que el precio de la instalacion de los neumaticos (<%= @order.workshop.display_price %>)
+                no esta incluido en el precio de la compra y que debera abonar al taller con la finalizacion de la
+                instalacion.
+                Gracias por confiar en neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo.
+              <% end -%>
+            </div>
+          </td>
+        </tr>
+      </table>
+      <!-- // End Module: Standard Content \\ -->
+    </td>
+  </tr>
+</table>
