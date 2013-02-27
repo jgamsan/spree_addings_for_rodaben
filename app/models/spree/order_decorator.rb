@@ -52,7 +52,7 @@ Spree::Order.class_eval do
   end
 
   def payment_by_transfer?
-    self.payment.payment_method_id == 2 ? true : false
+    self.payment.payment_method.type == "Spree::PaymentMethod::Check" ? true : false
   end
 
 
