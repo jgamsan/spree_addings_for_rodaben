@@ -4,8 +4,7 @@ Spree::Order.class_eval do
   belongs_to :workshop
 
   self.state_machine.after_transition :to => :payment,
-                          :do => :check_emails_to_send                     
-  end
+                          :do => :check_emails_to_send
   
   # def finalize!
   #   touch :completed_at
