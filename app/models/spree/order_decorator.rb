@@ -4,35 +4,15 @@ Spree::Order.class_eval do
   belongs_to :workshop
 
   self.state_machine.after_transition :to => :complete, :do => :check_emails_to_send
-  
-  # def finalize!
-  #   touch :completed_at
-  #   Spree::InventoryUnit.assign_opening_inventory(self)
-  #   # lock any optional adjustments (coupon promotions, etc.)
-  #   adjustments.optional.each { |adjustment| adjustment.update_column('locked', true) }
-  #   updater = Spree::OrderUpdater.new(self)
-  #   updater.update_payment_state
-  #   shipments.each { |shipment| shipment.update!(self) }
-  #   updater.update_shipment_state
-  #   save
-  #   deliver_order_confirmation_email
-    
-  #   self.state_changes.create({
-  #     :previous_state => 'cart',
-  #     :next_state     => 'complete',
-  #     :name           => 'order' ,
-  #     :user_id        => self.user_id
-  #   }, :without_protection => true)
-  # end
 
   def check_emails_to_send
     deliver_order_company_provider_email unless payment_by_transfer?
     deliver_order_workshop_email unless self.workshop_id.nil?
   end
 
-  def request!
-    deliver_order_company_provider_email
-  end
+  # def request!
+  #   deliver_order_company_provider_email
+  # end
 
   def deliver_order_company_provider_email
     begin

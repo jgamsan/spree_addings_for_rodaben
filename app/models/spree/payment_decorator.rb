@@ -1,8 +1,9 @@
 Spree::Payment.class_eval do
-  after_update :email_to_provider_if_payment
-
+  
+  self.state_machine.after_transition :to => :completed, :do => :email_to_provider_if_payment
+  
   def email_to_provider_if_payment
-    if (self.state_changed? || self.state == "completed" || self.payment_method.type == "Spree::PaymentMethod::Check")
+    if self.payment_method.type == "Spree::PaymentMethod::Check"
       begin
         @suppliers = Spree::Supplier.all
         @order = self.order
