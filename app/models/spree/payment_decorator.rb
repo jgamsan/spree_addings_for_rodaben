@@ -1,6 +1,6 @@
 Spree::Payment.class_eval do
   
-  #self.state_machine.after_transition :to => 'completed', :do => :email_to_provider_if_payment
+  self.state_machine.after_transition :to => 'completed', :do => :email_to_provider_if_payment
   
   def email_to_provider_if_payment
     if self.payment_method.type == "Spree::PaymentMethod::Check"

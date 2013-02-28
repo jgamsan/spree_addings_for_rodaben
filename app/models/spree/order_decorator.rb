@@ -3,7 +3,7 @@ Spree::Order.class_eval do
   attr_accessible :workshop_id
   belongs_to :workshop
 
-  #self.state_machine.after_transition :to => :complete, :do => :check_emails_to_send
+  self.state_machine.after_transition :to => :complete, :do => :check_emails_to_send
 
   def check_emails_to_send
     deliver_order_company_provider_email unless payment_by_transfer?
