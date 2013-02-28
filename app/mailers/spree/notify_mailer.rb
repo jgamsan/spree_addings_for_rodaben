@@ -49,5 +49,12 @@ module Spree
          :subject => subject)
     end
 
+    def send_email_bank_transfer_received(order)
+      @order + order
+      subject = "Notificacion de recepcion de Transferencia Bancaria"
+      subject += " Pedido N° #{@order.number}"
+      mail(:to => @order.email,
+           :subject => subject)
+    end
   end
 end
