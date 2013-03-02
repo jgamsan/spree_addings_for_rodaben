@@ -1,11 +1,11 @@
 # encoding: UTF-8
 module Spree
   class NotifyMailer < ActionMailer::Base
-    default :to => "info@neumaticosdecoche.com"
+    default :to => 'info@neumaticosdecoche.com'
 
     def file_notification(file)
       attachments[file] = File.read("#{Rails.root}/public/images/uploads/" + file)
-      mail(:subject => "Enviando archivo con Items eliminados por Focal")
+      mail(:subject => 'Enviando archivo con Items eliminados por Focal')
     end
 
     def report_notification(readed, updated, deleted, created, directory, file, company)
@@ -21,13 +21,13 @@ module Spree
     def report_deleted_items(deleted, category)
       @deleted = deleted
       @category = category
-      mail(:subject => "Enviando Informe de Items Borrados en Articulos")
+      mail(:subject => 'Enviando Informe de Items Borrados en Articulos')
     end
 
     def report_deleted_tires(gane, eurotyre)
       @gane = gane
       @eurotyre = eurotyre
-      mail(:subject => "Enviando Informe con las estadisticas de los productos borrados en Neumaticosdecoche.com")
+      mail(:subject => 'Enviando Informe con las estadisticas de los productos borrados en Neumaticosdecoche.com')
     end
 
     def send_email_to_provider(order, line_items, resend = false)
@@ -43,7 +43,7 @@ module Spree
     def send_email_to_workshop(order, line_items)
       @order = order
       @line_items = line_items
-      subject = "Notificacion de recepcion de Pedido de Neumaticos para instalacion"
+      subject = 'Notificacion de recepcion de Pedido de Neumaticos para instalacion'
       subject += " Pedido N° #{@order.number}"
       mail(:to => @order.workshop.email,
          :subject => subject)
@@ -51,7 +51,7 @@ module Spree
 
     def send_email_bank_transfer_received(order)
       @order = order
-      subject = "Notificacion de recepcion de Transferencia Bancaria"
+      subject = 'Notificacion de recepcion de Transferencia Bancaria'
       subject += " Pedido N° #{@order.number}"
       mail(:to => @order.email,
            :subject => subject)

@@ -31,8 +31,8 @@
                 <%= render :partial => 'spree/notify_mailer/provider/datos_workshop' %>
                 <br />
                 <br />
-                Asimismo recordarle, que el precio de la instalacion de los neumaticos (<%= money(@order.workshop.price_for_car) %>) no esta incluido en el precio de la compra y que debera abonar al taller con la finalizacion de la instalacion.
-                Gracias por confiar en neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo.
+                Asimismo recordarle, que el precio de la instalacion de los neumaticos (<%= @order.workshop.display_price %>)
+                neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo.
               <% end -%>
             </div>
           </td>
