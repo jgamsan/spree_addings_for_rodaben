@@ -4,8 +4,8 @@
       <!-- // Begin Module: Standard Content \\ -->
       <table border="0" cellpadding="20" cellspacing="0" width="100%">
         <tr>
-          <td valign="top" class="bodyContent">
-            <div mc:edit="std_content00">
+          <td style="vertical-align: top;" class="bodyContent">
+            <div>
               <strong>Estimado Cliente</strong>
               Hemos recibido en nuestra Cuenta Bancaria el importe de su pedido <%= @order.number %><br/>
               En este momento, hemos dado la orden de que se proceda al envio de su pedido.
@@ -14,13 +14,13 @@
           </td>
         </tr>
         <tr>
-          <td valign="top" style="padding-top:0; padding-bottom:0;">
+          <td style="padding-top:0; padding-bottom:0;vertical-align: top">
             <%= render :partial => 'spree/order_mailer/datos_compra' %>
           </td>
         </tr>
         <tr>
-          <td valign="top" class="bodyContent">
-            <div mc:edit="std_content01">
+          <td style="vertical-align: top;" class="bodyContent">
+            <div>
               <% if @order.workshop.nil? -%>
                 Gracias por confiar en neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo.
               <% else -%>
