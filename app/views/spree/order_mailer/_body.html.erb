@@ -1,24 +1,24 @@
-<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+<table style="border-collapse:collapse; border-spacing: 0; border: 0; width: 600px" id="templateBody">
   <tr>
-    <td valign="top">
+    <td style="vertical-align: top">
       <!-- // Begin Module: Standard Content \\ -->
       <table border="0" cellpadding="20" cellspacing="0" width="100%">
         <tr>
-          <td valign="top" class="bodyContent">
-            <div mc:edit="std_content00">
+          <td style="vertical-align: top" class="bodyContent">
+            <div>
               <strong>Estimado Cliente</strong>
               Le remito los datos de facturacion del pedido realizado en Neumaticosdecoche.com
             </div>
           </td>
         </tr>
         <tr>
-          <td valign="top" style="padding-top:0; padding-bottom:0;">
+          <td style="padding-top:0; padding-bottom:0;vertical-align: top">
             <%= render :partial => 'spree/order_mailer/datos_compra' %>
           </td>
         </tr>
         <tr>
-          <td valign="top" class="bodyContent">
-            <div mc:edit="std_content01">
+          <td style="vertical-align: top" class="bodyContent">
+            <div>
               <% if @order.workshop.nil? -%>
                 Gracias por confiar en neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo.
               <% else -%>

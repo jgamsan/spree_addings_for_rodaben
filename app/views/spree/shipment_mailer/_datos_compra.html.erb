@@ -1,15 +1,15 @@
 <h4><%= t('shipment_mailer.shipped_email.shipment_summary') %></h4>
 <table border="0" cellpadding="10" cellspacing="0" width="100%" class="templateDataTable">
   <tr>
-    <th scope="col" valign="top" width="40%" class="dataTableHeading" mc:edit="data_table_heading00">CODIGO</th>
-    <th scope="col" valign="top" width="50%" class="dataTableHeading" mc:edit="data_table_heading01">NOMBRE</th>
-    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading02">CANTIDAD</th>
+    <th scope="col" style="vertical-align: middle;width: 40%;text-align: center" class="dataTableHeading">CODIGO</th>
+    <th scope="col" style="vertical-align: middle;width: 50%;text-align: center" class="dataTableHeading">NOMBRE</th>
+    <th scope="col" style="vertical-align: middle;width: 10%;text-align: center" class="dataTableHeading">CANTIDAD</th>
   </tr>
   <% @shipment.manifest.each do |item| %>
-    <tr mc:repeatable>
-      <td class="dataTableContent" mc:edit="data_table_content00" style="vertical-align:middle;text-align:center;"><%= item.variant.sku %></td>
-      <td class="dataTableContent" mc:edit="data_table_content01" style="vertical-align:middle;text-align:center;"><%= item.variant.product.name %></td>
-      <td class="dataTableContent" mc:edit="data_table_content02" style="vertical-align:middle;text-align:center;"><%=item.quantity%></td>
+    <tr>
+      <td class="dataTableContent" style="vertical-align:middle;text-align:center;"><%= item.variant.sku %></td>
+      <td class="dataTableContent" style="vertical-align:middle;text-align:center;"><%= item.variant.product.name %></td>
+      <td class="dataTableContent" style="vertical-align:middle;text-align:center;"><%=item.quantity%></td>
     </tr>
   <% end -%>
 </table>

@@ -1,7 +1,7 @@
-<table border="0" cellpadding="10" cellspacing="0" width="100%">
+<table style="border-collapse:collapse; border-spacing: 0; border: 0; width: 100%">
   <tr>
-    <td valign="top" style="padding-right:0;">
-      <div mc:edit="std_content00">
+    <td style="padding-right:0;vertical-align: top">
+      <div>
         <h3 class="h3">Para <%= @order.workshop.name %>,</h3>
         Le remito los datos del pedido de neumaticos con destino a su taller para ser instalados en vehiculo propiedad del cliente cuyos datos se reseñan mas abajo.
         <br />
@@ -11,13 +11,13 @@
     </td>
   </tr>
   <tr>
-    <td valign="top" style="padding-right:0;">
-      <div mc:edit="std_content00">
+    <td style="padding-right:0;vertical-align: top">
+      <div>
         Los datos del cliente son los siguientes:
         <br />
         <br />
       </div>
-      <div mc:edit="std_content00">
+      <div>
         <%= render :partial => 'spree/notify_mailer/workshop/datos_cliente' %>
       </div>
     </td>

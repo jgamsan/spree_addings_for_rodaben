@@ -1,27 +1,27 @@
-<table border="0" cellpadding="10" cellspacing="0" width="100%" class="templateDataTable">
-  <col width="20%" valign="middle" halign="center">
-  <col width="20%" valign="middle">
-  <col width="20%" valign="middle" align="center">
-  <col width="10%" valign="middle" align="center">
-  <col width="10%" valign="middle" align="center">
-  <col width="10%" valign="middle" align="center">
-  <col width="10%" valign="middle" align="center">
+<table style="border-collapse:collapse;border-spacing: 0;border: 0;width: 100%" class="templateDataTable">
+  <col style="text-align: center;vertical-align: top;width: 20%">
+  <col style="text-align: center;vertical-align: middle;width: 20%">
+  <col style="text-align: center;vertical-align: middle;width: 20%">
+  <col style="text-align: center;vertical-align: middle;width: 10%">
+  <col style="text-align: center;vertical-align: middle;width: 10%">
+  <col style="text-align: center;vertical-align: middle;width: 10%">
+  <col style="text-align: center;vertical-align: middle;width: 10%">
   <tr>
-    <th scope="col" class="dataTableHeading" mc:edit="data_table_heading00">NOMBRE</th>
-    <th scope="col" class="dataTableHeading" mc:edit="data_table_heading01">APELLIDOS</th>
-    <th scope="col" class="dataTableHeading" mc:edit="data_table_heading02">DIRECCION</th>
-    <th scope="col" class="dataTableHeading" mc:edit="data_table_heading02">POBLACION</th>
-    <th scope="col" class="dataTableHeading" mc:edit="data_table_heading03">PROVINCIA</th>
-    <th scope="col" class="dataTableHeading" mc:edit="data_table_heading04">C.P.</th>
-    <th scope="col" class="dataTableHeading" mc:edit="data_table_heading04">TELEFONO</th>
+    <th scope="col" class="dataTableHeading">NOMBRE</th>
+    <th scope="col" class="dataTableHeading">APELLIDOS</th>
+    <th scope="col" class="dataTableHeading">DIRECCION</th>
+    <th scope="col" class="dataTableHeading">POBLACION</th>
+    <th scope="col" class="dataTableHeading">PROVINCIA</th>
+    <th scope="col" class="dataTableHeading">C.P.</th>
+    <th scope="col" class="dataTableHeading">TELEFONO</th>
   </tr>
-  <tr mc:repeatable>
-    <td class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.firstname %></td>
-    <td class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.lastname %></td>
-    <td class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.address1 %></td>
-    <td class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.city %></td>
-    <td class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.state.name %></td>
-    <td class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.zipcode %></td>
-    <td  class="dataTableContent" mc:edit="data_table_content00"><%= @order.bill_address.phone %></td>
+  <tr>
+    <td class="dataTableContent"><%= @order.bill_address.firstname %></td>
+    <td class="dataTableContent"><%= @order.bill_address.lastname %></td>
+    <td class="dataTableContent"><%= @order.bill_address.address1 %></td>
+    <td class="dataTableContent"><%= @order.bill_address.city %></td>
+    <td class="dataTableContent"><%= @order.bill_address.state.name %></td>
+    <td class="dataTableContent"><%= @order.bill_address.zipcode %></td>
+    <td class="dataTableContent"><%= @order.bill_address.phone %></td>
   </tr>
 </table>

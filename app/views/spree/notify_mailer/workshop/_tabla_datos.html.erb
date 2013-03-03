@@ -1,32 +1,18 @@
-<table border="0" cellpadding="10" cellspacing="0" width="100%" class="templateDataTable">
+<table style="border-collapse:collapse; border-spacing: 0; border: 0; width: 100%" class="templateDataTable">
   <tr>
-    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading00">
-      CODIGO
-    </th>
-    <th scope="col" valign="top" width="50%" class="dataTableHeading" mc:edit="data_table_heading01">
-      NOMBRE
-    </th>
-    <th scope="col" valign="top" width="30%" class="dataTableHeading" mc:edit="data_table_heading02">
-      MEDIDAS
-    </th>
-    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading02">
-      CANTIDAD
-    </th>
+    <th scope="col" style="vertical-align: top;width: 10%" class="dataTableHeading">CODIGO</th>
+    <th scope="col" style="vertical-align: top;width: 50%" class="dataTableHeading">NOMBRE</th>
+    <th scope="col" style="vertical-align: top;width: 30%" class="dataTableHeading">MEDIDAS</th>
+    <th scope="col" style="vertical-align: top;width: 10%" class="dataTableHeading">CANTIDAD</th>
   </tr>
   <% @order.line_items.each do |item| %>
-    <tr mc:repeatable>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-        <%= item.variant.sku %>
-      </td>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content01">
-        <%= raw(item.variant.product.name) %>
-      </td>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content02">
+    <tr>
+      <td style="vertical-align: top" class="dataTableContent"><%= item.variant.sku %></td>
+      <td style="vertical-align: top" class="dataTableContent"><%= raw(item.variant.product.name) %></td>
+      <td style="vertical-align: top" class="dataTableContent">
         <%= raw(item.variant.tire_width.name) unless item.variant.tire_width_id.nil? -%>/<%= raw(item.variant.tire_serial.name) unless item.variant.tire_serial_id.nil? -%>/<%= raw(item.variant.tire_innertube.name) unless item.variant.tire_innertube_id.nil? -%>/<%= raw(item.variant.tire_speed_code.name) unless item.variant.tire_speed_code_id.nil? -%>
       </td>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content02">
-        <%=item.quantity%>
-      </td>
+      <td style="vertical-align: top" class="dataTableContent"><%=item.quantity%></td>
     </tr>
   <% end -%>
 </table>
