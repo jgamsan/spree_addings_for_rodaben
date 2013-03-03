@@ -12,7 +12,7 @@
       <td style="vertical-align: top" class="dataTableContent">
         <%= raw(item.variant.tire_width.name) unless item.variant.tire_width_id.nil? -%>/<%= raw(item.variant.tire_serial.name) unless item.variant.tire_serial_id.nil? -%>/<%= raw(item.variant.tire_innertube.name) unless item.variant.tire_innertube_id.nil? -%>/<%= raw(item.variant.tire_speed_code.name) unless item.variant.tire_speed_code_id.nil? -%>
       </td>
-      <td style="vertical-align: top" class="dataTableContent"><%=item.quantity%></td>
+      <td style="vertical-align: top;text-align: center" class="dataTableContent"><%=item.quantity%></td>
     </tr>
   <% end -%>
 </table>
