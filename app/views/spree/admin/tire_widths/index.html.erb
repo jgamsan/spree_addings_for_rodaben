@@ -24,16 +24,14 @@
     </th>
   </thead>
   <tbody>
-    <% @tire_widths.each do |width|%>
-      <tr id="<%= spree_dom_id width %>" data-hook="admin_tire_widths_index_rows">
-        <td class="align-center"><%= width.name %></td>
-        <td class="align-center"><%= width.is_mm %></td>
-        <td class="align-center" data-hook="admin_tire_widths_index_row_actions">
-          <%= link_to_edit width %> &nbsp;
-          <%= link_to_delete width %>
-        </td>
-      </tr>
-    <% end %>
+    <%#= render @tire_widths %>
+    <tr ng-repeat='width in tire_widths' id='width_{{width_.id}}'>
+      <td>{{width.name}}</td>
+      <td>{{width.is_mm}}</td>
+      <td><a href='' ng-click='show(width.id)'>Show</a></td>
+      <td><a href='' ng-click='edit(width.id)'>Edit</a></td>
+      <td><a href='' ng-click='destroy(width.id)'>Delete</a></td>
+    </tr>
   </tbody>
 </table>
 <%= paginate @tire_widths %>  
