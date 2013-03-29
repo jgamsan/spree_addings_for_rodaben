@@ -1,7 +1,7 @@
-<table border="0" cellpadding="10" cellspacing="0" width="100%">
+<table style="border-collapse:collapse; border-spacing: 0; border: 0; width: 100%">
   <tr>
-    <td valign="top" style="padding-right:0;">
-      <div mc:edit="std_content00">
+    <td style="padding-right:0;vertical-align: top">
+      <div>
         <h3 class="h3">Estimada Empresa <%= @line_items.first.variant.product.supplier.title %></h3>
         Le remito los datos del pedido de neumaticos nº <%= @order.number %> con destino a la direccion abajo reseñada.
         <br />
@@ -11,20 +11,20 @@
     </td>
   </tr>
   <tr>
-    <td valign="top" style="padding-right:0;">
-      <div mc:edit="std_content00">
+    <td valign="top" style="padding-right:0;vertical-align: top">
+      <div>
         Los datos del cliente son los siguientes:
         <br />
         <br />
       </div>
-      <div mc:edit="std_content00">
+      <div>
         <% if @order.workshop.nil? -%>
           <%= render :partial => 'spree/notify_mailer/provider/datos_cliente' %>
         <% else -%>
           <%= render :partial => 'spree/notify_mailer/provider/datos_workshop' %>
         <% end -%>
       </div>
-      <div mc:edit="std_content00">
+      <div>
         <br />
         <br />
         Ruego comuniquen el envio del pedido a este <%=  mail_to "info@neumaticosdecoche.com", "email", :subject => "Enviado pedido orden #{@order.number}" %>

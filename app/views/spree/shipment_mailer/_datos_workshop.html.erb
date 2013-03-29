@@ -1,42 +1,18 @@
 <table border="0" cellpadding="10" cellspacing="0" width="100%" class="templateDataTable">
   <tr>
-    <th scope="col" valign="top" width="30%" class="dataTableHeading" mc:edit="data_table_heading00">
-      NOMBRE
-    </th>
-    <th scope="col" valign="top" width="30%" class="dataTableHeading" mc:edit="data_table_heading02">
-      DIRECCION
-    </th>
-    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading02">
-      POBLACION
-    </th>
-    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading03">
-      PROVINCIA
-    </th>
-    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading04">
-      EMAIL
-    </th>
-    <th scope="col" valign="top" width="10%" class="dataTableHeading" mc:edit="data_table_heading04">
-      TELEFONO
-    </th>
+    <th scope="col" style="vertical-align: middle;width: 30%;text-align: center" class="dataTableHeading">NOMBRE</th>
+    <th scope="col" style="vertical-align: middle;width: 30%;text-align: center" class="dataTableHeading">DIRECCION</th>
+    <th scope="col" style="vertical-align: middle;width: 10%;text-align: center" class="dataTableHeading">POBLACION</th>
+    <th scope="col" style="vertical-align: middle;width: 10%;text-align: center" class="dataTableHeading">PROVINCIA</th>
+    <th scope="col" style="vertical-align: middle;width: 10%;text-align: center" class="dataTableHeading">EMAIL</th>
+    <th scope="col" style="vertical-align: middle;width: 10%;text-align: center" class="dataTableHeading">TELEFONO</th>
   </tr>
-  <tr mc:repeatable>
-    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      <%= @shipment.order.workshop.name %>
-    </td>
-    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      <%= @shipment.order.workshop.address %>
-    </td>
-    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      <%= @shipment.order.workshop.town.name %>
-    </td>
-    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      <%= @shipment.order.workshop.town.state.name %>
-    </td>
-    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      <%= @shipment.order.workshop.email %>
-    </td>
-    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      <%= @shipment.order.workshop.phone %>
-    </td>
+  <tr>
+    <td style="vertical-align: top" class="dataTableContent"><%= @shipment.order.workshop.name %></td>
+    <td style="vertical-align: top" class="dataTableContent"><%= @shipment.order.workshop.address %></td>
+    <td style="vertical-align: top" class="dataTableContent"><%= @shipment.order.workshop.town.name %></td>
+    <td style="vertical-align: top" class="dataTableContent"><%= @shipment.order.workshop.town.state.name %></td>
+    <td style="vertical-align: top" class="dataTableContent"><%= @shipment.order.workshop.email %></td>
+    <td style="vertical-align: top" class="dataTableContent"><%= @shipment.order.workshop.phone %></td>
   </tr>
 </table>

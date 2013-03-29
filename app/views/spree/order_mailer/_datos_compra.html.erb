@@ -1,50 +1,40 @@
 <h4>Resumen del pedido</h4>
 <table border="0" cellpadding="10" cellspacing="0" width="100%" class="templateDataTable">
-  <col width="10%" valign="middle" align="center">
-  <col width="50%" valign="middle">
-  <col width="10%" valign="middle" align="center">
-  <col width="15%" valign="middle" align="center">
-  <col width="15%" valign="middle" align="center">
+  <col style="vertical-align: top;width: 10%;text-align: center">
+  <col style="vertical-align: top;width: 50%;text-align: center">
+  <col style="vertical-align: top;width: 10%;text-align: center">
+  <col style="vertical-align: top;width: 15%;text-align: center">
+  <col style="vertical-align: top;width: 15%;text-align: center">
   <tr>
-    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading00">CODIGO</th>
-    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading01">NOMBRE</th>
-    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading02">CANTIDAD</th>
-    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading03">PRECIO</th>
-    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading04">TOTAL</th>
+    <th scope="col"  class="dataTableHeading">CODIGO</th>
+    <th scope="col"  class="dataTableHeading">NOMBRE</th>
+    <th scope="col"  class="dataTableHeading">CANTIDAD</th>
+    <th scope="col"  class="dataTableHeading">PRECIO</th>
+    <th scope="col"  class="dataTableHeading">TOTAL</th>
   </tr>
   <% @order.line_items.each do |item| %>
-    <tr mc:repeatable>
-      <td  class="dataTableContent" mc:edit="data_table_content00"><%= item.variant.sku %></td>
-      <td  class="dataTableContent" mc:edit="data_table_content01"><%= raw(item.variant.product.name) %></td>
-      <td  class="dataTableContent" mc:edit="data_table_content02"><%=item.quantity%></td>
-      <td  class="dataTableContent" mc:edit="data_table_content02"><%= item.variant.display_amount %></td>
-      <td  class="dataTableContent" mc:edit="data_table_content02"><%= item.display_amount %></td>
+    <tr>
+      <td  class="dataTableContent"><%= item.variant.sku %></td>
+      <td  class="dataTableContent"><%= raw(item.variant.product.name) %></td>
+      <td  style="text-align: center" class="dataTableContent"><%=item.quantity%></td>
+      <td  class="dataTableContent"><%= item.variant.display_amount %></td>
+      <td  class="dataTableContent"><%= item.display_amount %></td>
     </tr>
   <% end -%>
-  <tr mc:repeatable>
-    <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00">
-      Subtotal
-    </td>
-    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      <%= @order.display_item_total %>
-    </td>
+  <tr>
+    <td colspan="4" style="text-align:right;vertical-align: top" class="dataTableContent">Subtotal</td>
+    <td style="vertical-align: top" class="dataTableContent"><%= @order.display_item_total %></td>
   </tr>
   <% @order.adjustments.eligible.each do |adjustment| %>
-    <tr mc:repeatable>
-      <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00">
+    <tr>
+      <td colspan="4" style="text-align:right;vertical-align: top" class="dataTableContent">
         <%= raw(adjustment.label) %>
       </td>
-      <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-        <%= adjustment.display_amount %>
-      </td>
+      <td style="vertical-align: top" class="dataTableContent"><%= adjustment.display_amount %></td>
     </tr>
   <% end %>
-  <tr mc:repeatable>
-    <td colspan="4" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00">
-      Total
-    </td>
-    <td valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      <%= @order.display_total %>
-    </td>
+  <tr>
+    <td colspan="4" style="text-align:right;vertical-align: top" class="dataTableContent">Total</td>
+    <td style="vertical-align: top" class="dataTableContent"><%= @order.display_total %></td>
   </tr>
 </table>

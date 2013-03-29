@@ -1,26 +1,26 @@
-<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateBody">
+<table style="border-collapse:collapse; border-spacing: 0; border: 0; width: 600px" id="templateBody">
   <tr>
     <td valign="top">
       <!-- // Begin Module: Standard Content \\ -->
-      <table border="0" cellpadding="20" cellspacing="0" width="100%">
+      <table style="border-collapse:collapse; border-spacing: 0; border: 0; width: 100%">
         <tr>
-          <td valign="top" class="bodyContent">
-            <div mc:edit="std_content00">
+          <td style="vertical-align: top;" class="bodyContent">
+            <div>
               <strong>Estimado Cliente</strong>
-              Hemos recibido en nuestra Cuenta Bancaria el importe de su pedido <%= @order.number %>
+              Hemos recibido en nuestra Cuenta Bancaria el importe de su pedido <%= @order.number %><br/>
               En este momento, hemos dado la orden de que se proceda al envio de su pedido.
               Nos permitimos recordarle los datos del mismo:
             </div>
           </td>
         </tr>
         <tr>
-          <td valign="top" style="padding-top:0; padding-bottom:0;">
+          <td style="padding-top:0; padding-bottom:0;vertical-align: top">
             <%= render :partial => 'spree/order_mailer/datos_compra' %>
           </td>
         </tr>
         <tr>
-          <td valign="top" class="bodyContent">
-            <div mc:edit="std_content01">
+          <td style="vertical-align: top;" class="bodyContent">
+            <div>
               <% if @order.workshop.nil? -%>
                 Gracias por confiar en neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo.
               <% else -%>
@@ -31,8 +31,12 @@
                 <%= render :partial => 'spree/notify_mailer/provider/datos_workshop' %>
                 <br />
                 <br />
-                Asimismo recordarle, que el precio de la instalacion de los neumaticos (<%= money(@order.workshop.price_for_car) %>) no esta incluido en el precio de la compra y que debera abonar al taller con la finalizacion de la instalacion.
-                Gracias por confiar en neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar en nosotros. Un saludo.
+                Asimismo recordarle, que el precio de la instalacion de los neumaticos (<%= @order.workshop.display_price %>)
+                no esta incluido en el precio de la compra y que debera abonar al taller con la finalizacion de la
+                instalacion.<br/>
+                Gracias por confiar en neumaticosdecoche.com. Esperamos cumplir sus expectativas y vuelva a confiar
+                en nosotros.<br/>
+                Un saludo.
               <% end -%>
             </div>
           </td>

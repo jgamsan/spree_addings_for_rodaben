@@ -1,38 +1,30 @@
 <h4>Cuenta Corriente</h4>
 <table border="0" cellpadding="10" cellspacing="0" width="100%" class="templateDataTable">
-  <col width="15%" valign="middle" align="center">
-  <col width="15%" valign="middle">
-  <col width="15%" valign="middle" align="center">
-  <col width="55%" valign="middle" align="center">
+  <col style="vertical-align: middle;width: 15%;text-align: center">
+  <col style="vertical-align: middle;width: 15%;text-align: center">
+  <col style="vertical-align: middle;width: 15%;text-align: center">
+  <col style="vertical-align: middle;width: 55%;text-align: center">
   <tr>
-    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading00">BANCO</th>
-    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading01">SUCURSAL</th>
-    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading02">DC</th>
-    <th scope="col"  class="dataTableHeading" mc:edit="data_table_heading03">Nº CUENTA</th>
+    <th scope="col"  class="dataTableHeading dataTableContentAccount">BANCO</th>
+    <th scope="col"  class="dataTableHeading dataTableContentAccount">SUCURSAL</th>
+    <th scope="col"  class="dataTableHeading dataTableContentAccount">DC</th>
+    <th scope="col"  class="dataTableHeading dataTableContentAccount">Nº CUENTA</th>
   </tr>
 
-  <tr mc:repeatable>
-    <td  class="dataTableContent" mc:edit="data_table_content00">0049</td>
-    <td  class="dataTableContent" mc:edit="data_table_content01">6690</td>
-    <td  class="dataTableContent" mc:edit="data_table_content02">98</td>
-    <td  class="dataTableContent" mc:edit="data_table_content02">2590016361</td>
+  <tr>
+    <td class="dataTableContent dataTableContentAccount">0049</td>
+    <td class="dataTableContent dataTableContentAccount">6690</td>
+    <td class="dataTableContent dataTableContentAccount">91</td>
+    <td class="dataTableContent dataTableContentAccount">2190027311</td>
   </tr>
 
-  <tr mc:repeatable>
-    <td colspan="2" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00">
-      PROPIETARIO
-    </td>
-    <td colspan="2" valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      Neumaticos Rodaben S.L.
-    </td>
+  <tr>
+    <td colspan="3" style="text-align:right;" class="dataTableContent">PROPIETARIO:</td>
+    <td colspan="3" class="dataTableContent">Neumaticos Rodaben S.L.</td>
   </tr>
 
-  <tr mc:repeatable>
-    <td colspan="2" valign="top" style="text-align:right;" class="dataTableContent" mc:edit="data_table_content00">
-      IMPORTE
-    </td>
-    <td colspan="2" valign="top" class="dataTableContent" mc:edit="data_table_content00">
-      <%= @order.display_total %>
-    </td>
+  <tr>
+    <td colspan="3" style="text-align:right;" class="dataTableContent">IMPORTE:</td>
+    <td colspan="3" class="dataTableContent"><%= @order.display_total %></td>
   </tr>
 </table>
