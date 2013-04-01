@@ -17,7 +17,7 @@
     <col style="width: 60%;">
   </colgroup>
   <thead data-hook="admin_tire_widths_index_headers">
-    <th>t(:name)</th>
+    <th><%= sort_link @search, :name, t(:name) %></th>
     <th>t(:is_mm?)</th>
     <th data-hook="admin_tire_widths_index_header_actions" class="actions">
     </th>
