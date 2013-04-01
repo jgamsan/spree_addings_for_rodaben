@@ -20,18 +20,10 @@
     <th>t(:name)</th>
     <th>t(:is_mm?)</th>
     <th data-hook="admin_tire_widths_index_header_actions" class="actions">
-      Search: <input ng-model="query">
     </th>
   </thead>
   <tbody>
-    <%#= render @tire_widths %>
-    <tr ng-repeat='width in tire_widths' id='width_{{width_.id}}'>
-      <td>{{width.name}}</td>
-      <td>{{width.is_mm}}</td>
-      <td><a href='' ng-click='show(width.id)'>Show</a></td>
-      <td><a href='' ng-click='edit(width.id)'>Edit</a></td>
-      <td><a href='' ng-click='destroy(width.id)'>Delete</a></td>
-    </tr>
+    <%= render @tire_widths %>
   </tbody>
 </table>
-<%#= paginate @tire_widths %>  
+<%= paginate @tire_widths %>  
