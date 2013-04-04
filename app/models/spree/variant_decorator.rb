@@ -35,7 +35,8 @@ Spree::Variant.class_eval do
   TUBE_OPTIONS = [
   ["TL", 1],
   ["TT", 2],
-  ["RU", 3]
+  ["RU", 3],
+  ["TL/TT", 4]
   ]
 
   POSITION_OPTIONS = [
