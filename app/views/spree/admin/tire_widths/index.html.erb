@@ -23,16 +23,9 @@
     </th>
   </thead>
   <tbody>
-    <% @tire_widths.each do |width|%>
-      <tr id="<%= spree_dom_id width %>" data-hook="admin_tire_widths_index_rows">
-        <td class="align-center"><%= width.name %></td>
-        <td class="align-center"><%= width.is_mm %></td>
-        <td class="align-center" data-hook="admin_tire_widths_index_row_actions">
-          <%= link_to_edit width %> &nbsp;
-          <%= link_to_delete width %>
-        </td>
-      </tr>
-    <% end %>
+    <#% @tire_widths.each do |width|%>
+    <%= render :partial => 'spree/admin/tire_widths/tire_width', :collection => @tire_widths %>  
+    <#% end %>
   </tbody>
 </table>
 <%= paginate @tire_widths %>  
