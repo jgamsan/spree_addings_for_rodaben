@@ -1,0 +1,8 @@
+<tr id="<%= spree_dom_id code %>" data-hook="admin_tire_load_codes_index_rows">
+  <td class="align-center"><%= code.name %></td>
+  <td class="align-center"><%= code.weight %></td>
+  <td class="align-center" data-hook="admin_tire_load_codes_index_row_actions">
+    <%= link_to_edit code %> &nbsp;
+    <%= link_to_delete code %>
+  </td>
+</tr>

@@ -1,0 +1,2 @@
+$('tbody#tire_load_codes').html('<%= escape_javascript(render :partial => "spree/admin/tire_load_codes/tire_load_code", :collection => @tire_load_codes, :as => :code) %>');
+$('#paginator').html('<%= escape_javascript(paginate(@tire_load_codes, :remote => true).to_s) %>');
