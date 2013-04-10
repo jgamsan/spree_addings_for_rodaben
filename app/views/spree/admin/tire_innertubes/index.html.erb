@@ -21,18 +21,9 @@
     <th data-hook="admin_tire_innertubes_index_header_actions" class="actions">
     </th>
   </thead>
-  <tbody>
-    <% @tire_innertubes.each do |innertube|%>
-      <tr id="<%= spree_dom_id innertube %>" data-hook="admin_tire_innertubes_index_rows">
-        <td class="align-center"><%= innertube.name %></td>
-        <td class="align-center"><%= innertube.sale_price %></td>
-        <td class="align-center"><%= innertube.is_mm %></td>
-        <td class="align-center" data-hook="admin_tire_innertubes_index_row_actions">
-          <%= link_to_edit innertube %> &nbsp;
-          <%= link_to_delete innertube %>
-        </td>
-      </tr>
-    <% end %>
+  <tbody id="tire_innertubes">
+    <%= render :partial => 'spree/admin/tire_innertubes/tire_innertube', :collection => @tire_innertubes, :as => :innertube %>
   </tbody>
 </table>
-<%= paginate @tire_innertubes %>
+<div id="paginator"><%= paginate @tire_innertubes, :remote => true %></div>
+

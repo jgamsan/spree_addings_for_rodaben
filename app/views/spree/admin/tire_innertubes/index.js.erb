@@ -1,0 +1,2 @@
+$('tbody#tire_innertubes').html('<%= escape_javascript(render :partial => "spree/admin/tire_innertubes/tire_innertube", :collection => @tire_innertubes) %>');
+$('#paginator').html('<%= escape_javascript(paginate(@tire_innertubes, :remote => true).to_s) %>');
