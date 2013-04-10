@@ -1,0 +1,2 @@
+$('#tire_widths').html('<%= escape_javascript render(:partial => 'spree/admin/tire_widths/tire_width', :collection => @tire_widths) %>');
+$('#paginator').html('<%= escape_javascript(paginate(@tire_widths, :remote => true).to_s) %>');

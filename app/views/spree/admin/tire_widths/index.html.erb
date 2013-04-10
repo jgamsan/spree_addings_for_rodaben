@@ -22,10 +22,9 @@
     <th data-hook="admin_tire_widths_index_header_actions" class="actions">
     </th>
   </thead>
-  <tbody>
-    <#% @tire_widths.each do |width|%>
+  <tbody id='tire_widths'>
     <%= render :partial => 'spree/admin/tire_widths/tire_width', :collection => @tire_widths %>  
-    <#% end %>
   </tbody>
 </table>
-<%= paginate @tire_widths %>  
+<div id="paginator"><%= paginate @tire_widths, :remote => true %></div>
+  
